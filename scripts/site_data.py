@@ -43,7 +43,7 @@ CATEGORIES = {
         "name": "Warehouse Equipment",
         "short": "Compact lifting tables, platform trucks, and support equipment for material flow.",
         "answer": "Match platform size, lifting range, mobility, and duty cycle to the workstation and load.",
-        "image": "warehouse-semi-electric-stacker.png",
+        "image": "sc1016.png",
     },
 }
 
@@ -187,8 +187,8 @@ PRODUCTS = [
     ),
     product(
         "r4efl3t", "R4EFL3T", "3.0 t Four-Wheel Electric Forklift", "electric-forklifts", "r4efl3t.png",
-        "3,000 kg class", "Configuration based", "Seated", "General industrial and warehouse handling",
-        {"Wheel arrangement": "Four-wheel", "Power": "Electric"},
+        "3,000 kg", "3,000 mm", "Seated", "General industrial and warehouse handling",
+        {"Load center": "500 mm", "Battery": "72 V / 500 Ah lead-acid", "Turning radius": "2,400 mm"},
     ),
     product(
         "r4efl5t", "R4EFL5T", "5.0 t Four-Wheel Electric Forklift", "electric-forklifts", "r4efl5t.png",
@@ -197,8 +197,8 @@ PRODUCTS = [
     ),
     product(
         "r4efl12t", "R4EFL12T", "Heavy-Duty Four-Wheel Electric Forklift", "electric-forklifts", "r4efl12t.png",
-        "Heavy-duty class", "Configuration based", "Seated", "High-capacity industrial applications",
-        {"Wheel arrangement": "Four-wheel", "Power": "Electric"},
+        "12,000 kg", "3,000 mm", "Seated", "High-capacity industrial applications",
+        {"Overall width": "2,250 mm", "Turning radius": "3,850 mm", "Power": "Storage battery"},
     ),
     product(
         "mpt5tn", "MPT5TN", "5.0 t Manual Pallet Truck", "manual-pallet-trucks", "mpt5tn.jpg",
@@ -207,18 +207,38 @@ PRODUCTS = [
     ),
     product(
         "mpjsc1500", "MPJSC1500", "1.5 t Single-Cylinder High-Lift Pallet Jack", "manual-pallet-trucks", "mpjsc1500.jpg",
-        "1,500 kg class", "High-lift configuration", "Manual", "Ergonomic loading, feeding, and workstation positioning",
-        {"Cylinder": "Single", "Drive": "Manual"},
+        "1,500 kg", "85-800 mm fork height", "Manual", "Ergonomic loading, feeding, and workstation positioning",
+        {"Cylinder": "Single-stage", "Fork length": "1,150 mm", "Drive": "Manual"},
     ),
     product(
         "mpjtsc1500", "MPJTSC1500", "1.5 t Two-Stage High-Lift Pallet Jack", "manual-pallet-trucks", "mpjtsc1500.jpg",
-        "1,500 kg class", "Two-stage high lift", "Manual", "Higher manual positioning and occasional stacking tasks",
-        {"Cylinder": "Two-stage", "Drive": "Manual"},
+        "1,500 kg", "85-800 mm fork height", "Manual", "Higher manual positioning and occasional stacking tasks",
+        {"Cylinder": "Two-stage", "Fork length": "1,150 mm", "Drive": "Manual"},
     ),
     product(
-        "warehouse-semi-electric-stacker", "SC1016", "Compact Semi-Electric Stacker", "warehouse-equipment", "warehouse-semi-electric-stacker.png",
+        "sc1016", "SC1016", "1.0 t Compact Semi-Electric Stacker", "warehouse-equipment", "sc1016.png",
         "1,000 kg", "1,600 mm configurable", "Manual travel / electric lift", "Light warehouse lifting and compact work areas",
         {"Overall width": "860 mm", "Overall length": "1,500 mm", "Battery": "48 V / 10 Ah LiFePO4"},
+    ),
+    product(
+        "qes12e", "QES12E", "1.2 t Walkie Electric Stacker", "warehouse-equipment", "qes12e.png",
+        "1,200 kg", "3,000 mm", "Walk-behind", "Compact electric pallet stacking and internal handling",
+        {"Load center": "600 mm", "Overall width": "820 mm", "Turning radius": "1,385 mm"},
+    ),
+    product(
+        "qes15e", "QES15/E", "1.5 t Walkie Electric Stacker", "warehouse-equipment", "qes15e.png",
+        "1,500 kg", "3,000 mm", "Walk-behind", "General warehouse pallet stacking on level floors",
+        {"Load center": "600 mm", "Overall width": "800 mm", "Turning radius": "1,440 mm"},
+    ),
+    product(
+        "qes15lie", "QES15-LI/E", "1.5 t Lithium Walkie Electric Stacker", "warehouse-equipment", "qes15lie.png",
+        "1,500 kg", "3,000 mm", "Walk-behind", "Lithium-powered pallet stacking and frequent indoor use",
+        {"Load center": "600 mm", "Service weight": "470 kg", "Overall width": "800 mm"},
+    ),
+    product(
+        "qed1530", "QED1530", "1.5 t Electric Stacker", "warehouse-equipment", "qed1530.png",
+        "1,500 kg", "3,000 mm configurable", "Electric", "Warehouse pallet lifting with customizable lift height",
+        {"Drive power": "2,200 W", "Lift motor": "750 W", "Battery": "24 V / 80 Ah optional"},
     ),
     product(
         "warehouse-scissor-lift-table", "Lift Table", "Mobile Scissor Lift Table", "warehouse-equipment", "warehouse-scissor-lift-table.png",
@@ -250,4 +270,3 @@ GUIDES = [
         "summary": "Why rated capacity alone is not enough when selecting an electric forklift.",
     },
 ]
-

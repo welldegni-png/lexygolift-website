@@ -1,6 +1,6 @@
-# LEXYGO Material Handling
+# LEXYGO Material Handling Equipment
 
-> Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. manufactures and configures material handling equipment in Changxing, Zhejiang, China.
+> Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. supplies model-specific pallet trucks, pallet stackers, electric forklifts, manual pallet trucks, and warehouse equipment.
 
 ## Product families
 - [Electric Pallet Trucks](https://www.lexygolift.com/products/electric-pallet-trucks/): Move palletized loads efficiently across warehouses, docks, and mixed surfaces.
@@ -9,11 +9,45 @@
 - [Manual Pallet Trucks](https://www.lexygolift.com/products/manual-pallet-trucks/): Simple, dependable pallet movement and manual high-lift handling.
 - [Warehouse Equipment](https://www.lexygolift.com/products/warehouse-equipment/): Compact lifting tables, platform trucks, and support equipment for material flow.
 
-## Buyer guides
-- [How to Choose an Electric Pallet Truck](https://www.lexygolift.com/guides/how-to-choose-an-electric-pallet-truck/): A practical checklist for load, route length, floor condition, turning space, battery, and duty cycle.
-- [Pallet Truck vs. Pallet Stacker](https://www.lexygolift.com/guides/pallet-truck-vs-stacker/): Use a pallet truck to move loads horizontally and a stacker when the task includes lifting into storage positions.
-- [Forklift Capacity, Lift Height, and Aisle Width](https://www.lexygolift.com/guides/forklift-capacity-and-aisle-width/): Why rated capacity alone is not enough when selecting an electric forklift.
+## Model pages
+- [WEP20J 2.0 t Walkie Electric Pallet Truck](https://www.lexygolift.com/products/wep20j/): 2,000 kg; 205 mm; Walk-behind.
+- [REP3000E 3.0 t Rider Electric Pallet Truck](https://www.lexygolift.com/products/rep3000e/): 3,000 kg; 205 mm; Ride-on.
+- [ATEP3000Y 3.0 t All-Terrain Electric Pallet Truck](https://www.lexygolift.com/products/atep3000y/): 3,000 kg; 205 mm; Walk-behind.
+- [WES1500A 1.5 t Walkie Electric Stacker](https://www.lexygolift.com/products/wes1500a/): 1,500 kg; 1,600-3,500 mm; Walk-behind.
+- [WES1600A 1.6 t Walkie Electric Stacker](https://www.lexygolift.com/products/wes1600a/): 1,600 kg; 1,600-3,500 mm; Walk-behind.
+- [WES1500JP 1.5 t Walkie Electric Stacker](https://www.lexygolift.com/products/wes1500jp/): 1,500 kg; 1,600-3,500 mm; Walk-behind.
+- [WES2000A 2.0 t Walkie Electric Stacker](https://www.lexygolift.com/products/wes2000a/): 2,000 kg; 1,600-3,500 mm; Walk-behind.
+- [RES1500D 1.5 t Rider Electric Stacker](https://www.lexygolift.com/products/res1500d/): 1,500 kg; 1,600-3,500 mm; Stand-on.
+- [RES2000D 2.0 t Rider Electric Stacker](https://www.lexygolift.com/products/res2000d/): 2,000 kg; 1,600-3,500 mm; Stand-on.
+- [RES1500E 1.5 t Rider Electric Stacker](https://www.lexygolift.com/products/res1500e/): 1,500 kg; 1,600-3,500 mm; Stand-on.
+- [RES2000E 2.0 t Rider Electric Stacker](https://www.lexygolift.com/products/res2000e/): 2,000 kg; 1,600-3,500 mm; Stand-on.
+- [RES1500G 1.5 t Rider Electric Stacker](https://www.lexygolift.com/products/res1500g/): 1,500 kg; 1,600-3,000 mm; Stand-on.
+- [WCES500J 0.5 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/products/wces500j/): 500 kg; 1,600-3,500 mm; Walk-behind.
+- [WCES1000J 1.0 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/products/wces1000j/): 1,000 kg; 1,600-3,500 mm; Walk-behind.
+- [WCES1300J 1.3 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/products/wces1300j/): 1,300 kg; 1,600-3,500 mm; Walk-behind.
+- [WCES1500J 1.5 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/products/wces1500j/): 1,500 kg; 1,600-3,500 mm; Walk-behind.
+- [RCES1000B 1.0 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces1000b/): 1,000 kg; Configuration based; Stand-on.
+- [RCES1500E 1.5 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces1500e/): 1,500 kg; Configuration based; Stand-on.
+- [RCES2000E 2.0 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces2000e/): 2,000 kg; Configuration based; Stand-on.
+- [HES1500A 1.5 t Reach Electric Stacker](https://www.lexygolift.com/products/hes1500a/): 1,500 kg; 3,000 mm; Stand-on.
+- [HES2000A 2.0 t Reach Electric Stacker](https://www.lexygolift.com/products/hes2000a/): 2,000 kg; 1,600-3,500 mm; Stand-on.
+- [EFL1200R3 1.2 t Three-Wheel Electric Forklift](https://www.lexygolift.com/products/efl1200r3/): 1,200 kg; 3,000 mm; Seated.
+- [EFL2000R3 2.0 t Three-Wheel Electric Forklift](https://www.lexygolift.com/products/efl2000r3/): 2,000 kg; 3,000 mm; Seated.
+- [R4EFL1T 1.2 t Four-Wheel Electric Forklift](https://www.lexygolift.com/products/r4efl1t/): 1,200 kg; 3,000 mm; Seated.
+- [R4EFL3T 3.0 t Four-Wheel Electric Forklift](https://www.lexygolift.com/products/r4efl3t/): 3,000 kg; 3,000 mm; Seated.
+- [R4EFL5T 5.0 t Four-Wheel Electric Forklift](https://www.lexygolift.com/products/r4efl5t/): 5,000 kg; 3,000 mm; Seated.
+- [R4EFL12T Heavy-Duty Four-Wheel Electric Forklift](https://www.lexygolift.com/products/r4efl12t/): 12,000 kg; 3,000 mm; Seated.
+- [MPT5TN 5.0 t Manual Pallet Truck](https://www.lexygolift.com/products/mpt5tn/): 5,000 kg; 85-185 mm fork height; Manual.
+- [MPJSC1500 1.5 t Single-Cylinder High-Lift Pallet Jack](https://www.lexygolift.com/products/mpjsc1500/): 1,500 kg; 85-800 mm fork height; Manual.
+- [MPJTSC1500 1.5 t Two-Stage High-Lift Pallet Jack](https://www.lexygolift.com/products/mpjtsc1500/): 1,500 kg; 85-800 mm fork height; Manual.
+- [SC1016 1.0 t Compact Semi-Electric Stacker](https://www.lexygolift.com/products/sc1016/): 1,000 kg; 1,600 mm configurable; Manual travel / electric lift.
+- [QES12E 1.2 t Walkie Electric Stacker](https://www.lexygolift.com/products/qes12e/): 1,200 kg; 3,000 mm; Walk-behind.
+- [QES15/E 1.5 t Walkie Electric Stacker](https://www.lexygolift.com/products/qes15e/): 1,500 kg; 3,000 mm; Walk-behind.
+- [QES15-LI/E 1.5 t Lithium Walkie Electric Stacker](https://www.lexygolift.com/products/qes15lie/): 1,500 kg; 3,000 mm; Walk-behind.
+- [QED1530 1.5 t Electric Stacker](https://www.lexygolift.com/products/qed1530/): 1,500 kg; 3,000 mm configurable; Electric.
+- [Lift Table Mobile Scissor Lift Table](https://www.lexygolift.com/products/warehouse-scissor-lift-table/): Configuration based; Configuration based; Manual mobile.
+- [Lift Cart Compact Material Lift Cart](https://www.lexygolift.com/products/warehouse-material-lift-cart/): Configuration based; Configuration based; Manual mobile.
 
 ## Contact
 - Email: degni@shengliclean.com
-- Published specifications must be confirmed against the final quotation and configuration.
+- Final specifications are confirmed against the quotation and project configuration.

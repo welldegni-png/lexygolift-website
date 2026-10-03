@@ -1,0 +1,5982 @@
+{
+  "efl1200r3": [
+    {
+      "title": "Specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "t",
+          "value": "1.2"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "1,940"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "1,975"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "2,570"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "922"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "mm",
+          "value": "35 x 100 x 920"
+        },
+        {
+          "name": "Fork carriage width",
+          "unit": "mm",
+          "value": "825"
+        },
+        {
+          "name": "Turning radius",
+          "unit": "mm",
+          "value": "1,490"
+        },
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "km/h",
+          "value": "9 / 10"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "m/s",
+          "value": "0.15 / 0.22"
+        }
+      ]
+    }
+  ],
+  "efl2000r3": [
+    {
+      "title": "Specifications",
+      "rows": [
+        {
+          "name": "Power source",
+          "unit": "",
+          "value": "Storage battery"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "2,000"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "3,760"
+        },
+        {
+          "name": "Tire type, front/rear",
+          "unit": "",
+          "value": "Solid tires"
+        },
+        {
+          "name": "Overall length, excluding forks",
+          "unit": "mm",
+          "value": "2,105"
+        },
+        {
+          "name": "Overall width at frame",
+          "unit": "mm",
+          "value": "1,100"
+        },
+        {
+          "name": "Overhead guard height",
+          "unit": "mm",
+          "value": "2,055"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "mm",
+          "value": "1,690"
+        },
+        {
+          "name": "Maximum gradeability, laden",
+          "unit": "%",
+          "value": "15"
+        }
+      ]
+    }
+  ],
+  "r4efl1t": [
+    {
+      "title": "Dimensions and performance",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,200"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "mm",
+          "value": "500"
+        },
+        {
+          "name": "Ground clearance under mast, lowered",
+          "unit": "mm",
+          "value": "75"
+        },
+        {
+          "name": "Turning radius",
+          "unit": "mm",
+          "value": "1,900"
+        },
+        {
+          "name": "Right-angle stacking aisle width",
+          "unit": "mm",
+          "value": "3,200 (1,000 x 1,000 pallet; 200 clearance)"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "2,050"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,850"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "970"
+        },
+        {
+          "name": "Overhead guard height",
+          "unit": "mm",
+          "value": "1,860"
+        },
+        {
+          "name": "Maximum fork spread",
+          "unit": "mm",
+          "value": "870"
+        },
+        {
+          "name": "Maximum height during operation",
+          "unit": "mm",
+          "value": "3,900"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "mm",
+          "value": "32 x 100 x 920"
+        },
+        {
+          "name": "Minimum fork spacing",
+          "unit": "mm",
+          "value": "200"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "230 / 250"
+        },
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "km/h",
+          "value": "10 / 12"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "%",
+          "value": "10 / 15"
+        },
+        {
+          "name": "Mast tilt, forward/backward",
+          "unit": "deg",
+          "value": "6 / 12"
+        }
+      ]
+    },
+    {
+      "title": "Powertrain and chassis",
+      "rows": [
+        {
+          "name": "Tire type",
+          "unit": "",
+          "value": "Solid tires"
+        },
+        {
+          "name": "Front tire size",
+          "unit": "",
+          "value": "16 x 6-8"
+        },
+        {
+          "name": "Rear tire size",
+          "unit": "",
+          "value": "15 x 4 1/2-8"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "1,690"
+        },
+        {
+          "name": "Operator position",
+          "unit": "",
+          "value": "Seated"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "mm",
+          "value": "1,230"
+        },
+        {
+          "name": "Tread, front/rear",
+          "unit": "mm",
+          "value": "820 / 810"
+        },
+        {
+          "name": "Charger input voltage",
+          "unit": "V",
+          "value": "220"
+        },
+        {
+          "name": "Rated voltage",
+          "unit": "V",
+          "value": "48"
+        },
+        {
+          "name": "Ground clearance at center of wheelbase",
+          "unit": "mm",
+          "value": "100"
+        },
+        {
+          "name": "Lithium battery capacity",
+          "unit": "Ah",
+          "value": "150"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "kW",
+          "value": "4.0"
+        },
+        {
+          "name": "Drive motor rating",
+          "unit": "kW",
+          "value": "3.0"
+        },
+        {
+          "name": "Power source",
+          "unit": "",
+          "value": "Lithium battery"
+        },
+        {
+          "name": "Steering",
+          "unit": "",
+          "value": "Hydraulic power steering"
+        },
+        {
+          "name": "Counterweight",
+          "unit": "",
+          "value": "One-piece cast"
+        },
+        {
+          "name": "Charging time",
+          "unit": "h",
+          "value": "6 / 8"
+        },
+        {
+          "name": "Attachments",
+          "unit": "",
+          "value": "Available to project requirements"
+        }
+      ]
+    }
+  ],
+  "r4efl3t": [
+    {
+      "title": "Dimensions and performance",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "3,000"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "mm",
+          "value": "500"
+        },
+        {
+          "name": "Ground clearance under mast, lowered",
+          "unit": "mm",
+          "value": "120"
+        },
+        {
+          "name": "Turning radius",
+          "unit": "mm",
+          "value": "2,400"
+        },
+        {
+          "name": "Right-angle stacking aisle width",
+          "unit": "mm",
+          "value": "4,664 (1,000 x 1,000 pallet; 200 clearance)"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "2,090"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "2,600"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "1,240"
+        },
+        {
+          "name": "Overhead guard height",
+          "unit": "mm",
+          "value": "2,100"
+        },
+        {
+          "name": "Maximum fork spread",
+          "unit": "mm",
+          "value": "1,100"
+        },
+        {
+          "name": "Maximum height during operation",
+          "unit": "mm",
+          "value": "4,255"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "mm",
+          "value": "45 x 125 x 1,220"
+        },
+        {
+          "name": "Minimum fork spacing",
+          "unit": "mm",
+          "value": "245"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "230 / 250"
+        },
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "km/h",
+          "value": "10 / 12"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "%",
+          "value": "10 / 15"
+        },
+        {
+          "name": "Mast tilt, forward/backward",
+          "unit": "deg",
+          "value": "6 / 12"
+        }
+      ]
+    },
+    {
+      "title": "Powertrain and chassis",
+      "rows": [
+        {
+          "name": "Tire type",
+          "unit": "",
+          "value": "Pneumatic tires"
+        },
+        {
+          "name": "Front tire size",
+          "unit": "",
+          "value": "23 x 9-10"
+        },
+        {
+          "name": "Rear tire size",
+          "unit": "",
+          "value": "18 x 7-8"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "4,300"
+        },
+        {
+          "name": "Operator position",
+          "unit": "",
+          "value": "Seated"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "mm",
+          "value": "1,640"
+        },
+        {
+          "name": "Tread, front/rear",
+          "unit": "mm",
+          "value": "1,020 / 990"
+        },
+        {
+          "name": "Charger input voltage",
+          "unit": "V",
+          "value": "220"
+        },
+        {
+          "name": "Rated voltage",
+          "unit": "V",
+          "value": "72"
+        },
+        {
+          "name": "Ground clearance at center of wheelbase",
+          "unit": "mm",
+          "value": "140"
+        },
+        {
+          "name": "Lead-acid battery capacity",
+          "unit": "Ah",
+          "value": "500"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "kW",
+          "value": "15"
+        },
+        {
+          "name": "Drive motor rating",
+          "unit": "kW",
+          "value": "11"
+        },
+        {
+          "name": "Power source",
+          "unit": "",
+          "value": "Lead-acid traction battery"
+        },
+        {
+          "name": "Steering",
+          "unit": "",
+          "value": "Hydraulic power steering"
+        },
+        {
+          "name": "Counterweight",
+          "unit": "",
+          "value": "One-piece cast"
+        },
+        {
+          "name": "Charging time",
+          "unit": "h",
+          "value": "8 / 10"
+        },
+        {
+          "name": "Attachments",
+          "unit": "",
+          "value": "Available to project requirements"
+        }
+      ]
+    }
+  ],
+  "r4efl12t": [
+    {
+      "title": "Specifications",
+      "rows": [
+        {
+          "name": "Power source",
+          "unit": "",
+          "value": "Storage battery"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "12,000"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "15,800"
+        },
+        {
+          "name": "Tire type, front/rear",
+          "unit": "",
+          "value": "Solid tires"
+        },
+        {
+          "name": "Overall length, excluding forks",
+          "unit": "mm",
+          "value": "4,415"
+        },
+        {
+          "name": "Overall width at frame",
+          "unit": "mm",
+          "value": "2,250"
+        },
+        {
+          "name": "Overhead guard height",
+          "unit": "mm",
+          "value": "2,640"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "mm",
+          "value": "3,850"
+        },
+        {
+          "name": "Maximum gradeability, laden",
+          "unit": "%",
+          "value": "10"
+        }
+      ]
+    }
+  ],
+  "r4efl5t": [
+    {
+      "title": "Dimensions and performance",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "5,000"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "mm",
+          "value": "500"
+        },
+        {
+          "name": "Maximum lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Free lift height",
+          "unit": "mm",
+          "value": "155"
+        },
+        {
+          "name": "Fork dimensions (length x width x thickness)",
+          "unit": "mm",
+          "value": "1,070 x 150 x 50"
+        },
+        {
+          "name": "Mast tilt, forward/backward",
+          "unit": "deg",
+          "value": "6 / 10"
+        },
+        {
+          "name": "Overall length to fork face",
+          "unit": "mm",
+          "value": "3,005"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "1,479"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "2,245"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "mm",
+          "value": "4,066"
+        },
+        {
+          "name": "Overhead guard height",
+          "unit": "mm",
+          "value": "2,353"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "mm",
+          "value": "2,730"
+        },
+        {
+          "name": "Front overhang",
+          "unit": "mm",
+          "value": "540"
+        },
+        {
+          "name": "Front wheel track",
+          "unit": "mm",
+          "value": "1,228"
+        },
+        {
+          "name": "Rear wheel track",
+          "unit": "mm",
+          "value": "1,130"
+        },
+        {
+          "name": "Minimum ground clearance, frame/mast",
+          "unit": "mm",
+          "value": "150 / 175"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "mm",
+          "value": "2,000"
+        },
+        {
+          "name": "Fork spread",
+          "unit": "mm",
+          "value": "305 / 1,335"
+        },
+        {
+          "name": "Right-angle stacking aisle, 1,000 x 1,200 pallet",
+          "unit": "mm",
+          "value": "4,540"
+        },
+        {
+          "name": "Right-angle stacking aisle, 800 x 1,200 pallet",
+          "unit": "mm",
+          "value": "4,670"
+        },
+        {
+          "name": "Travel speed, unladen/laden",
+          "unit": "km/h",
+          "value": "14.5 / 14"
+        },
+        {
+          "name": "Lift speed, unladen/laden",
+          "unit": "mm/s",
+          "value": "400 / 250"
+        },
+        {
+          "name": "Maximum gradeability, laden",
+          "unit": "%",
+          "value": "15"
+        },
+        {
+          "name": "Descent rate",
+          "unit": "mm/s",
+          "value": "Laden <=600; unladen >=300"
+        }
+      ]
+    },
+    {
+      "title": "Powertrain and chassis",
+      "rows": [
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "7,320"
+        },
+        {
+          "name": "Front solid tire",
+          "unit": "",
+          "value": "250-15"
+        },
+        {
+          "name": "Rear solid tire",
+          "unit": "",
+          "value": "21 x 8-9"
+        },
+        {
+          "name": "Drive motor rating",
+          "unit": "kW",
+          "value": "18"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "kW",
+          "value": "25"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "Fanji / Inmotion"
+        },
+        {
+          "name": "Battery voltage / capacity",
+          "unit": "V/Ah",
+          "value": "80 / 700"
+        },
+        {
+          "name": "Working pressure",
+          "unit": "MPa",
+          "value": "20"
+        }
+      ]
+    }
+  ],
+  "mpt5tn": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "5,000"
+        },
+        {
+          "name": "Minimum fork height",
+          "unit": "mm",
+          "value": "85"
+        },
+        {
+          "name": "Maximum fork height",
+          "unit": "mm",
+          "value": "185"
+        },
+        {
+          "name": "Maximum lift travel",
+          "unit": "mm",
+          "value": "100"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "mm",
+          "value": "540 / 685"
+        },
+        {
+          "name": "Inside fork spacing",
+          "unit": "mm",
+          "value": "180 / 325"
+        },
+        {
+          "name": "Fork length",
+          "unit": "mm",
+          "value": "1,150 / 1,220"
+        },
+        {
+          "name": "Single fork width",
+          "unit": "mm",
+          "value": "180"
+        },
+        {
+          "name": "Fork thickness",
+          "unit": "mm",
+          "value": "60"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,670"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,230"
+        },
+        {
+          "name": "Hydraulic piston rod diameter",
+          "unit": "mm",
+          "value": "Ø45"
+        },
+        {
+          "name": "Tandem load wheel size",
+          "unit": "mm",
+          "value": "Ø80 x 70"
+        },
+        {
+          "name": "Steering wheel size",
+          "unit": "mm",
+          "value": "Ø180 x 50"
+        },
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "PU / nylon / iron"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "126"
+        },
+        {
+          "name": "Gross weight, 4 units per pallet",
+          "unit": "kg",
+          "value": "517"
+        },
+        {
+          "name": "Packing size",
+          "unit": "mm",
+          "value": "5T 685 x 1,220: 2,000 x 700 x 680"
+        }
+      ]
+    }
+  ],
+  "mpjsc1500": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,500"
+        },
+        {
+          "name": "Minimum fork height",
+          "unit": "mm",
+          "value": "85"
+        },
+        {
+          "name": "Maximum fork height",
+          "unit": "mm",
+          "value": "800"
+        },
+        {
+          "name": "Maximum lift travel",
+          "unit": "mm",
+          "value": ">=715"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "mm",
+          "value": "540 / 680"
+        },
+        {
+          "name": "Inside fork spacing",
+          "unit": "mm",
+          "value": "220 / 360"
+        },
+        {
+          "name": "Fork length",
+          "unit": "mm",
+          "value": "1,150"
+        },
+        {
+          "name": "Single fork width",
+          "unit": "mm",
+          "value": "160"
+        },
+        {
+          "name": "Fork thickness",
+          "unit": "mm",
+          "value": "50"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,540"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,260"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "mm",
+          "value": "Ø80 x 70"
+        },
+        {
+          "name": "Steering wheel size",
+          "unit": "mm",
+          "value": "Ø180 x 50"
+        },
+        {
+          "name": "Minimum turning diameter",
+          "unit": "mm",
+          "value": "1,260"
+        },
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "PU / nylon"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "122 / 128"
+        },
+        {
+          "name": "Gross weight, 4 units per pallet",
+          "unit": "kg",
+          "value": "500 / 524"
+        },
+        {
+          "name": "Packing size",
+          "unit": "mm",
+          "value": "ACHLT-D1.5T 680 x 1,150: 2,200 x 700 x 1,100"
+        }
+      ]
+    }
+  ],
+  "mpjtsc1500": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,500"
+        },
+        {
+          "name": "Minimum fork height",
+          "unit": "mm",
+          "value": "85"
+        },
+        {
+          "name": "Maximum fork height",
+          "unit": "mm",
+          "value": "800"
+        },
+        {
+          "name": "Maximum lift travel",
+          "unit": "mm",
+          "value": ">=715"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "mm",
+          "value": "540 / 680"
+        },
+        {
+          "name": "Inside fork spacing",
+          "unit": "mm",
+          "value": "220 / 360"
+        },
+        {
+          "name": "Fork length",
+          "unit": "mm",
+          "value": "1,150"
+        },
+        {
+          "name": "Single fork width",
+          "unit": "mm",
+          "value": "160"
+        },
+        {
+          "name": "Fork thickness",
+          "unit": "mm",
+          "value": "50"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,540"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,260"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "mm",
+          "value": "Ø80 x 70"
+        },
+        {
+          "name": "Steering wheel size",
+          "unit": "mm",
+          "value": "Ø150 x 50"
+        },
+        {
+          "name": "Minimum turning diameter",
+          "unit": "mm",
+          "value": "1,260"
+        },
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "PU / nylon"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "108 / 114"
+        },
+        {
+          "name": "Gross weight, 4 units per pallet",
+          "unit": "kg",
+          "value": "448 / 472"
+        },
+        {
+          "name": "Packing size",
+          "unit": "mm",
+          "value": "ACHLT-S1.5T 680 x 1,150: 1,920 x 700 x 800"
+        }
+      ]
+    }
+  ],
+  "sc1016": [
+    {
+      "title": "Specifications",
+      "rows": [
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "200"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "1,600; customizable"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "860"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,500"
+        },
+        {
+          "name": "Motor power",
+          "unit": "W",
+          "value": "700"
+        },
+        {
+          "name": "Fork length",
+          "unit": "mm",
+          "value": "1,150; customizable"
+        },
+        {
+          "name": "Fork width",
+          "unit": "mm",
+          "value": "550"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,000"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,800"
+        },
+        {
+          "name": "Battery",
+          "unit": "",
+          "value": "48 V / 10 Ah LiFePO4"
+        }
+      ]
+    }
+  ],
+  "qes12e": [
+    {
+      "title": "Specifications",
+      "rows": [
+        {
+          "name": "Drive type",
+          "unit": "",
+          "value": "Horizontal drive unit"
+        },
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,200"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "mm",
+          "value": "600"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "mm",
+          "value": "1,210"
+        },
+        {
+          "name": "Service weight without battery",
+          "unit": "kg",
+          "value": "397"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "437"
+        },
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "PU"
+        },
+        {
+          "name": "Front wheel size",
+          "unit": "mm",
+          "value": "Ø80"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "mm",
+          "value": "Ø210"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "mm",
+          "value": "152"
+        },
+        {
+          "name": "Number of wheels",
+          "unit": "pcs",
+          "value": "4"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "2,030"
+        },
+        {
+          "name": "Maximum vehicle height",
+          "unit": "mm",
+          "value": "3,500"
+        },
+        {
+          "name": "Fork lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,750"
+        },
+        {
+          "name": "Single fork width",
+          "unit": "mm",
+          "value": "160"
+        },
+        {
+          "name": "Body width",
+          "unit": "mm",
+          "value": "820"
+        },
+        {
+          "name": "Fork length",
+          "unit": "mm",
+          "value": "1,125"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "mm",
+          "value": "680"
+        },
+        {
+          "name": "Minimum fork height",
+          "unit": "mm",
+          "value": "90"
+        },
+        {
+          "name": "Ground clearance",
+          "unit": "mm",
+          "value": "35"
+        },
+        {
+          "name": "Turning radius, excluding handle",
+          "unit": "mm",
+          "value": "1,385"
+        },
+        {
+          "name": "Body height",
+          "unit": "mm",
+          "value": "810"
+        }
+      ]
+    }
+  ],
+  "qes15e": [
+    {
+      "title": "Specifications",
+      "rows": [
+        {
+          "name": "Drive type",
+          "unit": "",
+          "value": "Horizontal drive unit"
+        },
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,500"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "mm",
+          "value": "600"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "mm",
+          "value": "1,235"
+        },
+        {
+          "name": "Service weight without battery",
+          "unit": "kg",
+          "value": "450"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "490"
+        },
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "PU"
+        },
+        {
+          "name": "Front wheel size",
+          "unit": "mm",
+          "value": "Ø80"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "mm",
+          "value": "Ø210"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "mm",
+          "value": "152"
+        },
+        {
+          "name": "Number of wheels",
+          "unit": "pcs",
+          "value": "4"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "2,030"
+        },
+        {
+          "name": "Maximum vehicle height",
+          "unit": "mm",
+          "value": "3,500"
+        },
+        {
+          "name": "Fork lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,750"
+        },
+        {
+          "name": "Single fork width",
+          "unit": "mm",
+          "value": "160"
+        },
+        {
+          "name": "Body width",
+          "unit": "mm",
+          "value": "800"
+        },
+        {
+          "name": "Fork length",
+          "unit": "mm",
+          "value": "1,125"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "mm",
+          "value": "680"
+        },
+        {
+          "name": "Minimum fork height",
+          "unit": "mm",
+          "value": "90"
+        },
+        {
+          "name": "Ground clearance",
+          "unit": "mm",
+          "value": "35"
+        },
+        {
+          "name": "Turning radius, excluding handle",
+          "unit": "mm",
+          "value": "1,440"
+        },
+        {
+          "name": "Body height",
+          "unit": "mm",
+          "value": "890"
+        }
+      ]
+    }
+  ],
+  "qes15lie": [
+    {
+      "title": "Specifications",
+      "rows": [
+        {
+          "name": "Drive type",
+          "unit": "",
+          "value": "Horizontal drive unit"
+        },
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,500"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "mm",
+          "value": "600"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "mm",
+          "value": "1,235"
+        },
+        {
+          "name": "Service weight without battery",
+          "unit": "kg",
+          "value": "450"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "470"
+        },
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "PU"
+        },
+        {
+          "name": "Front wheel size",
+          "unit": "mm",
+          "value": "Ø80"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "mm",
+          "value": "Ø210"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "mm",
+          "value": "152"
+        },
+        {
+          "name": "Number of wheels",
+          "unit": "pcs",
+          "value": "4"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "2,030"
+        },
+        {
+          "name": "Maximum vehicle height",
+          "unit": "mm",
+          "value": "3,500"
+        },
+        {
+          "name": "Fork lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,750"
+        },
+        {
+          "name": "Single fork width",
+          "unit": "mm",
+          "value": "160"
+        },
+        {
+          "name": "Body width",
+          "unit": "mm",
+          "value": "800"
+        },
+        {
+          "name": "Fork length",
+          "unit": "mm",
+          "value": "1,125"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "mm",
+          "value": "680"
+        },
+        {
+          "name": "Minimum fork height",
+          "unit": "mm",
+          "value": "90"
+        },
+        {
+          "name": "Ground clearance",
+          "unit": "mm",
+          "value": "35"
+        },
+        {
+          "name": "Turning radius, excluding handle",
+          "unit": "mm",
+          "value": "1,440"
+        },
+        {
+          "name": "Body height",
+          "unit": "mm",
+          "value": "890"
+        }
+      ]
+    }
+  ],
+  "qed1530": [
+    {
+      "title": "Specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,500"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "3,000; customizable"
+        },
+        {
+          "name": "Power",
+          "unit": "W",
+          "value": "2,200"
+        },
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Electric"
+        },
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "km/h",
+          "value": "3.5 / 4.0"
+        },
+        {
+          "name": "Lift motor power",
+          "unit": "W",
+          "value": "750"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "81 / 130"
+        },
+        {
+          "name": "Service brake",
+          "unit": "",
+          "value": "Electromagnetic"
+        },
+        {
+          "name": "Battery",
+          "unit": "",
+          "value": "24 V / 80 Ah; optional"
+        }
+      ]
+    }
+  ],
+  "wep20j": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "2000"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "205"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "600"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "944"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1261"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80 x 60"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "85"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "1650"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "685"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "50/150/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "35"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2224"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2137"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1462"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4/4.5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "20/30"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "40/30"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/16"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.75"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "0.8"
+        },
+        {
+          "name": "Battery to DIN standard",
+          "unit": "",
+          "value": "no"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/65"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "24x2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "rep3000e": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "3000"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "205"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "670"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "600"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "1028"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1416"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø230 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80 x 98"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 2/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "85"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "1825"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "611"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "775"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/170/1220"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "31"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2400"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2307"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1670"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/6"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "25"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "30"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/16"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "1.6/2.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "1"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/210"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "180"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Electronic steering"
+        }
+      ]
+    }
+  ],
+  "atep3000y": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "3000"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "205"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "268"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "600"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "981"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1334"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø300 x 95 rubber"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø84 x 80 nylon"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "85"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "1786"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "567"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "699"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1220"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "30"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2294"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2204"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1548"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4/4.5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "20/30"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "40/30"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/16"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.8"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "0.8"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "Single mast: 48/20; 2-stage standard mast: 48/30"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "wes1500a": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1500; 2-stage standard mast: 1500/1400/1100/800"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 470; 2-stage standard mast: 525/545/560/616"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "737"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1260"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "Daneng D2P"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210*75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80*60"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115*55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 1/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2083; 2-stage standard mast: 1583/1833/1983/2333"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2083; 2-stage standard mast: 2568/3068/3483/4068"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "88"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "1857"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "707"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "850"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "28"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2383"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2313"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1502"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4.2/4.5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "4/7"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.75"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/85"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "24 x 2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "wes1600a": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1600"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 1600/1500/1200/900"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 500; 2-stage standard mast: 550/582/595/652"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "737"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1260"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "Daneng D2P"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210*75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80*60"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115*55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 1/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2083; 2-stage standard mast: 1583/1833/1983/2333"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2083; 2-stage standard mast: 2568/3068/3483/4068"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "88"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "1857"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "707"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "850"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "28"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2383"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2313"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1502"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4.2/4.5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "4/7"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.75"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/85"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "24 x 2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "wes1500jp": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "Daneng D2P"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210*75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80*70"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115*55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 1/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2083; 2-stage standard mast: 1583/1833/1983/2333"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4.2/4.5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "4/7"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.75"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/85"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "24 x 2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "wes2000a": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "2000"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 2000; 2-stage standard mast: 2000/1900/1500/1100"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 525; 2-stage standard mast: 595/630/650/690"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "735"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1251"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "Tianli WTBL4890MB-C4"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80 x 60"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 1/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 1580/1830/1980/2330"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 2565/3065/3480/4065"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "86"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "1854"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "704"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "850"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "30"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2377"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2307"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1494"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4.2/4.5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "75/100"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "85/95"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "4/7"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.9"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "48/65"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "15 x 4"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "res1500d": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1500; 2-stage standard mast: 1500/1400/1100/800"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 630; 2-stage standard mast: 690/720/745/770"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "764"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1457"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø250 x 80"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80 x 60"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 2/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 1580/1830/1980/2330"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 2568/3068/3483/4068"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "88/86"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2125"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "975"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "850"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "30"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2608"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2536"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1744"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/5.8"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "1.5"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24 / 120, maintenance-free"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "35 x 2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "res2000d": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "2000"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 2000; 2-stage standard mast: 2000/1900/1500/1100"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 705; 2-stage standard mast: 750/775/800/825"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "764"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1457"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø250 x 80"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80 x 60"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 2/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 1580/1830/1980/2330"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 2568/3068/3483/4068"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "88/86"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2125"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "975"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "850"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "30"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2608"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2536"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1744"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/5.8"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "75/125"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "95/100"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "1.5"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24 / 120, maintenance-free"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "35 x 2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "res1500e": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1500; 2-stage standard mast: 1500/1400/1100/800"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "875/905/935/1005/1055"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "764"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1417"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø230 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80 x 60"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 2/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 1580/1830/1980/2330"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 2568/3068/3483/4068"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "88/86"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2125"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "975"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "850"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "30"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2608"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2536"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1744"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/6"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/210"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "180"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Electronic steering"
+        }
+      ]
+    }
+  ],
+  "res2000e": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "2000"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 2000; 2-stage standard mast: 2000/1900/1500/1100"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "875/905/935/1005/1055"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "764"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1417"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø230 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80 x 60"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 2/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 1580/1830/1980/2330"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2080; 2-stage standard mast: 2568/3068/3483/4068"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "88/86"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2125"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "975"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "850"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "30"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2608"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2536"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1744"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/6"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "75/125"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "95/100"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/210"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "180"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Electronic steering"
+        }
+      ]
+    }
+  ],
+  "res1500g": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1500; 2-stage standard mast: 1500/1400/1100"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 530; 2-stage standard mast: 560/575/600"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "730"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1238"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "Daneng D2P"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø80 x 60"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 2/4"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2083; 2-stage standard mast: 1583/1833/2083"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2083; 2-stage standard mast: 2568/3068/3568"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "88"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "1893"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "743"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "850"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "55/165/1150"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "550/685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "28"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2368"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2299"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1482"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "3.5/4.5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "4/7"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.75"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery to DIN standard",
+          "unit": "",
+          "value": "no"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/92"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "32.5 x 2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "wces500j": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 500; 2-stage standard mast: 500/500/400/350"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 1060; 2-stage standard mast: 1210/1230/1250/1300"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "119"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "790"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "Daneng D2P"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 85"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 0/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2095; 2-stage standard mast: 1595/1845/1995/2345"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2095; 2-stage standard mast: 2695/3197/3700/4200"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2014"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1054"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "950"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "30/100/920"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "210-685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2630"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2598"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1010"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4.5/5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "110/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "%",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.75"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/92"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "27.5 x 2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "wces1000j": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1000"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1000; 2-stage standard mast: 1000/1000/850/700"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 1515; 2-stage standard mast: 1545/1565/1585/1635"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "119"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "990"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "Daneng D2P"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 85"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 0/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2095; 2-stage standard mast: 1595/1845/1995/2345"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2095; 2-stage standard mast: 2695/3197/3700/4200"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2364"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1254"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "950"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "40/100/1070"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "210-685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2827"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2796"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1264"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4.5/5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "110/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "%",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "0.75"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/92"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "27.5 x 2"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "wces1300j": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1300"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1300; 2-stage standard mast: 1300/1300/1150/1000"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 1550; 2-stage standard mast: 1590/1620/1650/1690"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "118"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1290"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "KTZ48C15Z0UC"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø250 x 80"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 85"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 0/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2095; 2-stage standard mast: 1595/1845/1995/2345"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2095; 2-stage standard mast: 2695/3197/3700/4200"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2663"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1553"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "950"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "40/100/1070"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "210-685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "3112"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "3079"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1491"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4.5/5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "110/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "%",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "1.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "48/92"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "27.5 x 4"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "wces1500j": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Pedestrian"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1500; 2-stage standard mast: 1500/1500/1350/1200"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 1580; 2-stage standard mast: 1600/1635/1685/1725"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "118"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1490"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "KTZ48C15Z0UC"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø250 x 80"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 85"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 0/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2095; 2-stage standard mast: 1595/1845/1995/2345"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2095; 2-stage standard mast: 2695/3197/3700/4200"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2863"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1753"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "950"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "40/100/1070"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "210-685"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "3302"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "3274"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1688"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "4.5/5"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "%",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "1.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "48/92"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "27.5 x 4"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "rces1000b": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1000"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1000; 2-stage standard mast: 1000/900/750/600"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "Single mast: 1400; 2-stage standard mast: 1440/1470/1500/1530"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "125"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1025"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø250 x 80"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø160 x 72"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø124 x 60"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 2/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2110; 2-stage standard mast: 1610/1860/2110/2360"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2415; 2-stage standard mast: 2815/3312/3815/4315"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2503"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1423"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "960"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "35/100/1070"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "220-680"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2934"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2902"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1318"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5/5.8"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "1.5"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/120 (210)"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "35 x 2 (180)"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Mechanical steering"
+        }
+      ]
+    }
+  ],
+  "rces1500e": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 1500; 2-stage standard mast: 1500/1400/1100/800"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "1500/1515/1540/1565/1590"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "125"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1581"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø230 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 85"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 4/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2110; 2-stage standard mast: 1610/1860/2110/2360"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2415; 2-stage standard mast: 2815/3315/3815/4315"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "3055"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1975"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "960"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "40/100/1070"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "220-680"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "3481"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "3448"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1867"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/6"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/210"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "180"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Electronic steering"
+        }
+      ]
+    }
+  ],
+  "rces2000e": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "2000"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 2000; 2-stage standard mast: 2000/1900/1500/1100"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "1500/1515/1540/1565/1590"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "125"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1581"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø230 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 85"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 4/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2110; 2-stage standard mast: 1610/1860/2110/2360"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2415; 2-stage standard mast: 2815/3315/3815/4315"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "3055"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1975"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "960"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "40/100/1070"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "220-680"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "3481"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "3448"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1867"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/6"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "75/125"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "95/100"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/210"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "",
+          "value": "180"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Electronic steering"
+        }
+      ]
+    }
+  ],
+  "hes1500a": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "1500"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "3000"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "1100"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "1950/2020/2050/2080/2126"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "502"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1538"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø230 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 85"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 4/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2064; 2-stage standard mast: 1564/1814/2064/2314"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2064; 2-stage standard mast: 2524/3064/3394/4064"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2431"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1351"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "1035"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "40/100/1070"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "220-680"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2925"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2771"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1867"
+        },
+        {
+          "name": "Reach distance",
+          "unit": "",
+          "value": "650"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/6"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/155"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "100/110"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/240"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Electronic steering"
+        }
+      ]
+    }
+  ],
+  "hes2000a": [
+    {
+      "title": "Characteristics",
+      "rows": [
+        {
+          "name": "Operation mode",
+          "unit": "",
+          "value": "Stand-on"
+        },
+        {
+          "name": "Rated load capacity",
+          "unit": "",
+          "value": "2000"
+        },
+        {
+          "name": "Mast type",
+          "unit": "",
+          "value": "Single mast: Single mast; 2-stage standard mast: 2-stage standard mast"
+        },
+        {
+          "name": "Lift height",
+          "unit": "",
+          "value": "Single mast: 1600; 2-stage standard mast: 2000/2500/3000/3500"
+        },
+        {
+          "name": "Capacity at maximum lift height",
+          "unit": "",
+          "value": "Single mast: 2000; 2-stage standard mast: 2000/1900/1500/1100"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "",
+          "value": "1950/2020/2050/2080/2126"
+        },
+        {
+          "name": "Load center distance",
+          "unit": "",
+          "value": "500"
+        },
+        {
+          "name": "Axle center to fork face",
+          "unit": "",
+          "value": "502"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "1538"
+        },
+        {
+          "name": "Controller",
+          "unit": "",
+          "value": "QEXPAND LVM24S20"
+        }
+      ]
+    },
+    {
+      "title": "Wheels",
+      "rows": [
+        {
+          "name": "Wheel material",
+          "unit": "",
+          "value": "Polyurethane (PU)"
+        },
+        {
+          "name": "Drive wheel size",
+          "unit": "Ø x w",
+          "value": "Ø230 x 75"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "Ø x w",
+          "value": "Ø210 x 85"
+        },
+        {
+          "name": "Stabilizer wheel size",
+          "unit": "Ø x w",
+          "value": "Ø115 x 55"
+        },
+        {
+          "name": "Wheels, front/rear (x = driven)",
+          "unit": "",
+          "value": "1x, 4/2"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "rows": [
+        {
+          "name": "Mast height, lowered",
+          "unit": "",
+          "value": "Single mast: 2064; 2-stage standard mast: 1564/1814/2064/2314"
+        },
+        {
+          "name": "Mast height, extended",
+          "unit": "",
+          "value": "Single mast: 2064; 2-stage standard mast: 2524/3064/3394/4064"
+        },
+        {
+          "name": "Fork height, lowered",
+          "unit": "",
+          "value": "<=65"
+        },
+        {
+          "name": "Overall length",
+          "unit": "",
+          "value": "2431"
+        },
+        {
+          "name": "Length to fork face",
+          "unit": "",
+          "value": "1351"
+        },
+        {
+          "name": "Overall width",
+          "unit": "",
+          "value": "1035"
+        },
+        {
+          "name": "Fork dimensions (thickness x width x length)",
+          "unit": "",
+          "value": "40/100/1070"
+        },
+        {
+          "name": "Overall fork width",
+          "unit": "",
+          "value": "220-680"
+        },
+        {
+          "name": "Wheelbase",
+          "unit": "",
+          "value": "60"
+        },
+        {
+          "name": "Aisle width with 1000 x 1200 mm pallet",
+          "unit": "",
+          "value": "2925"
+        },
+        {
+          "name": "Aisle width with 800 x 1200 mm pallet",
+          "unit": "",
+          "value": "2771"
+        },
+        {
+          "name": "Minimum turning radius",
+          "unit": "",
+          "value": "1867"
+        },
+        {
+          "name": "Reach distance",
+          "unit": "",
+          "value": "550"
+        }
+      ]
+    },
+    {
+      "title": "Performance",
+      "rows": [
+        {
+          "name": "Travel speed, laden/unladen",
+          "unit": "/h",
+          "value": "5.5/6"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "/s",
+          "value": "75/125"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "/s",
+          "value": "95/100"
+        },
+        {
+          "name": "Gradeability, laden/unladen",
+          "unit": "/s",
+          "value": "5/8"
+        },
+        {
+          "name": "Service brake",
+          "unit": "%",
+          "value": "Electromagnetic brake"
+        }
+      ]
+    },
+    {
+      "title": "Drive and battery",
+      "rows": [
+        {
+          "name": "Drive motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "",
+          "value": "2.2"
+        },
+        {
+          "name": "Battery voltage / rated capacity",
+          "unit": "/Ah",
+          "value": "24/240"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "rows": [
+        {
+          "name": "Noise level at operator's ear",
+          "unit": "",
+          "value": "69"
+        },
+        {
+          "name": "Steering type",
+          "unit": "",
+          "value": "Electronic steering"
+        }
+      ]
+    }
+  ]
+}
