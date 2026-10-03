@@ -2,11 +2,10 @@ from __future__ import annotations
 
 import html
 import json
-import re
 import shutil
 from pathlib import Path
 
-from site_data import CATEGORIES, COMPANY, GUIDES, PRODUCTS, SOURCE_ROOT
+from site_data import CATEGORIES, COMPANY, PRODUCTS, SOURCE_ROOT
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +18,11 @@ FULL_SPECS = json.loads((ROOT / "product_specs.json").read_text(encoding="utf-8"
 
 def esc(value):
     return html.escape(str(value), quote=True)
+
+
+def known(value):
+    text = str(value or "").strip()
+    return "" if text.lower() in {"configuration based", "configurable"} else text
 
 
 def route_url(route):
@@ -39,38 +43,99 @@ def button(label, href, style="primary", icon_name="arrow-right"):
     return f'<a class="button button-{style}" href="{href}"><span>{esc(label)}</span>{icon(icon_name)}</a>'
 
 
-def capacity_number(value):
-    match = re.search(r"([\d,]+)", value)
-    return int(match.group(1).replace(",", "")) if match else 0
+def image_class(item):
+    classes = ["product-image"]
+    if item["slug"] in {"mpt5tn", "mpjsc1500", "mpjtsc1500"}:
+        classes.append("source-brochure")
+    if item["slug"] in {"mpjsc1500", "mpjtsc1500"}:
+        classes.append("source-brochure-highlift")
+    if item["slug"] == "mpjtsc1500":
+        classes.append("source-brochure-two-stage")
+    return " ".join(classes)
 
 
-def header():
+def products_for(category):
+    return [item for item in PRODUCTS if item["category"] == category]
+
+
+def category_menu():
+    links = "".join(
+        f'<li><a href="/products/{slug}/">{esc(data["name"])}<span>{len(products_for(slug))}</span></a></li>'
+        for slug, data in CATEGORIES.items()
+    )
+    return f'<div class="side-box"><h2>PRODUCT CATEGORY</h2><ul class="category-menu">{links}</ul></div>'
+
+
+def header(active=""):
+    product_links = "".join(
+        f'<a href="/products/{slug}/">{esc(data["name"])}</a>' for slug, data in CATEGORIES.items()
+    )
     return f"""
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="top-strip"><div class="shell"><span>{esc(COMPANY['location'])}</span><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></div></div>
     <header class="site-header"><div class="shell nav-row">
-      <a class="brand" href="/" aria-label="LEXYGO home"><span class="brand-mark">L</span><span><strong>LEXYGO</strong><small>Material Handling Equipment</small></span></a>
-      <button class="icon-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button title="Menu">{icon('menu')}</button>
-      <nav class="main-nav" aria-label="Main navigation" data-menu><a href="/products/">Products</a><a href="/solutions/">Applications</a><a href="/quality/">Manufacturing</a><a href="/oem-odm/">OEM</a><a href="/about/">Company</a><a class="nav-contact" href="/contact/">Inquiry {icon('arrow-up-right', 16)}</a></nav>
+      <a class="brand" href="/" aria-label="LEXYGO home"><strong>LEXYGO</strong><small>MATERIAL HANDLING EQUIPMENT</small></a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>{icon('menu', 22)}</button>
+      <nav class="main-nav" aria-label="Main navigation" data-menu>
+        <a class="{'active' if active == 'home' else ''}" href="/">Home</a>
+        <div class="nav-group"><a class="{'active' if active == 'company' else ''}" href="/company/">Company {icon('chevron-down', 14)}</a><div class="dropdown"><a href="/company/">Company Profile</a><a href="/company/why-choose-us/">Why Choose Us</a><a href="/company/quality-management/">Quality Management</a></div></div>
+        <div class="nav-group"><a class="{'active' if active == 'products' else ''}" href="/products/">Products {icon('chevron-down', 14)}</a><div class="dropdown wide-dropdown">{product_links}</div></div>
+        <a class="{'active' if active == 'services' else ''}" href="/services/">Services</a>
+        <div class="nav-group"><a class="{'active' if active == 'resources' else ''}" href="/resources/">Resources {icon('chevron-down', 14)}</a><div class="dropdown"><a href="/resources/download/">Download</a><a href="/resources/faq/">FAQ</a><a href="/resources/cases/">Cases</a></div></div>
+        <div class="nav-group"><a class="{'active' if active == 'blogs' else ''}" href="/blogs/">Blogs {icon('chevron-down', 14)}</a><div class="dropdown"><a href="/blogs/company-news/">Company News</a><a href="/blogs/industry-knowledge/">Industry Knowledge</a></div></div>
+        <a class="{'active' if active == 'contact' else ''}" href="/contact/">Contact Us</a>
+      </nav>
     </div></header>
     """
 
 
 def footer():
-    families = "".join(f'<li><a href="/products/{slug}/">{esc(data["name"])}</a></li>' for slug, data in CATEGORIES.items())
+    category_links = "".join(
+        f'<li><a href="/products/{slug}/">{esc(data["name"])}</a></li>' for slug, data in CATEGORIES.items()
+    )
     return f"""
-    <footer class="site-footer"><div class="shell footer-grid">
-      <div><a class="brand brand-footer" href="/"><span class="brand-mark">L</span><span><strong>LEXYGO</strong><small>Material Handling Equipment</small></span></a><p>Manufacturer-direct equipment for pallet movement, stacking, lifting, and industrial logistics.</p></div>
-      <div><h2>Products</h2><ul>{families}</ul></div>
-      <div><h2>Company</h2><ul><li><a href="/quality/">Manufacturing &amp; quality</a></li><li><a href="/oem-odm/">OEM support</a></li><li><a href="/about/">About us</a></li><li><a href="/contact/">Contact</a></li></ul></div>
-      <div><h2>Contact</h2><p>{esc(COMPANY['location'])}</p><p><a href="mailto:{COMPANY['email']}">{esc(COMPANY['email'])}</a></p></div>
-    </div><div class="shell footer-bottom"><span>&copy; 2026 {esc(COMPANY['legal_name'])}</span><span>Final specifications are confirmed in the quotation.</span></div></footer>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <section><h2>CONTACT US</h2><dl class="contact-list"><div><dt>Address</dt><dd>{esc(COMPANY['location'])}</dd></div><div><dt>Telephone</dt><dd>&nbsp;</dd></div><div><dt>WhatsApp</dt><dd>&nbsp;</dd></div><div><dt>Email</dt><dd><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></dd></div></dl></section>
+        <section><h2>QUICK LINKS</h2><ul><li><a href="/">Home</a></li><li><a href="/company/">Company Profile</a></li><li><a href="/services/">Services</a></li><li><a href="/resources/download/">Download</a></li><li><a href="/resources/faq/">FAQ</a></li><li><a href="/resources/cases/">Cases</a></li><li><a href="/blogs/">Blogs</a></li><li><a href="/contact/">Contact Us</a></li></ul></section>
+        <section><h2>PRODUCT CATEGORY</h2><ul>{category_links}</ul></section>
+        <section><h2>NEWSLETTER</h2><p>Receive product and company updates.</p><form class="newsletter" onsubmit="return false"><label><span class="sr-only">Email address</span><input type="email" placeholder="Email address"></label><button type="submit" aria-label="Subscribe">{icon('send', 18)}</button></form></section>
+      </div>
+      <div class="footer-bottom"><div class="shell"><span>&copy; 2026 {esc(COMPANY['legal_name'])}</span><span>{esc(COMPANY['brand'])}</span></div></div>
+    </footer>
     """
 
 
+def organization_schema():
+    return {
+        "@type": "Organization",
+        "name": COMPANY["legal_name"],
+        "brand": COMPANY["brand"],
+        "url": BASE_URL,
+        "email": COMPANY["email"],
+        "address": {"@type": "PostalAddress", "addressLocality": "Changxing", "addressRegion": "Zhejiang", "addressCountry": "CN"},
+    }
+
+
+def page(title, description, route, body, schema=None, active=""):
+    schemas = [organization_schema()]
+    if schema:
+        schemas.extend(schema if isinstance(schema, list) else [schema])
+    json_ld = json.dumps({"@context": "https://schema.org", "@graph": schemas}, ensure_ascii=False)
+    canonical = route_url(route)
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{esc(title)} | LEXYGO</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}">
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}/assets/og-cover.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{json_ld}</script></head>
+<body>{header(active)}<main id="main">{body}</main>{footer()}<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><script src="/assets/site.js"></script></body></html>"""
+
+
 def breadcrumbs(items):
-    visible, structured = [], []
+    visible = []
+    structured = []
     for index, (label, href) in enumerate(items, start=1):
-        visible.append(f'<a href="{href}">{esc(label)}</a><span>/</span>' if href else f'<span aria-current="page">{esc(label)}</span>')
+        visible.append(f'<a href="{href}">{esc(label)}</a><span>{icon("chevron-right", 13)}</span>' if href else f'<span aria-current="page">{esc(label)}</span>')
         entry = {"@type": "ListItem", "position": index, "name": label}
         if href:
             entry["item"] = route_url(href)
@@ -78,160 +143,157 @@ def breadcrumbs(items):
     return '<nav class="breadcrumbs shell" aria-label="Breadcrumb">' + "".join(visible) + "</nav>", {"@type": "BreadcrumbList", "itemListElement": structured}
 
 
-def page(title, description, route, body, schema=None, body_class=""):
-    graph = [
-        {"@type": "Organization", "@id": BASE_URL + "/#organization", "name": COMPANY["legal_name"], "alternateName": COMPANY["brand"], "url": BASE_URL + "/", "email": COMPANY["email"], "address": {"@type": "PostalAddress", "addressLocality": "Changxing", "addressRegion": "Zhejiang", "addressCountry": "CN"}},
-        {"@type": "WebSite", "@id": BASE_URL + "/#website", "url": BASE_URL + "/", "name": "LEXYGO Material Handling Equipment", "publisher": {"@id": BASE_URL + "/#organization"}},
-    ]
-    if schema:
-        graph.extend(schema if isinstance(schema, list) else [schema])
-    ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
-    canonical = route_url(route)
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} | LEXYGO</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)} | LEXYGO"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}/assets/og-cover.png"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{ld}</script></head><body class="{esc(body_class)}">{header()}<main id="main">{body}</main>{footer()}<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script><script src="/assets/site.js" defer></script></body></html>"""
+def inner_banner(title, crumbs):
+    breadcrumb_html, breadcrumb_schema = breadcrumbs(crumbs)
+    return f'<section class="inner-banner"><div class="shell"><h1>{esc(title)}</h1></div></section>{breadcrumb_html}', breadcrumb_schema
 
 
-def image_class(item):
-    if item["slug"] == "mpjtsc1500":
-        return " source-brochure source-brochure-highlift source-brochure-two-stage"
-    if item["slug"] == "mpjsc1500":
-        return " source-brochure source-brochure-highlift"
-    return " source-brochure" if item["slug"] == "mpt5tn" else ""
+def inquiry_form(compact=False):
+    fields = """<label><span>Name</span><input name="name" required></label><label><span>Email</span><input type="email" name="email" required></label><label><span>Company</span><input name="company"></label><label><span>Country / Region</span><input name="country"></label><label class="full"><span>Product / Model</span><input name="model" data-model-field></label><label class="full"><span>Message</span><textarea name="details" rows="5" required></textarea></label>"""
+    klass = "inquiry-form compact-form" if compact else "inquiry-form"
+    return f'<form class="{klass}" data-mailto-form data-email="{esc(COMPANY["email"])}"><div class="form-grid">{fields}</div><button class="button button-primary" type="submit">Send Inquiry {icon("send", 17)}</button></form>'
 
 
-def product_row(item):
-    category = CATEGORIES[item["category"]]["name"]
-    searchable = " ".join([item["model"], item["name"], item["best_for"], category]).lower()
+def section_heading(kicker, title, copy=""):
+    copy_html = f'<p>{esc(copy)}</p>' if copy else ""
+    return f'<header class="section-heading"><span>{esc(kicker)}</span><h2>{esc(title)}</h2>{copy_html}</header>'
+
+
+def product_card(item):
+    capacity = known(item["capacity"])
+    lift = known(item["lift"])
+    operation = known(item["operation"])
+    specs = "".join(
+        f'<li><span>{label}</span><strong>{esc(value) if value else "&nbsp;"}</strong></li>'
+        for label, value in [("Capacity", capacity), ("Lift height", lift), ("Operation", operation)]
+    )
     return f"""
-    <article class="model-row" data-product-card data-category="{item['category']}" data-operation="{esc(item['operation'].lower())}" data-capacity="{capacity_number(item['capacity'])}" data-search="{esc(searchable)}">
-      <a class="model-photo{image_class(item)}" href="/products/{item['slug']}/"><img src="/assets/products/{item['image']}" alt="{esc(item['model'] + ' ' + item['name'])}" loading="lazy"></a>
-      <div class="model-copy"><p class="overline">{esc(category)}</p><h3><a href="/products/{item['slug']}/"><strong>{esc(item['model'])}</strong> {esc(item['name'])}</a></h3><p>{esc(item['best_for'])}.</p></div>
-      <dl class="model-specs"><div><dt>Capacity</dt><dd>{esc(item['capacity'])}</dd></div><div><dt>Lift</dt><dd>{esc(item['lift'])}</dd></div><div><dt>Operation</dt><dd>{esc(item['operation'])}</dd></div></dl>
-      <a class="row-action" href="/products/{item['slug']}/" aria-label="View {esc(item['model'])}">{icon('arrow-right', 20)}</a>
+    <article class="product-card"><a class="{image_class(item)}" href="/products/{item['slug']}/"><img src="/assets/products/{esc(item['image'])}" alt="{esc(item['model'])} {esc(item['name'])}" loading="lazy"></a>
+      <div class="product-card-copy"><p class="model-code">{esc(item['model'])}</p><h3><a href="/products/{item['slug']}/">{esc(item['name'])}</a></h3><ul>{specs}</ul><div class="card-actions"><a href="/contact/?model={esc(item['model'])}">Inquire</a><a href="/products/{item['slug']}/">More &gt;&gt;</a></div></div>
     </article>"""
 
 
-def category_tile(slug, data):
-    items = [item for item in PRODUCTS if item["category"] == slug]
-    values = [capacity_number(item["capacity"]) for item in items if capacity_number(item["capacity"])]
-    capacity_range = f"{min(values):,}-{max(values):,} kg" if values else "Configuration based"
-    models = " / ".join(item["model"] for item in items[:4])
-    return f"""
-    <article class="category-tile"><a class="category-photo" href="/products/{slug}/"><img src="/assets/products/{data['image']}" alt="{esc(data['name'])}" loading="lazy"></a><div class="category-copy"><p class="overline">{len(items)} models</p><h2><a href="/products/{slug}/">{esc(data['name'])}</a></h2><p>{esc(data['short'])}</p><dl><div><dt>Capacity range</dt><dd>{esc(capacity_range)}</dd></div><div><dt>Models</dt><dd>{esc(models)}{(' / ...' if len(items) > 4 else '')}</dd></div></dl><a class="text-link" href="/products/{slug}/">View category {icon('arrow-right', 16)}</a></div></article>"""
-
-
 def home_page():
-    tiles = "".join(category_tile(slug, data) for slug, data in CATEGORIES.items())
-    featured = "".join(product_row(next(item for item in PRODUCTS if item["slug"] == slug)) for slug in ["wep20j", "wes1500a", "r4efl3t", "mpt5tn"])
-    faqs = [
-        ("Which machine is used only to move pallets horizontally?", "Choose a manual or electric pallet truck. Select by load capacity, route length, floor condition, and operator mode."),
-        ("When should I choose a pallet stacker?", "Choose a pallet stacker when pallets must be raised into racking or positioned above floor level. Confirm pallet entry, load center, lift height, and residual capacity."),
-        ("What information is needed for a forklift quotation?", "Provide the maximum load, load dimensions, lift height, aisle width, floor or outdoor conditions, daily working hours, battery preference, and destination market."),
+    featured_slugs = ["r4efl3t", "wep20j", "wes1500a", "mpt5tn"]
+    featured = [next(item for item in PRODUCTS if item["slug"] == slug) for slug in featured_slugs]
+    featured_html = product_card(featured[0]) + '<div class="featured-stack">' + "".join(product_card(item) for item in featured[1:]) + "</div>"
+    solution_cards = "".join(
+        f'<a class="solution-card" href="/products/{slug}/"><img src="/assets/products/{esc(data["image"])}" alt="{esc(data["name"])}"><span>{esc(data["name"])}</span></a>'
+        for slug, data in list(CATEGORIES.items())[:4]
+    )
+    why = [
+        ("Factory Production", "Material handling equipment produced by an intelligent machinery manufacturer in Changxing, Zhejiang, China."),
+        ("Independent LEXYGO Range", "LEXYGO pallet trucks, stackers, electric forklifts, and warehouse equipment are presented by model and application."),
+        ("OEM And Configuration Support", "Product configuration and final technical details are confirmed for each quotation and application."),
     ]
-    faq_html = "".join(f'<details><summary>{esc(q)}{icon("chevron-down", 16)}</summary><p>{esc(a)}</p></details>' for q, a in faqs)
+    why_html = "".join(f'<article><span>{index:02d}</span><h3>{esc(title)}</h3><p>{esc(copy)}</p></article>' for index, (title, copy) in enumerate(why, start=1))
     body = f"""
-    <section class="catalog-intro"><div class="shell catalog-intro-grid"><div><p class="overline">LEXYGO product directory</p><h1>Material Handling Equipment by Product Type</h1><p>Find the right pallet truck, stacker, electric forklift, or warehouse lifting product. Every model page presents the available technical data as searchable English HTML.</p><div class="button-row">{button('Browse all models', '/products/')} {button('Send requirements', '/contact/', 'secondary', 'send')}</div></div><dl class="catalog-summary"><div><dt>Product families</dt><dd>{len(CATEGORIES)}</dd></div><div><dt>Model pages</dt><dd>{len(PRODUCTS)}</dd></div><div><dt>Detailed spec tables</dt><dd>{len(FULL_SPECS)}</dd></div></dl></div></section>
-    <section class="directory-section"><div class="shell"><div class="section-heading"><div><p class="overline">Start here</p><h2>Product directory</h2><p>Select a category, then compare model, capacity, lift height, and operating mode.</p></div><a class="text-link" href="/products/">All products {icon('arrow-right', 16)}</a></div><div class="category-grid">{tiles}</div></div></section>
-    <section class="model-section model-section-muted"><div class="shell"><div class="section-heading"><div><p class="overline">Common starting points</p><h2>Frequently selected models</h2></div></div><div class="model-list">{featured}</div></div></section>
-    <section class="buying-section"><div class="shell buying-grid"><div><p class="overline">Faster product selection</p><h2>Four details narrow the range quickly</h2></div><ol class="selection-steps"><li><strong>Load</strong><span>Maximum weight and load center</span></li><li><strong>Lift</strong><span>Floor movement or required lift height</span></li><li><strong>Route</strong><span>Aisle, turning radius, floor, and gradient</span></li><li><strong>Duty</strong><span>Travel distance, shift length, and charging plan</span></li></ol></div></section>
-    <section class="faq-section"><div class="shell two-column"><div><p class="overline">Buyer questions</p><h2>Direct answers before inquiry</h2></div><div class="faq-list">{faq_html}</div></div></section>
-    <section class="cta-band"><div class="shell cta-inner"><div><p class="overline">Need a model shortlist?</p><h2>Send the load, lift height, aisle, route, and daily duty.</h2></div>{button('Request a recommendation', '/contact/', 'light', 'send')}</div></section>"""
-    schema = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
-    return page("Material Handling Equipment Manufacturer", "Compare LEXYGO pallet trucks, pallet stackers, electric forklifts, and warehouse lifting equipment by model and specification.", "/", body, schema, "home")
+    <section class="hero"><div class="shell hero-grid"><div class="hero-copy"><p>LEXYGO MATERIAL HANDLING EQUIPMENT</p><h1>Electric Forklifts, Stackers &amp; Pallet Trucks</h1><p class="hero-intro">Direct product access for professional buyers, distributors, and material handling projects.</p>{button('View Products', '/products/', 'primary')} {button('Contact Us', '/contact/', 'light')}</div><div class="hero-machine"><img src="/assets/products/r4efl3t.png" alt="LEXYGO four-wheel electric forklift"></div></div></section>
+    <section class="home-section featured-section"><div class="shell">{section_heading('PRODUCTS', 'FEATURED PRODUCTS', 'Browse core LEXYGO models and open the complete technical parameter page.')}
+      <div class="featured-grid">{featured_html}</div><div class="center-action">{button('View All Products', '/products/', 'outline')}</div></div></section>
+    <section class="home-section solutions-section"><div class="shell">{section_heading('PRODUCT RANGE', 'ONE-STOP MATERIAL HANDLING SOLUTIONS')}
+      <div class="solution-grid">{solution_cards}</div></div></section>
+    <section class="home-section about-band"><div class="shell about-grid"><div><p class="section-kicker">WHO WE ARE?</p><h2>{esc(COMPANY['legal_name'])}</h2><p>We manufacture and supply electric pallet trucks, electric pallet stackers, electric forklifts, manual pallet trucks, and warehouse equipment.</p><p>Our product pages present the available English technical data for professional selection and inquiry.</p>{button('Learn More', '/company/', 'primary')}</div><div class="about-photo"><img src="/assets/products/res2000e.png" alt="LEXYGO electric stacker"></div></div></section>
+    <section class="factory-stats"><div class="shell stats-grid"><div><strong>&nbsp;</strong><span>Factory Area</span></div><div><strong>&nbsp;</strong><span>Production Lines</span></div><div><strong>&nbsp;</strong><span>Annual Capacity</span></div><div><strong>&nbsp;</strong><span>Export Markets</span></div></div></section>
+    <section class="home-section why-section"><div class="shell">{section_heading('FACTORY & SERVICE', 'WHY CHOOSE LEXYGO')}
+      <div class="why-grid">{why_html}</div></div></section>
+    <section class="home-section showroom-section"><div class="shell">{section_heading('FACTORY VIEW', 'DIGITAL SHOWROOM')}<div class="blank-media" aria-label="Digital showroom content pending"></div></div></section>
+    <section class="home-section cases-section"><div class="shell">{section_heading('APPLICATIONS', 'OUR CASES')}<div class="blank-grid"><article></article><article></article></div></div></section>
+    <section class="home-section insights-section"><div class="shell">{section_heading('LEARN MORE', 'INDUSTRY INSIGHTS & PRODUCT KNOWLEDGE')}<div class="blank-grid three"><article></article><article></article><article></article></div></div></section>
+    <section class="contact-band"><div class="shell contact-band-grid"><div><p class="section-kicker">CONTACT US</p><h2>Tell Us What You Need To Move Or Lift</h2><p>Share the load, lift height, aisle, route, quantity, and destination.</p></div>{inquiry_form()}</div></section>
+    """
+    schema = {"@type": "WebSite", "name": "LEXYGO", "url": BASE_URL}
+    return page("Material Handling Equipment Manufacturer", "LEXYGO electric forklifts, pallet stackers, pallet trucks, and warehouse equipment for professional buyers.", "/", body, schema, "home")
+
+
+def sidebar():
+    return f'<aside class="catalog-sidebar">{category_menu()}<div class="side-box inquiry-box"><h2>CONTACT US</h2>{inquiry_form(True)}</div></aside>'
 
 
 def products_page():
-    rows_html = "".join(product_row(item) for item in PRODUCTS)
-    options = "".join(f'<option value="{slug}">{esc(data["name"])}</option>' for slug, data in CATEGORIES.items())
-    crumb, crumb_schema = breadcrumbs([("Home", "/"), ("Products", None)])
-    body = f"""{crumb}<section class="page-heading"><div class="shell"><p class="overline">Complete catalog</p><h1>Material Handling Equipment</h1><p>Filter {len(PRODUCTS)} product pages by equipment type, operation, capacity, or model number.</p></div></section>
-    <section class="catalog-section"><div class="shell"><div class="filter-bar" data-filters><label class="search-field"><span>Search model or application</span><div>{icon('search', 18)}<input type="search" placeholder="Example: WEP20J or narrow aisle" data-search-input></div></label><label><span>Product family</span><select data-category-filter><option value="">All families</option>{options}</select></label><label><span>Operation</span><select data-operation-filter><option value="">All modes</option><option value="walk">Walk-behind</option><option value="stand">Stand-on / rider</option><option value="seated">Seated</option><option value="manual">Manual</option></select></label><label><span>Minimum capacity</span><select data-capacity-filter><option value="0">Any capacity</option><option value="1000">1,000 kg</option><option value="1500">1,500 kg</option><option value="2000">2,000 kg</option><option value="3000">3,000 kg</option><option value="5000">5,000 kg</option><option value="10000">10,000 kg</option></select></label></div><div class="catalog-status"><strong data-result-count>{len(PRODUCTS)} models</strong><button type="button" class="text-button" data-clear-filters>Clear filters</button></div><div class="model-list" data-product-grid>{rows_html}</div><div class="empty-state" data-empty-state hidden><h2>No exact match found</h2><p>Adjust the filters or send the application details for a configuration review.</p>{button('Ask for a recommendation', '/contact/', 'primary', 'send')}</div></div></section>"""
-    return page("Product Catalog", "Browse and compare LEXYGO material handling equipment by capacity, lift height, operation, and model.", "/products/", body, [crumb_schema, {"@type": "CollectionPage", "name": "LEXYGO Product Catalog", "url": route_url("/products/")}])
+    banner, crumb_schema = inner_banner("ALL PRODUCTS", [("Home", "/"), ("Products", None)])
+    cards = "".join(product_card(item) for item in PRODUCTS)
+    body = f'{banner}<section class="catalog-layout-section"><div class="shell catalog-layout">{sidebar()}<div class="catalog-main"><header class="catalog-title"><p>PRODUCTS</p><h2>ALL PRODUCTS</h2><p>Select a product family or open a model page to review the available English technical parameters.</p></header><div class="product-grid">{cards}</div></div></div></section>'
+    return page("All Material Handling Products", "Browse LEXYGO electric pallet trucks, stackers, electric forklifts, manual pallet trucks, and warehouse equipment.", "/products/", body, crumb_schema, "products")
 
 
 def category_page(slug, data):
-    items = [item for item in PRODUCTS if item["category"] == slug]
-    rows_html = "".join(product_row(item) for item in items)
-    crumb, crumb_schema = breadcrumbs([("Home", "/"), ("Products", "/products/"), (data["name"], None)])
-    body = f"""{crumb}<section class="category-heading"><div class="shell category-heading-grid"><div><p class="overline">{len(items)} product pages</p><h1>{esc(data['name'])}</h1><p>{esc(data['short'])}</p><div class="selection-note"><strong>How to choose</strong><span>{esc(data['answer'])}</span></div></div><div class="category-heading-image"><img src="/assets/products/{data['image']}" alt="{esc(data['name'])}" fetchpriority="high"></div></div></section><section class="model-section"><div class="shell"><div class="comparison-head"><span>Model</span><span>Capacity / lift / operation</span></div><div class="model-list">{rows_html}</div></div></section><section class="requirements-band"><div class="shell"><h2>Information required for selection</h2><ul><li>Maximum load and load center</li><li>Required lift height</li><li>Aisle and turning space</li><li>Floor and gradient</li><li>Shift length and battery plan</li><li>Pallet and fork dimensions</li></ul></div></section><section class="cta-band"><div class="shell cta-inner"><div><p class="overline">Selection support</p><h2>Send your working conditions for a model recommendation.</h2></div>{button('Contact LEXYGO', '/contact/', 'light', 'send')}</div></section>"""
-    return page(data["name"], data["short"], f"/products/{slug}/", body, [crumb_schema, {"@type": "CollectionPage", "name": data["name"], "description": data["short"], "url": route_url(f"/products/{slug}/")}])
+    items = products_for(slug)
+    banner, crumb_schema = inner_banner(data["name"].upper(), [("Home", "/"), ("Products", "/products/"), (data["name"], None)])
+    cards = "".join(product_card(item) for item in items)
+    body = f'{banner}<section class="catalog-layout-section"><div class="shell catalog-layout">{sidebar()}<div class="catalog-main"><header class="catalog-title"><p>PRODUCT CATEGORY</p><h2>{esc(data["name"])}</h2><p>{esc(data["short"])}</p></header><div class="category-answer"><strong>Selection note</strong><p>{esc(data["answer"])}</p></div><div class="product-grid">{cards}</div></div></div></section>'
+    schema = [{"@type": "CollectionPage", "name": data["name"], "description": data["short"], "url": route_url(f"/products/{slug}/")}, crumb_schema]
+    return page(data["name"], data["short"], f"/products/{slug}/", body, schema, "products")
 
 
 def spec_tables(item):
-    sections = FULL_SPECS.get(item["slug"], [])
-    if not sections:
-        return '<div class="spec-empty"><h2>Configuration data</h2><p>This product is supplied against the confirmed platform size, lifting range, and duty requirement. Request the current configuration sheet.</p></div>'
+    groups = FULL_SPECS.get(item["slug"], [])
+    if not groups:
+        return '<div class="spec-empty" aria-label="Product parameters pending"></div>'
     blocks = []
-    for section in sections:
-        rows_html = "".join(f'<tr><th scope="row">{esc(row["name"])}</th><td>{esc(row["unit"] or "-")}</td><td>{esc(row["value"])}</td></tr>' for row in section["rows"])
-        blocks.append(f'<section class="spec-group"><h3>{esc(section["title"])}</h3><div class="table-wrap"><table><thead><tr><th>Specification</th><th>Unit</th><th>Value</th></tr></thead><tbody>{rows_html}</tbody></table></div></section>')
+    for group in groups:
+        rows = "".join(
+            f'<tr><th scope="row">{esc(row["name"])}</th><td>{esc(row.get("unit", ""))}</td><td>{esc(row.get("value", ""))}</td></tr>'
+            for row in group["rows"]
+        )
+        blocks.append(f'<section class="spec-group"><h3>{esc(group["title"])}</h3><div class="table-wrap"><table><thead><tr><th>Parameter</th><th>Unit</th><th>Value</th></tr></thead><tbody>{rows}</tbody></table></div></section>')
     return "".join(blocks)
 
 
 def product_page(item):
     category = CATEGORIES[item["category"]]
-    crumb, crumb_schema = breadcrumbs([("Home", "/"), ("Products", "/products/"), (category["name"], f'/products/{item["category"]}/'), (item["model"], None)])
-    quick = [("Rated capacity", item["capacity"]), ("Lift", item["lift"]), ("Operation", item["operation"])] + list(item["specs"].items())[:3]
-    quick_html = "".join(f'<div><dt>{esc(name)}</dt><dd>{esc(value)}</dd></div>' for name, value in quick)
-    sections = FULL_SPECS.get(item["slug"], [])
-    all_rows = [row for section in sections for row in section["rows"]]
-    additional = [{"@type": "PropertyValue", "name": row["name"], "unitText": row["unit"], "value": row["value"]} for row in all_rows]
-    faqs = [(f"What is the rated capacity of the {item['model']}?", f"The stated rated capacity is {item['capacity']}. Final suitability depends on load center, lift height, attachment, and operating conditions."), (f"What is the lift specification of the {item['model']}?", f"The listed lift specification is {item['lift']}. Confirm the required maximum height and residual capacity before ordering."), (f"What information is needed to quote the {item['model']}?", "Provide load weight and dimensions, lift height, aisle or route conditions, daily duty, battery requirement, quantity, and destination.")]
-    faq_html = "".join(f'<details><summary>{esc(q)}{icon("chevron-down", 16)}</summary><p>{esc(a)}</p></details>' for q, a in faqs)
-    body = f"""{crumb}<section class="product-overview"><div class="shell product-overview-grid"><div class="product-visual{image_class(item)}"><img src="/assets/products/{item['image']}" alt="{esc(item['model'] + ' ' + item['name'])}" fetchpriority="high"></div><div class="product-title"><p class="overline">{esc(category['name'])}</p><p class="model-code">{esc(item['model'])}</p><h1>{esc(item['name'])}</h1><p>{esc(item['best_for'])}.</p><dl class="product-key-specs">{quick_html}</dl><div class="button-row">{button('Request quotation', '/contact/?model=' + item['model'], 'primary', 'send')} {button('Back to category', '/products/' + item['category'] + '/', 'secondary', 'list')}</div></div></div></section><section class="specification-section"><div class="shell"><div class="specification-heading"><div><p class="overline">Rebuilt from the supplied specification sheet</p><h2>Technical specifications</h2></div><p>All supplied parameters are presented below as English HTML data. Values shown for different mast options remain configuration dependent.</p></div>{spec_tables(item)}</div></section><section class="application-section"><div class="shell two-column"><div><p class="overline">Application</p><h2>Where {esc(item['model'])} fits</h2><p>{esc(item['best_for'])}. Confirm load dimensions, pallet entry, route, gradient, floor condition, and duty cycle before ordering.</p></div><div class="source-note">{icon('info', 20)}<p>{esc(item['note'])}</p></div></div></section><section class="faq-section"><div class="shell two-column"><div><p class="overline">Model questions</p><h2>{esc(item['model'])} FAQ</h2></div><div class="faq-list">{faq_html}</div></div></section><section class="cta-band"><div class="shell cta-inner"><div><p class="overline">Quote this model</p><h2>Send the load, lift height, aisle, pallet, and shift time.</h2></div>{button('Send project details', '/contact/?model=' + item['model'], 'light', 'send')}</div></section>"""
-    product_schema = {"@type": "Product", "name": item["name"], "model": item["model"], "sku": item["model"], "image": BASE_URL + "/assets/products/" + item["image"], "description": f"{item['name']} for {item['best_for'].lower()}.", "brand": {"@type": "Brand", "name": COMPANY["brand"]}, "manufacturer": {"@id": BASE_URL + "/#organization"}, "category": category["name"], "additionalProperty": additional}
-    faq_schema = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
-    return page(f"{item['model']} {item['name']}", f"{item['model']} {item['name']}: {item['capacity']} capacity, {item['lift']} lift, and complete English technical specifications.", f"/products/{item['slug']}/", body, [crumb_schema, product_schema, faq_schema], "product-page")
+    banner, crumb_schema = inner_banner(item["name"].upper(), [("Home", "/"), ("Products", "/products/"), (category["name"], f'/products/{item["category"]}/'), (item["model"], None)])
+    key_specs = [("Rated capacity", known(item["capacity"])), ("Lift height", known(item["lift"])), ("Operation", known(item["operation"])), ("Application", known(item["best_for"]))]
+    quick_rows = "".join(f'<tr><th>{esc(label)}</th><td>{esc(value) if value else "&nbsp;"}</td></tr>' for label, value in key_specs)
+    feature_items = "".join(f'<li><span>{esc(label)}</span><strong>{esc(value) if value else "&nbsp;"}</strong></li>' for label, value in key_specs)
+    related_items = [related for related in products_for(item["category"]) if related["slug"] != item["slug"]][:4]
+    related = "".join(product_card(product) for product in related_items)
+    product_schema = {
+        "@type": "Product", "name": f'{item["model"]} {item["name"]}', "sku": item["model"], "brand": {"@type": "Brand", "name": "LEXYGO"},
+        "category": category["name"], "image": f'{BASE_URL}/assets/products/{item["image"]}', "description": item["best_for"],
+    }
+    body = f"""{banner}
+    <section class="product-intro"><div class="shell product-intro-grid"><div class="product-gallery"><div class="{image_class(item)}"><img src="/assets/products/{esc(item['image'])}" alt="{esc(item['model'])} {esc(item['name'])}"></div></div><div class="product-summary"><p class="model-code">{esc(item['model'])}</p><h2>{esc(item['name'])}</h2><p>{esc(item['best_for'])}</p><ul class="feature-list">{feature_items}</ul><dl class="availability"><div><dt>Availability</dt><dd>&nbsp;</dd></div><div><dt>Quantity</dt><dd>&nbsp;</dd></div></dl>{button('INQUIRE', f'/contact/?model={esc(item["model"])}', 'primary', 'send')}<div class="product-identity"><span>Model: <strong>{esc(item['model'])}</strong></span><span>Brand: <strong>LEXYGO</strong></span></div></div></div></section>
+    <section class="product-description"><div class="shell"><header class="tab-heading"><span>Product Description</span></header><div class="description-grid"><div><h2>{esc(item['model'])} {esc(item['name'])}</h2><p>{esc(item['best_for'])}.</p><p>{esc(item['note'])}</p></div><div class="quick-table"><table><tbody>{quick_rows}</tbody></table></div></div></div></section>
+    <section class="parameter-section"><div class="shell"><header class="tab-heading"><span>Product Parameters</span></header>{spec_tables(item)}</div></section>
+    <section class="detail-inquiry"><div class="shell detail-inquiry-grid"><div><p class="section-kicker">SEND YOUR REQUIREMENTS</p><h2>Request Price And Configuration</h2><p>Use the model number and describe the load, lift height, aisle, duty, quantity, and destination.</p></div>{inquiry_form()}</div></section>
+    <section class="related-section"><div class="shell">{section_heading('MORE PRODUCTS', 'RELATED PRODUCTS')}<div class="product-grid four">{related}</div></div></section>"""
+    return page(f'{item["model"]} {item["name"]}', f'{item["model"]} {item["name"]}: {known(item["capacity"])} capacity, {known(item["lift"])} lift, {known(item["operation"])} operation.', f'/products/{item["slug"]}/', body, [product_schema, crumb_schema], "products")
 
 
-def simple_page(route, title, eyebrow, intro, sections):
-    crumb, crumb_schema = breadcrumbs([("Home", "/"), (title, None)])
-    blocks = "".join(f'<section><h2>{esc(heading)}</h2><p>{esc(copy)}</p></section>' for heading, copy in sections)
-    body = f'{crumb}<section class="page-heading"><div class="shell"><p class="overline">{esc(eyebrow)}</p><h1>{esc(title)}</h1><p>{esc(intro)}</p></div></section><section class="text-sections"><div class="shell text-section-grid">{blocks}</div></section><section class="cta-band"><div class="shell cta-inner"><div><p class="overline">Project inquiry</p><h2>Send your product and application requirements.</h2></div>{button("Contact LEXYGO", "/contact/", "light", "send")}</div></section>'
-    return page(title, intro, route, body, crumb_schema)
+def blank_page(route, title, parent=None, active=""):
+    crumbs = [("Home", "/")]
+    if parent:
+        crumbs.append(parent)
+    crumbs.append((title, None))
+    banner, crumb_schema = inner_banner(title.upper(), crumbs)
+    body = f'{banner}<section class="blank-page"><div class="shell"><h2>{esc(title)}</h2><div class="blank-content" aria-label="Content pending"></div></div></section>'
+    return page(title, f"LEXYGO {title}.", route, body, crumb_schema, active)
 
 
-def solutions_page():
-    return simple_page("/solutions/", "Material Handling Applications", "Selection by task", "Match the equipment type to the load movement, lift height, route, pallet, and daily duty.", [(data["name"], data["answer"]) for data in CATEGORIES.values()])
+def company_page():
+    banner, crumb_schema = inner_banner("COMPANY PROFILE", [("Home", "/"), ("Company", None)])
+    body = f"""{banner}<section class="company-profile"><div class="shell profile-grid"><div><p class="section-kicker">COMPANY PROFILE</p><h2>{esc(COMPANY['legal_name'])}</h2><p>LEXYGO is the material handling equipment range of our intelligent machinery factory in {esc(COMPANY['location'])}.</p><p>Our current range includes electric pallet trucks, electric pallet stackers, electric forklifts, manual pallet trucks, and warehouse equipment.</p></div><div class="company-machine"><img src="/assets/products/r4efl5t.png" alt="LEXYGO electric forklift"></div></div></section><section class="factory-stats"><div class="shell stats-grid"><div><strong>&nbsp;</strong><span>Factory Area</span></div><div><strong>&nbsp;</strong><span>Production Lines</span></div><div><strong>&nbsp;</strong><span>Annual Capacity</span></div><div><strong>&nbsp;</strong><span>Export Markets</span></div></div></section>"""
+    return page("Company Profile", "Company profile for LEXYGO material handling equipment.", "/company/", body, crumb_schema, "company")
 
 
-def guides_index():
-    crumb, crumb_schema = breadcrumbs([("Home", "/"), ("Buyer Guides", None)])
-    cards = "".join(f'<article><p class="overline">Selection guide</p><h2><a href="/guides/{guide["slug"]}/">{esc(guide["title"])}</a></h2><p>{esc(guide["summary"])}</p><a class="text-link" href="/guides/{guide["slug"]}/">Read guide {icon("arrow-right", 16)}</a></article>' for guide in GUIDES)
-    return page("Buyer Guides", "Practical buyer guides for pallet trucks, stackers, and electric forklifts.", "/guides/", f'{crumb}<section class="page-heading"><div class="shell"><p class="overline">Technical buying support</p><h1>Buyer Guides</h1><p>Short answers for common material handling equipment decisions.</p></div></section><section class="text-sections"><div class="shell guide-grid">{cards}</div></section>', crumb_schema)
+def resources_page():
+    return blank_page("/resources/", "Resources", active="resources")
 
 
-def guide_page(guide):
-    content = {
-        "how-to-choose-an-electric-pallet-truck": [("1. Confirm the load", "Record the maximum pallet weight, load center, fork entry, and pallet dimensions."), ("2. Measure the route", "Check travel distance, aisle width, turning space, floor condition, ramps, and thresholds."), ("3. Select operator mode", "Walkie trucks suit compact routes. Rider trucks suit longer and more frequent travel."), ("4. Confirm the battery", "Match battery capacity and charging method to the shift length and available charging time.")],
-        "pallet-truck-vs-stacker": [("Pallet truck", "Use a pallet truck for horizontal movement and low fork lift only."), ("Pallet stacker", "Use a stacker when the pallet must be placed into racking or raised for positioning."), ("Selection checkpoint", "If lifting height is above floor-transfer level, specify a stacker and verify residual capacity.")],
-        "forklift-capacity-and-aisle-width": [("Rated capacity", "Capacity depends on load center, lift height, attachment, and mast configuration."), ("Aisle width", "Compare right-angle stacking aisle data with the real pallet size and safety clearance."), ("Turning radius", "Turning radius is useful but does not replace the full aisle-width calculation."), ("Site conditions", "Confirm floor loading, surface quality, gradients, door height, and charging area.")],
-    }[guide["slug"]]
-    crumb, crumb_schema = breadcrumbs([("Home", "/"), ("Buyer Guides", "/guides/"), (guide["title"], None)])
-    blocks = "".join(f'<section><h2>{esc(title)}</h2><p>{esc(copy)}</p></section>' for title, copy in content)
-    body = f'{crumb}<article class="guide-article shell"><header><p class="overline">Buyer guide</p><h1>{esc(guide["title"])}</h1><p>{esc(guide["summary"])}</p>{button("Browse products", "/products/", "secondary", "list")}</header><div>{blocks}</div></article>'
-    return page(guide["title"], guide["summary"], f'/guides/{guide["slug"]}/', body, crumb_schema)
-
-
-def quality_page():
-    return simple_page("/quality/", "Manufacturing & Quality", "Factory support", "A clear specification and inspection process keeps supplied equipment aligned with the approved configuration.", [("Requirement review", "Application, capacity, lift height, route, pallet, battery, destination, and documentation are confirmed before quotation."), ("Configuration control", "The confirmed model, mast, forks, battery, wheels, branding, and packaging form the project baseline."), ("Inspection", "Functional checks, appearance, labels, accessories, and shipment preparation are reviewed against the order."), ("Export documentation", "Manuals, labels, packing information, and available conformity documents are coordinated for the destination market.")])
-
-
-def oem_page():
-    return simple_page("/oem-odm/", "OEM & Configuration Support", "Distributor projects", "LEXYGO supports defined product configurations for distributors, brands, and industrial buyers.", [("Branding", "Nameplates, color, labels, packaging, and documentation can be discussed for qualified projects."), ("Product configuration", "Capacity, mast, lift height, fork dimensions, battery, charger, wheel material, and attachments are reviewed before quotation."), ("Approval", "The agreed sample, drawing, specification, or confirmation method becomes the production reference."), ("Repeat supply", "Packaging, spare parts, and order-level inspection can be aligned with repeat purchasing requirements.")])
-
-
-def about_page():
-    return simple_page("/about/", "About LEXYGO", "Material handling manufacturer", f"{COMPANY['legal_name']} develops and supplies practical equipment for moving, lifting, and stacking material loads.", [("Product focus", "Electric pallet trucks, electric pallet stackers, electric forklifts, manual pallet trucks, and warehouse lifting equipment."), ("Factory location", f"Manufacturing and project coordination in {COMPANY['location']}."), ("Commercial approach", "Model-level data, application-based selection, configurable projects, and direct export communication."), ("Brand", "LEXYGO is used for the independently marketed material handling product range.")])
+def blogs_page():
+    return blank_page("/blogs/", "Blogs", active="blogs")
 
 
 def contact_page():
-    crumb, crumb_schema = breadcrumbs([("Home", "/"), ("Contact", None)])
-    body = f"""{crumb}<section class="page-heading"><div class="shell"><p class="overline">Factory inquiry</p><h1>Request a Model or Configuration</h1><p>Provide the product, load, lift height, route, quantity, and destination. Your email client will open with the completed inquiry.</p></div></section><section class="contact-section"><div class="shell contact-grid"><form class="quote-form" data-mailto-form data-email="{COMPANY['email']}"><div class="form-grid"><label><span>Company</span><input name="company" required></label><label><span>Name</span><input name="name" required></label><label><span>Business email</span><input type="email" name="email" required></label><label><span>Country / region</span><input name="country" required></label><label><span>Model / product</span><input name="model" data-model-field></label><label><span>Quantity</span><input name="quantity"></label><label><span>Maximum load</span><input name="load" placeholder="kg"></label><label><span>Required lift height</span><input name="height" placeholder="mm"></label><label class="full"><span>Application and working conditions</span><textarea name="details" rows="6" required></textarea></label></div><button class="button button-primary" type="submit">Create email inquiry {icon('send', 18)}</button></form><aside><h2>Direct contact</h2><p><strong>Email</strong><a href="mailto:{COMPANY['email']}">{esc(COMPANY['email'])}</a></p><p><strong>Location</strong><span>{esc(COMPANY['location'])}</span></p><h2>Useful details</h2><ul><li>Load weight and dimensions</li><li>Lift height and aisle width</li><li>Floor, gradient, and route</li><li>Daily duty and battery preference</li><li>Quantity and destination</li></ul></aside></div></section>"""
-    return page("Contact LEXYGO", "Contact LEXYGO for pallet truck, stacker, electric forklift, and warehouse equipment quotations.", "/contact/", body, crumb_schema)
+    banner, crumb_schema = inner_banner("CONTACT US", [("Home", "/"), ("Contact Us", None)])
+    body = f"""{banner}<section class="contact-page"><div class="shell contact-page-grid"><div><p class="section-kicker">CONTACT DETAILS</p><h2>Contact LEXYGO</h2><dl class="contact-details"><div><dt>Company</dt><dd>{esc(COMPANY['legal_name'])}</dd></div><div><dt>Address</dt><dd>{esc(COMPANY['location'])}</dd></div><div><dt>Email</dt><dd><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></dd></div><div><dt>Telephone</dt><dd>&nbsp;</dd></div><div><dt>WhatsApp</dt><dd>&nbsp;</dd></div></dl></div>{inquiry_form()}</div></section>"""
+    return page("Contact Us", "Contact LEXYGO for material handling product and configuration inquiries.", "/contact/", body, crumb_schema, "contact")
 
 
 def not_found_page():
-    return page("Page Not Found", "The requested LEXYGO page was not found.", "/404/", f'<section class="not-found shell"><p class="overline">404</p><h1>Page not found</h1><p>Browse the product directory or return to the home page.</p>{button("Product directory", "/products/")} {button("Home", "/", "secondary", "home")}</section>')
+    banner, _ = inner_banner("PAGE NOT FOUND", [("Home", "/"), ("404", None)])
+    return page("Page Not Found", "The requested page was not found.", "/404/", f'{banner}<section class="blank-page"><div class="shell"><h2>Page not found</h2>{button("View Products", "/products/")}</div></section>')
 
 
 def find_source_file(name):
@@ -244,7 +306,11 @@ def find_source_file(name):
 def copy_product_assets():
     PRODUCT_ASSETS.mkdir(parents=True, exist_ok=True)
     warehouse = ROOT / "tmp" / "warehouse-assets"
-    explicit = {"r4efl12t.png": find_source_file("REEF12T.png"), "sc1016.png": warehouse / "image190.png", "qes12e.png": warehouse / "image251.png", "qes15e.png": warehouse / "image252.png", "qes15lie.png": warehouse / "image254.png", "qed1530.png": warehouse / "image191.png", "warehouse-scissor-lift-table.png": warehouse / "image139.png", "warehouse-material-lift-cart.png": warehouse / "image3.png"}
+    explicit = {
+        "r4efl12t.png": find_source_file("REEF12T.png"), "sc1016.png": warehouse / "image190.png", "qes12e.png": warehouse / "image251.png",
+        "qes15e.png": warehouse / "image252.png", "qes15lie.png": warehouse / "image254.png", "qed1530.png": warehouse / "image191.png",
+        "warehouse-scissor-lift-table.png": warehouse / "image139.png", "warehouse-material-lift-cart.png": warehouse / "image3.png",
+    }
     for item in PRODUCTS:
         source = explicit[item["image"]] if item["image"] in explicit else find_source_file(item["image"])
         if not source.exists():
@@ -254,29 +320,27 @@ def copy_product_assets():
 
 
 CSS = r"""
-:root{--ink:#162126;--muted:#596a72;--line:#d8e0e3;--soft:#f4f7f8;--teal:#0d6b73;--teal-dark:#084b52;--orange:#e45b25;--orange-dark:#b94014;--white:#fff;--max:1220px;--shadow:0 12px 30px rgba(19,40,48,.1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:Arial,"Helvetica Neue",sans-serif;line-height:1.55}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}h1,h2,h3,p{overflow-wrap:anywhere}h1,h2,h3{letter-spacing:0}.shell{width:min(calc(100% - 48px),var(--max));margin-inline:auto}.skip-link{position:fixed;top:8px;left:8px;z-index:1000;background:#fff;padding:8px;transform:translateY(-150%)}.skip-link:focus{transform:none}.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}.nav-row{height:74px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:inline-flex;align-items:center;gap:10px;min-width:238px}.brand-mark{width:38px;height:38px;display:grid;place-items:center;background:var(--orange);color:#fff;font-weight:900;font-size:22px;border-radius:3px}.brand strong,.brand small{display:block}.brand strong{font-size:21px;line-height:1}.brand small{margin-top:3px;color:var(--muted);font-size:11px}.main-nav{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:700}.main-nav>a:hover{color:var(--teal)}.nav-contact{background:var(--teal);color:#fff;padding:10px 13px;display:inline-flex;align-items:center;gap:7px;border-radius:3px}.nav-contact:hover{background:var(--teal-dark);color:#fff!important}.icon-button{width:42px;height:42px;border:0;background:transparent;display:none;place-items:center}.overline{margin:0 0 8px;color:var(--orange-dark);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0}.catalog-intro{border-bottom:1px solid var(--line);background:linear-gradient(90deg,#fff 0 70%,#edf5f5 70%)}.catalog-intro-grid{min-height:320px;display:grid;grid-template-columns:minmax(0,1fr) 340px;align-items:center;gap:70px;padding-block:46px}.catalog-intro h1,.page-heading h1,.category-heading h1,.product-title h1,.guide-article h1,.not-found h1{font-size:48px;line-height:1.08;margin:0 0 16px}.catalog-intro p:not(.overline),.page-heading p,.category-heading p,.product-title>p:last-of-type,.guide-article header p{font-size:18px;color:var(--muted);max-width:800px;margin:0}.catalog-summary{margin:0;border-left:4px solid var(--teal);background:#fff}.catalog-summary div{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 18px;border-bottom:1px solid var(--line)}.catalog-summary div:last-child{border-bottom:0}.catalog-summary dt{font-size:13px;color:var(--muted)}.catalog-summary dd{font-size:21px;font-weight:900;margin:0}.button-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.button{min-height:44px;padding:10px 15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:3px;font-weight:800}.button-primary{background:var(--orange);color:#fff}.button-primary:hover{background:var(--orange-dark)}.button-secondary{background:#fff;border-color:#aebbc0}.button-secondary:hover{border-color:var(--teal);color:var(--teal)}.button-light{background:#fff;color:var(--ink)}.directory-section,.model-section,.buying-section,.faq-section,.catalog-section,.specification-section,.application-section,.text-sections,.contact-section{padding:62px 0}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:28px}.section-heading h2,.buying-grid h2,.two-column h2,.specification-heading h2,.requirements-band h2,.text-section-grid h2,.contact-grid h2{font-size:30px;line-height:1.2;margin:0}.section-heading p{margin:6px 0 0;color:var(--muted)}.text-link{display:inline-flex;align-items:center;gap:6px;color:var(--teal-dark);font-size:14px;font-weight:800}.text-link:hover{color:var(--orange-dark)}.category-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}.category-tile{display:grid;grid-template-columns:220px minmax(0,1fr);min-width:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.category-tile:last-child:nth-child(odd){grid-column:1/-1;grid-template-columns:260px minmax(0,1fr)}.category-photo{aspect-ratio:4/3;align-self:center;display:grid;place-items:center;background:var(--soft);padding:16px;margin:20px}.category-photo img{width:100%;height:100%;object-fit:contain}.category-copy{padding:24px 24px 24px 0;min-width:0}.category-copy h2{font-size:23px;line-height:1.2;margin:0 0 8px}.category-copy>p:not(.overline){font-size:14px;color:var(--muted);margin:0 0 14px}.category-copy dl{display:grid;grid-template-columns:150px minmax(0,1fr);margin:0 0 14px;font-size:13px}.category-copy dl div{display:contents}.category-copy dt,.category-copy dd{padding:6px 0;border-top:1px solid var(--line)}.category-copy dt{color:var(--muted)}.category-copy dd{margin:0;font-weight:700}.model-section-muted{background:var(--soft)}.model-list{border-top:1px solid var(--line)}.model-row{display:grid;grid-template-columns:180px minmax(260px,1fr) minmax(320px,390px) 50px;gap:24px;align-items:center;min-width:0;padding:16px 0;border-bottom:1px solid var(--line);background:#fff}.model-section-muted .model-row{padding-inline:16px}.model-photo{aspect-ratio:4/3;display:grid;place-items:center;background:var(--soft);overflow:hidden;padding:10px}.model-photo img,.category-heading-image img,.product-visual img{width:100%;height:100%;object-fit:contain}.source-brochure{padding:0}.source-brochure img{width:185%;height:185%;max-width:none;object-fit:cover;object-position:90% 7%}.model-copy{min-width:0}.model-copy h3{font-size:18px;line-height:1.28;margin:0 0 7px}.model-copy h3 strong{color:var(--teal-dark);margin-right:8px}.model-copy p:not(.overline){font-size:13px;color:var(--muted);margin:0}.model-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0}.model-specs div{min-width:0;padding:8px 13px;border-left:2px solid var(--line)}.model-specs dt{font-size:11px;color:var(--muted)}.model-specs dd{font-size:13px;font-weight:800;margin:2px 0 0}.row-action{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:3px}.row-action:hover{border-color:var(--teal);color:var(--teal)}.buying-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}.selection-steps{display:grid;grid-template-columns:1fr 1fr;list-style:none;counter-reset:step;margin:0;padding:0;border-top:1px solid var(--line)}.selection-steps li{counter-increment:step;display:grid;grid-template-columns:34px 90px 1fr;gap:10px;padding:16px 0;border-bottom:1px solid var(--line)}.selection-steps li:before{content:counter(step,decimal-leading-zero);color:var(--orange);font-weight:900}.selection-steps span{color:var(--muted)}.two-column{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:start}.faq-section{background:var(--soft)}.faq-list details{border-top:1px solid var(--line);padding:16px 0}.faq-list details:last-child{border-bottom:1px solid var(--line)}.faq-list summary{display:flex;justify-content:space-between;gap:20px;font-weight:800;cursor:pointer;list-style:none}.faq-list p{margin:9px 30px 0 0;color:var(--muted)}.cta-band{background:var(--teal-dark);color:#fff;padding:38px 0}.cta-band .overline{color:#ffd19d}.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-band h2{font-size:28px;line-height:1.2;margin:0}.breadcrumbs{min-height:48px;display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}.breadcrumbs a:hover{color:var(--orange-dark)}.page-heading{padding:44px 0 50px;border-bottom:1px solid var(--line);background:var(--soft)}.filter-bar{display:grid;grid-template-columns:1.4fr 1fr 1fr .8fr;gap:12px;padding:15px;background:var(--soft);border:1px solid var(--line);position:sticky;top:74px;z-index:20}.filter-bar label,.form-grid label{font-size:12px;font-weight:800;color:#394a52}.filter-bar label>span,.form-grid label span{display:block}.filter-bar select,.filter-bar input,.form-grid input,.form-grid textarea{width:100%;min-height:44px;margin-top:6px;border:1px solid #b8c3c7;background:#fff;border-radius:3px;padding:9px 11px}.search-field>div{position:relative}.search-field svg{position:absolute;left:11px;top:19px;color:var(--muted)}.search-field input{padding-left:37px}.catalog-status{display:flex;align-items:center;justify-content:space-between;padding:18px 0}.text-button{border:0;background:transparent;color:var(--teal);font-weight:800;cursor:pointer}.empty-state{text-align:center;padding:70px 20px}.category-heading{padding:38px 0 50px;border-bottom:1px solid var(--line);background:var(--soft)}.category-heading-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:70px;align-items:center}.category-heading-image{aspect-ratio:4/3;display:grid;place-items:center;background:#fff;padding:18px}.selection-note{display:grid;grid-template-columns:110px 1fr;gap:14px;margin-top:22px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px}.selection-note span{color:var(--muted)}.comparison-head{display:grid;grid-template-columns:1fr 390px 50px;gap:24px;margin-left:204px;padding:0 0 8px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase}.requirements-band{padding:42px 0;background:var(--soft);border-top:1px solid var(--line)}.requirements-band ul{display:grid;grid-template-columns:repeat(3,1fr);gap:0 25px;margin:20px 0 0;padding:0;list-style:none}.requirements-band li{padding:11px 0;border-top:1px solid var(--line)}.product-overview{padding:30px 0 58px}.product-overview-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:60px;align-items:center}.product-visual{aspect-ratio:4/3;display:grid;place-items:center;background:var(--soft);overflow:hidden;padding:24px}.product-title .model-code{font-size:15px;font-weight:900;color:var(--teal);margin:0 0 5px}.product-title h1{font-size:42px}.product-key-specs{display:grid;grid-template-columns:1fr 1fr;margin:24px 0 0;border-top:1px solid var(--line)}.product-key-specs div{padding:12px 10px 12px 0;border-bottom:1px solid var(--line)}.product-key-specs dt{font-size:11px;color:var(--muted)}.product-key-specs dd{font-size:14px;font-weight:800;margin:3px 0 0}.specification-section{background:var(--soft)}.specification-heading{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;margin-bottom:28px}.specification-heading p{margin:0;color:var(--muted)}.spec-group{margin-bottom:28px}.spec-group h3{font-size:17px;margin:0;padding:10px 13px;background:var(--teal-dark);color:#fff}.table-wrap{overflow-x:auto;background:#fff}table{width:100%;border-collapse:collapse;min-width:690px}th,td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}thead th{background:#e8eef0;color:#34464e;font-size:11px;text-transform:uppercase}tbody th{width:48%;font-size:13px;font-weight:600}tbody td:nth-child(2){width:16%;color:var(--muted);font-size:13px}tbody td:last-child{font-weight:700;font-size:13px}.spec-empty{background:#fff;border-left:4px solid var(--orange);padding:22px}.source-note{display:flex;gap:12px;background:#e9f3f3;padding:18px;color:var(--teal-dark)}.source-note p{margin:0}.text-section-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.text-section-grid section{padding:26px;border-bottom:1px solid var(--line)}.text-section-grid section:nth-child(odd){border-right:1px solid var(--line)}.text-section-grid p{color:var(--muted)}.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.guide-grid article{padding:24px;background:var(--soft);border-top:4px solid var(--teal)}.guide-grid h2{font-size:22px}.guide-grid p{color:var(--muted)}.guide-article{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;padding-block:55px}.guide-article header{position:sticky;top:110px;align-self:start}.guide-article>div section{padding:0 0 24px;margin-bottom:24px;border-bottom:1px solid var(--line)}.guide-article h2{font-size:23px;margin:0 0 8px}.guide-article>div p{color:var(--muted)}.contact-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:50px}.quote-form{padding:26px;background:var(--soft);border-top:4px solid var(--orange)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:19px}.form-grid .full{grid-column:1/-1}.contact-grid aside{border-left:1px solid var(--line);padding-left:30px}.contact-grid aside h2{font-size:20px}.contact-grid aside p strong,.contact-grid aside p span,.contact-grid aside p a{display:block}.contact-grid aside p span,.contact-grid aside p a{color:var(--muted)}.contact-grid aside ul{padding-left:20px}.not-found{padding-block:100px}.site-footer{background:#152227;color:#bdc9ce;padding:50px 0 20px}.footer-grid{display:grid;grid-template-columns:1.35fr 1fr .8fr 1fr;gap:42px}.brand-footer{color:#fff}.brand-footer small{color:#a7b5bb}.footer-grid h2{font-size:13px;color:#fff;text-transform:uppercase}.footer-grid p,.footer-grid ul{font-size:13px}.footer-grid ul{padding:0;list-style:none}.footer-grid li{margin:7px 0}.footer-grid a:hover{color:#fff}.footer-bottom{display:flex;justify-content:space-between;gap:20px;margin-top:35px;padding-top:17px;border-top:1px solid #314047;font-size:12px;color:#8fa0a7}
-@media(max-width:1020px){.main-nav{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:10px 24px}.main-nav.is-open{display:flex}.main-nav>a{padding:10px}.icon-button{display:grid}.catalog-intro-grid{grid-template-columns:1fr 280px;gap:35px}.category-grid{grid-template-columns:1fr}.category-tile:last-child:nth-child(odd){grid-column:auto;grid-template-columns:220px minmax(0,1fr)}.model-row{grid-template-columns:150px minmax(220px,1fr) 290px 44px;gap:16px}.filter-bar{grid-template-columns:1fr 1fr}.product-overview-grid{gap:35px}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:760px){.shell{width:min(calc(100% - 28px),var(--max))}.nav-row{height:66px}.brand{min-width:0}.brand small{display:none}.catalog-intro{background:#fff}.catalog-intro-grid{grid-template-columns:1fr;min-height:0;padding-block:36px}.catalog-intro h1,.page-heading h1,.category-heading h1,.guide-article h1{font-size:36px}.catalog-summary{display:grid;grid-template-columns:repeat(3,1fr);border-left:0;border-top:4px solid var(--teal)}.catalog-summary div{display:block;padding:12px 8px;text-align:center;border-right:1px solid var(--line);border-bottom:0}.catalog-summary div:last-child{border-right:0}.catalog-summary dt{font-size:10px}.directory-section,.model-section,.buying-section,.faq-section,.catalog-section,.specification-section,.application-section,.text-sections,.contact-section{padding:46px 0}.section-heading,.cta-inner{align-items:flex-start;flex-direction:column}.category-tile,.category-tile:last-child:nth-child(odd){grid-template-columns:130px minmax(0,1fr)}.category-photo{margin:12px;padding:8px}.category-copy{padding:16px 14px 16px 0}.category-copy h2{font-size:19px}.category-copy dl{grid-template-columns:1fr}.category-copy dl div{display:block;border-top:1px solid var(--line);padding:5px 0}.category-copy dt,.category-copy dd{border:0;padding:0}.model-row{grid-template-columns:112px minmax(0,1fr) 40px;gap:12px;padding:14px 0}.model-copy{grid-column:2}.model-specs{grid-column:1/-1;grid-row:2}.row-action{grid-column:3;grid-row:1}.model-photo{grid-column:1;grid-row:1}.model-specs div{padding-left:9px}.buying-grid,.two-column,.category-heading-grid,.product-overview-grid,.specification-heading,.guide-article,.contact-grid{grid-template-columns:1fr;gap:32px}.selection-steps{grid-template-columns:1fr}.filter-bar{position:static;grid-template-columns:1fr}.category-heading-image{max-width:420px;width:100%;margin:auto}.comparison-head{display:none}.requirements-band ul{grid-template-columns:1fr 1fr}.product-visual{padding:14px}.product-title h1{font-size:34px}.product-key-specs{grid-template-columns:1fr}.text-section-grid,.guide-grid{grid-template-columns:1fr}.text-section-grid section:nth-child(odd){border-right:0}.guide-article header{position:static}.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}.contact-grid aside{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}.source-brochure img{width:190%;height:190%;object-position:91% 7%}}
-@media(max-width:480px){.category-tile,.category-tile:last-child:nth-child(odd){grid-template-columns:1fr}.category-photo{aspect-ratio:16/9;margin:0}.category-copy{padding:18px}.model-row{grid-template-columns:92px minmax(0,1fr) 36px}.model-specs{grid-template-columns:1fr}.model-specs div{border-left:0;border-top:1px solid var(--line)}.requirements-band ul{grid-template-columns:1fr}.catalog-summary{grid-template-columns:1fr}.catalog-summary div{display:flex;text-align:left;border-right:0;border-bottom:1px solid var(--line)}.button{width:100%}}
-"""
-
-
-CSS += r"""
-.source-brochure{position:relative}
-.source-brochure img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain;object-position:center;transform:scale(3.2);transform-origin:75% 18%}
-.source-brochure-highlift img{transform:scale(2.6);transform-origin:85% 28%}
-.source-brochure-two-stage img{transform-origin:85% 28%}
-@media(max-width:760px){.source-brochure img{width:100%;height:100%;object-position:center;transform:scale(3.2);transform-origin:75% 18%}.source-brochure-highlift img{transform:scale(2.6);transform-origin:85% 28%}.source-brochure-two-stage img{transform-origin:85% 28%}}
+:root{--green:#0a6763;--green-dark:#074d4b;--orange:#ef7d25;--ink:#242a2d;--muted:#687277;--line:#d9dfe1;--soft:#f5f6f6;--white:#fff;--max:1200px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Arial,"Helvetica Neue",sans-serif;line-height:1.6;background:#fff}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}h1,h2,h3,p{overflow-wrap:anywhere;letter-spacing:0}.shell{width:min(calc(100% - 40px),var(--max));margin-inline:auto}.skip-link{position:fixed;left:8px;top:8px;z-index:1000;transform:translateY(-150%);background:#fff;padding:8px}.skip-link:focus{transform:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.top-strip{background:#293033;color:#cbd2d4;font-size:12px}.top-strip .shell{height:34px;display:flex;align-items:center;justify-content:flex-end;gap:28px}.top-strip a:hover{color:#fff}.site-header{position:sticky;top:0;z-index:80;background:#fff;border-bottom:1px solid var(--line)}.nav-row{height:82px;display:flex;align-items:center;justify-content:space-between;gap:35px}.brand{display:flex;flex-direction:column;line-height:1;min-width:180px}.brand strong{font-size:31px;color:var(--green-dark);font-weight:900}.brand small{font-size:10px;color:#555;margin-top:6px}.main-nav{height:100%;display:flex;align-items:stretch}.main-nav>a,.nav-group>a{position:relative;display:flex;align-items:center;gap:4px;padding:0 15px;font-size:14px;font-weight:700}.main-nav>a:after,.nav-group>a:after{content:"";position:absolute;left:15px;right:15px;bottom:0;height:3px;background:var(--orange);transform:scaleX(0);transition:.2s}.main-nav>a:hover,.nav-group:hover>a,.main-nav .active{color:var(--green)}.main-nav>a:hover:after,.nav-group:hover>a:after,.main-nav .active:after{transform:scaleX(1)}.nav-group{position:relative;display:flex}.dropdown{display:none;position:absolute;top:100%;left:0;min-width:220px;background:#fff;border-top:3px solid var(--orange);box-shadow:0 12px 28px rgba(0,0,0,.14);padding:8px 0}.dropdown a{display:block;padding:9px 15px;font-size:13px;border-bottom:1px solid #edf0f1}.dropdown a:hover{background:var(--soft);color:var(--green)}.nav-group:hover .dropdown{display:block}.wide-dropdown{min-width:270px}.menu-button{display:none;width:42px;height:42px;border:0;background:transparent;color:var(--ink)}
+.hero{min-height:540px;background:linear-gradient(100deg,#074d4b 0%,#0a6763 58%,#e8f2f1 58%,#f6f8f8 100%);overflow:hidden}.hero-grid{min-height:540px;display:grid;grid-template-columns:1fr 1fr;align-items:center}.hero-copy{position:relative;z-index:2;color:#fff;padding:65px 30px 65px 0}.hero-copy>p:first-child{font-size:13px;font-weight:800;color:#bfe1de}.hero h1{font-size:50px;line-height:1.08;margin:12px 0 18px;max-width:640px}.hero-intro{font-size:18px;max-width:570px;color:#e7f1f0}.hero-machine{align-self:stretch;display:grid;place-items:center;padding:35px 0 35px 30px}.hero-machine img{width:116%;max-width:none;height:470px;object-fit:contain;filter:drop-shadow(0 24px 20px rgba(0,0,0,.18))}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;margin:10px 8px 0 0;border:1px solid transparent;font-size:13px;font-weight:800;text-transform:uppercase}.button-primary{background:var(--orange);color:#fff}.button-primary:hover{background:#d9650f}.button-light{background:#fff;color:var(--green-dark)}.button-outline{border-color:var(--green);color:var(--green);background:#fff}.button-outline:hover{background:var(--green);color:#fff}
+.home-section{padding:70px 0}.section-heading{text-align:center;max-width:760px;margin:0 auto 36px}.section-heading span,.section-kicker{display:block;margin-bottom:7px;color:var(--orange);font-size:12px;font-weight:900;text-transform:uppercase}.section-heading h2,.about-grid h2,.contact-band h2,.detail-inquiry h2,.contact-page h2,.company-profile h2{font-size:32px;line-height:1.2;margin:0}.section-heading p{color:var(--muted);margin:12px auto 0}.featured-section{background:#fff}.featured-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.featured-grid>.product-card{height:100%}.featured-grid>.product-card .product-image{height:410px}.featured-stack{display:grid;grid-template-columns:1fr;gap:18px}.featured-stack .product-card{display:grid;grid-template-columns:190px 1fr}.featured-stack .product-image{height:100%;min-height:160px}.featured-stack .product-card-copy{padding:16px}.featured-stack .product-card-copy ul{display:none}.center-action{text-align:center;margin-top:28px}.solutions-section{background:var(--soft)}.solution-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.solution-card{position:relative;height:285px;background:#fff;overflow:hidden}.solution-card img{width:100%;height:100%;object-fit:contain;padding:22px;transition:.25s}.solution-card span{position:absolute;left:0;right:0;bottom:0;padding:14px;background:rgba(7,77,75,.94);color:#fff;font-size:16px;font-weight:800}.solution-card:hover img{transform:scale(1.04)}.about-band{padding:0;background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;min-height:430px;align-items:center}.about-grid>div:first-child{padding:60px 60px 60px 0}.about-grid p{color:var(--muted)}.about-photo{align-self:stretch;background:#eef3f3;display:grid;place-items:center;overflow:hidden}.about-photo img{width:88%;height:390px;object-fit:contain}.factory-stats{background:var(--green-dark);color:#fff}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}.stats-grid div{min-height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid rgba(255,255,255,.18)}.stats-grid div:last-child{border:0}.stats-grid strong{min-height:35px;font-size:30px}.stats-grid span{font-size:13px;color:#cce1df}.why-section{background:#fff}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.why-grid article{padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.why-grid article>span{font-size:30px;font-weight:900;color:#bdd2d1}.why-grid h3{font-size:19px;margin:14px 0 8px}.why-grid p{margin:0;color:var(--muted);font-size:14px}.showroom-section{background:var(--soft)}.blank-media{height:380px;border:1px solid var(--line);background:#fff}.cases-section{background:#fff}.blank-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.blank-grid.three{grid-template-columns:repeat(3,1fr)}.blank-grid article{height:260px;border:1px solid var(--line);background:var(--soft)}.insights-section{background:#fff}.contact-band{padding:65px 0;background:#eef3f3}.contact-band-grid,.detail-inquiry-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:65px;align-items:start}.contact-band-grid>div>p:not(.section-kicker),.detail-inquiry-grid>div>p:not(.section-kicker){color:var(--muted)}
+.inner-banner{height:235px;display:grid;align-items:center;background:linear-gradient(rgba(7,55,54,.82),rgba(7,55,54,.82)),url('/assets/og-cover.png') center 58%/cover no-repeat;color:#fff;text-align:center}.inner-banner h1{font-size:38px;margin:0;text-transform:uppercase}.breadcrumbs{height:48px;display:flex;align-items:center;gap:6px;color:var(--muted);font-size:12px;border-bottom:1px solid var(--line)}.breadcrumbs a:hover{color:var(--orange)}.catalog-layout-section{padding:52px 0 75px}.catalog-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:36px}.catalog-sidebar{min-width:0}.side-box{border:1px solid var(--line);margin-bottom:28px}.side-box>h2{margin:0;padding:13px 15px;background:var(--green);color:#fff;font-size:14px}.category-menu,.site-footer ul{margin:0;padding:0;list-style:none}.category-menu li+li{border-top:1px solid var(--line)}.category-menu a{display:flex;justify-content:space-between;gap:10px;padding:11px 13px;font-size:13px}.category-menu a:hover{color:var(--green);background:var(--soft)}.category-menu span{color:#999}.inquiry-box .compact-form{padding:15px}.catalog-title{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:25px}.catalog-title>p:first-child{margin:0 0 4px;color:var(--orange);font-size:12px;font-weight:900}.catalog-title h2{font-size:29px;margin:0 0 8px}.catalog-title>p:last-child{margin:0;color:var(--muted)}.category-answer{padding:15px 18px;margin:-5px 0 25px;background:var(--soft);border-left:4px solid var(--orange)}.category-answer strong{font-size:13px}.category-answer p{margin:3px 0 0;color:var(--muted);font-size:13px}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.product-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.product-card{min-width:0;background:#fff;border:1px solid var(--line);transition:.2s}.product-card:hover{box-shadow:0 10px 28px rgba(0,0,0,.09);transform:translateY(-2px)}.product-image{position:relative;height:225px;display:grid;place-items:center;overflow:hidden;background:#f7f8f8;padding:17px}.product-image img{width:100%;height:100%;object-fit:contain}.product-card-copy{padding:17px}.model-code{margin:0 0 4px;color:var(--green);font-size:12px;font-weight:900}.product-card h3{font-size:16px;line-height:1.35;margin:0 0 13px;min-height:44px}.product-card h3 a:hover{color:var(--green)}.product-card ul{margin:0 0 14px;padding:0;list-style:none;border-top:1px solid var(--line)}.product-card li{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--line);font-size:11px}.product-card li span{color:var(--muted)}.product-card li strong{text-align:right}.card-actions{display:flex;justify-content:space-between;gap:15px}.card-actions a{color:var(--green);font-size:12px;font-weight:800}.card-actions a:first-child{color:var(--orange)}
+.product-intro{padding:55px 0}.product-intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.product-gallery{border:1px solid var(--line);background:#f7f8f8}.product-gallery .product-image{height:460px}.product-summary h2{font-size:33px;line-height:1.2;margin:6px 0 14px}.product-summary>p{color:var(--muted)}.feature-list{margin:22px 0;padding:0;list-style:none;border-top:1px solid var(--line)}.feature-list li{display:flex;justify-content:space-between;gap:20px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}.feature-list span{color:var(--muted)}.feature-list strong{text-align:right}.availability{display:grid;grid-template-columns:1fr 1fr;margin:18px 0 6px}.availability div{border-left:3px solid var(--line);padding:4px 11px}.availability dt{font-size:11px;color:var(--muted)}.availability dd{min-height:22px;margin:2px 0 0}.product-identity{display:flex;gap:25px;margin-top:19px;font-size:12px;color:var(--muted)}.product-description{padding:55px 0;background:#fff}.tab-heading{border-bottom:2px solid var(--green);margin-bottom:25px}.tab-heading span{display:inline-block;padding:11px 18px;background:var(--green);color:#fff;font-weight:800}.description-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px}.description-grid h2{font-size:25px;margin-top:0}.description-grid p{color:var(--muted)}.quick-table table{min-width:0}.parameter-section{padding:55px 0;background:var(--soft)}.spec-group{margin-bottom:25px}.spec-group h3{font-size:15px;margin:0;padding:11px 13px;background:var(--green-dark);color:#fff}.table-wrap{overflow-x:auto;background:#fff}table{width:100%;border-collapse:collapse;min-width:680px}th,td{padding:9px 12px;text-align:left;border:1px solid var(--line);font-size:12px}thead th{background:#e7ecec}.spec-empty{height:180px;background:#fff;border:1px solid var(--line)}.detail-inquiry{padding:60px 0;background:#eef3f3}.related-section{padding:65px 0}.related-section .product-image{height:180px}.related-section .product-card h3{font-size:14px}
+.inquiry-form{background:#fff;border-top:4px solid var(--orange);padding:24px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.form-grid label{font-size:11px;font-weight:700}.form-grid label span{display:block}.form-grid .full{grid-column:1/-1}.form-grid input,.form-grid textarea{width:100%;margin-top:4px;border:1px solid #bdc6c8;background:#fff;padding:9px;min-height:40px}.compact-form{border-top:0}.compact-form .form-grid{grid-template-columns:1fr}.compact-form .full{grid-column:auto}.compact-form .button{width:100%;margin-right:0}.company-profile,.contact-page,.blank-page{padding:65px 0}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.profile-grid p{color:var(--muted)}.company-machine{height:390px;background:var(--soft);display:grid;place-items:center}.company-machine img{width:90%;height:90%;object-fit:contain}.contact-page-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px}.contact-details{margin:25px 0 0}.contact-details div{padding:11px 0;border-top:1px solid var(--line)}.contact-details dt{font-size:11px;color:var(--muted)}.contact-details dd{margin:3px 0 0;font-weight:700}.blank-page h2{font-size:29px;margin:0 0 22px}.blank-content{height:330px;border:1px solid var(--line);background:var(--soft)}
+.site-footer{background:#222a2d;color:#bfc8ca;padding-top:55px}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1.2fr 1fr;gap:45px}.site-footer h2{font-size:14px;color:#fff;margin:0 0 20px}.site-footer p,.site-footer li,.contact-list{font-size:12px}.site-footer li{margin:8px 0}.site-footer a:hover{color:#fff}.contact-list{margin:0}.contact-list div{margin-bottom:10px}.contact-list dt{color:#879598}.contact-list dd{margin:2px 0 0;min-height:19px}.newsletter{display:flex}.newsletter input{width:100%;height:42px;border:0;padding:8px}.newsletter button{width:45px;border:0;background:var(--orange);color:#fff}.footer-bottom{margin-top:45px;border-top:1px solid #3b4549}.footer-bottom .shell{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:11px;color:#869397}
+.source-brochure img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain;transform:scale(3.2);transform-origin:75% 18%}.source-brochure-highlift img{transform:scale(2.6);transform-origin:85% 28%}.source-brochure-two-stage img{transform-origin:85% 28%}
+@media(max-width:1050px){.main-nav{display:none;position:absolute;top:100%;left:0;right:0;height:auto;max-height:calc(100vh - 100px);overflow:auto;background:#fff;box-shadow:0 12px 25px rgba(0,0,0,.13);padding:10px 20px;align-items:stretch;flex-direction:column}.main-nav.is-open{display:flex}.main-nav>a,.nav-group>a{min-height:44px;padding:9px 5px}.nav-group{display:block}.nav-group:hover .dropdown{display:none}.dropdown{position:static;box-shadow:none;border-top:0;padding:0 0 5px 15px}.nav-group.is-open .dropdown{display:block}.menu-button{display:block}.hero h1{font-size:43px}.product-grid{grid-template-columns:repeat(2,1fr)}.product-grid.four{grid-template-columns:repeat(2,1fr)}.solution-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.shell{width:min(calc(100% - 28px),var(--max))}.top-strip{display:none}.nav-row{height:68px}.brand strong{font-size:26px}.brand small{font-size:8px}.hero{min-height:0;background:linear-gradient(160deg,var(--green-dark) 0 63%,#edf3f2 63%)}.hero-grid{min-height:0;grid-template-columns:1fr}.hero-copy{padding:45px 0 22px}.hero h1{font-size:37px}.hero-machine{height:285px;padding:0}.hero-machine img{height:300px;width:100%}.home-section{padding:52px 0}.section-heading h2,.about-grid h2,.contact-band h2,.detail-inquiry h2,.company-profile h2,.contact-page h2{font-size:27px}.featured-grid{grid-template-columns:1fr}.featured-grid>.product-card .product-image{height:280px}.featured-stack .product-card{grid-template-columns:130px 1fr}.solution-grid{grid-template-columns:1fr 1fr}.solution-card{height:220px}.about-grid,.profile-grid{grid-template-columns:1fr}.about-grid>div:first-child{padding:45px 0}.about-photo,.company-machine{height:320px}.stats-grid{grid-template-columns:1fr 1fr}.stats-grid div:nth-child(2){border-right:0}.stats-grid div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}.why-grid{grid-template-columns:1fr}.blank-grid,.blank-grid.three{grid-template-columns:1fr}.blank-grid article{height:220px}.contact-band-grid,.detail-inquiry-grid,.contact-page-grid{grid-template-columns:1fr;gap:30px}.inner-banner{height:175px}.inner-banner h1{font-size:29px}.catalog-layout{grid-template-columns:1fr}.catalog-sidebar{order:2}.catalog-main{order:1}.inquiry-box{display:none}.category-menu{display:grid;grid-template-columns:1fr 1fr}.product-intro-grid{grid-template-columns:1fr;gap:30px}.product-gallery .product-image{height:340px}.product-summary h2{font-size:28px}.description-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.footer-bottom .shell{align-items:flex-start;justify-content:center;flex-direction:column;padding-block:15px}.product-grid,.product-grid.four{grid-template-columns:1fr 1fr}.source-brochure img{transform:scale(3.2);transform-origin:75% 18%}.source-brochure-highlift img{transform:scale(2.6);transform-origin:85% 28%}.source-brochure-two-stage img{transform-origin:85% 28%}}
+@media(max-width:500px){.hero h1{font-size:32px}.button{width:100%;margin-right:0}.solution-grid,.product-grid,.product-grid.four{grid-template-columns:1fr}.solution-card{height:245px}.featured-stack .product-card{grid-template-columns:115px 1fr}.category-menu{grid-template-columns:1fr}.product-card h3{min-height:0}.product-image{height:240px}.product-identity{flex-direction:column;gap:4px}.availability{grid-template-columns:1fr}.product-gallery .product-image{height:300px}}
 """
 
 
 JS = r"""
-document.addEventListener('DOMContentLoaded',()=>{if(window.lucide){window.lucide.createIcons()}const menuButton=document.querySelector('[data-menu-button]');const menu=document.querySelector('[data-menu]');if(menuButton&&menu){menuButton.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');menuButton.setAttribute('aria-expanded',String(open))})}const grid=document.querySelector('[data-product-grid]');if(grid){const cards=[...grid.querySelectorAll('[data-product-card]')];const search=document.querySelector('[data-search-input]');const category=document.querySelector('[data-category-filter]');const operation=document.querySelector('[data-operation-filter]');const capacity=document.querySelector('[data-capacity-filter]');const count=document.querySelector('[data-result-count]');const empty=document.querySelector('[data-empty-state]');const params=new URLSearchParams(location.search);if(params.get('category')&&category)category.value=params.get('category');if(params.get('capacity')&&capacity)capacity.value=params.get('capacity');if(params.get('operation')&&operation)operation.value=params.get('operation');const apply=()=>{const q=(search?.value||'').trim().toLowerCase();const cat=category?.value||'';const op=(operation?.value||'').toLowerCase();const cap=Number(capacity?.value||0);let shown=0;cards.forEach(card=>{const matches=(!q||card.dataset.search.includes(q))&&(!cat||card.dataset.category===cat)&&(!op||card.dataset.operation.includes(op)||(op==='stand'&&card.dataset.operation.includes('rider')))&&(!cap||Number(card.dataset.capacity)>=cap);card.hidden=!matches;if(matches)shown++});if(count)count.textContent=`${shown} model${shown===1?'':'s'}`;if(empty)empty.hidden=shown!==0};[search,category,operation,capacity].filter(Boolean).forEach(el=>el.addEventListener(el===search?'input':'change',apply));document.querySelector('[data-clear-filters]')?.addEventListener('click',()=>{if(search)search.value='';if(category)category.value='';if(operation)operation.value='';if(capacity)capacity.value='0';apply()});apply()}const modelField=document.querySelector('[data-model-field]');if(modelField){const model=new URLSearchParams(location.search).get('model');if(model)modelField.value=model}const form=document.querySelector('[data-mailto-form]');if(form){form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`LEXYGO inquiry: ${data.get('model')||'material handling equipment'} - ${data.get('company')}`;const body=[`Company: ${data.get('company')}`,`Name: ${data.get('name')}`,`Business email: ${data.get('email')}`,`Country / region: ${data.get('country')}`,`Model / product: ${data.get('model')||''}`,`Quantity: ${data.get('quantity')||''}`,`Maximum load: ${data.get('load')||''}`,`Required lift height: ${data.get('height')||''}`,'',`Application and working conditions:`,` ${data.get('details')}`].join('\n');location.href=`mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`})}});
+document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)window.lucide.createIcons();const button=document.querySelector('[data-menu-button]');const menu=document.querySelector('[data-menu]');if(button&&menu){button.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open))});menu.querySelectorAll('.nav-group>a').forEach(link=>link.addEventListener('click',event=>{if(window.innerWidth<=1050&&link.nextElementSibling){event.preventDefault();link.parentElement.classList.toggle('is-open')}}))}const model=new URLSearchParams(location.search).get('model');document.querySelectorAll('[data-model-field]').forEach(field=>{if(model)field.value=model});document.querySelectorAll('[data-mailto-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`LEXYGO inquiry: ${data.get('model')||'material handling equipment'}${data.get('company')?' - '+data.get('company'):''}`;const body=[`Name: ${data.get('name')||''}`,`Email: ${data.get('email')||''}`,`Company: ${data.get('company')||''}`,`Country / Region: ${data.get('country')||''}`,`Product / Model: ${data.get('model')||''}`,'',`Message:`,` ${data.get('details')||''}`].join('\n');location.href=`mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}))});
 """
 
 
-FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="4" fill="#e45b25"/><path d="M18 12h10v32h20v8H18z" fill="#fff"/><path d="M38 20h8v17h-8z" fill="#0d6b73"/></svg>"""
+FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#0a6763"/><path d="M16 11h11v31h22v11H16z" fill="#fff"/><path d="M39 20h9v17h-9z" fill="#ef7d25"/></svg>"""
 
 
 def build():
@@ -287,29 +351,65 @@ def build():
     (ASSETS / "site.css").write_text(CSS, encoding="utf-8")
     (ASSETS / "site.js").write_text(JS, encoding="utf-8")
     (ASSETS / "favicon.svg").write_text(FAVICON, encoding="utf-8")
+
+    routes = ["/", "/products/"]
     write_route("/", home_page())
     write_route("/products/", products_page())
     for slug, data in CATEGORIES.items():
-        write_route(f"/products/{slug}/", category_page(slug, data))
+        route = f"/products/{slug}/"
+        write_route(route, category_page(slug, data))
+        routes.append(route)
     for item in PRODUCTS:
-        write_route(f'/products/{item["slug"]}/', product_page(item))
-    write_route("/solutions/", solutions_page())
-    write_route("/guides/", guides_index())
-    for guide in GUIDES:
-        write_route(f'/guides/{guide["slug"]}/', guide_page(guide))
-    write_route("/quality/", quality_page())
-    write_route("/oem-odm/", oem_page())
-    write_route("/about/", about_page())
-    write_route("/contact/", contact_page())
+        route = f'/products/{item["slug"]}/'
+        write_route(route, product_page(item))
+        routes.append(route)
+
+    static_pages = {
+        "/company/": company_page(),
+        "/company/why-choose-us/": blank_page("/company/why-choose-us/", "Why Choose Us", ("Company", "/company/"), "company"),
+        "/company/quality-management/": blank_page("/company/quality-management/", "Quality Management", ("Company", "/company/"), "company"),
+        "/services/": blank_page("/services/", "Services", active="services"),
+        "/resources/": resources_page(),
+        "/resources/download/": blank_page("/resources/download/", "Download", ("Resources", "/resources/"), "resources"),
+        "/resources/faq/": blank_page("/resources/faq/", "FAQ", ("Resources", "/resources/"), "resources"),
+        "/resources/cases/": blank_page("/resources/cases/", "Cases", ("Resources", "/resources/"), "resources"),
+        "/blogs/": blogs_page(),
+        "/blogs/company-news/": blank_page("/blogs/company-news/", "Company News", ("Blogs", "/blogs/"), "blogs"),
+        "/blogs/industry-knowledge/": blank_page("/blogs/industry-knowledge/", "Industry Knowledge", ("Blogs", "/blogs/"), "blogs"),
+        "/contact/": contact_page(),
+    }
+    for route, content in static_pages.items():
+        write_route(route, content)
+        routes.append(route)
+
+    aliases = {
+        "/about/": static_pages["/company/"],
+        "/quality/": static_pages["/company/quality-management/"],
+        "/oem-odm/": static_pages["/services/"],
+        "/solutions/": static_pages["/services/"],
+        "/guides/": static_pages["/resources/"],
+        "/guides/forklift-capacity-and-aisle-width/": blank_page(
+            "/guides/forklift-capacity-and-aisle-width/", "Forklift Capacity And Aisle Width", ("Resources", "/resources/"), "resources"
+        ),
+        "/guides/how-to-choose-an-electric-pallet-truck/": blank_page(
+            "/guides/how-to-choose-an-electric-pallet-truck/", "How To Choose An Electric Pallet Truck", ("Resources", "/resources/"), "resources"
+        ),
+        "/guides/pallet-truck-vs-stacker/": blank_page(
+            "/guides/pallet-truck-vs-stacker/", "Pallet Truck Vs Stacker", ("Resources", "/resources/"), "resources"
+        ),
+    }
+    for route, content in aliases.items():
+        write_route(route, content)
+        routes.append(route)
+
     (DIST / "404.html").write_text(not_found_page(), encoding="utf-8")
-    routes = ["/", "/products/"] + [f"/products/{slug}/" for slug in CATEGORIES] + [f'/products/{item["slug"]}/' for item in PRODUCTS] + ["/solutions/", "/guides/", "/quality/", "/oem-odm/", "/about/", "/contact/"] + [f'/guides/{guide["slug"]}/' for guide in GUIDES]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(f"  <url><loc>{route_url(route)}</loc></url>" for route in routes) + "\n</urlset>\n"
     (DIST / "sitemap.xml").write_text(sitemap, encoding="utf-8")
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
-    llms = ["# LEXYGO Material Handling Equipment", "", f"> {COMPANY['legal_name']} supplies model-specific pallet trucks, pallet stackers, electric forklifts, manual pallet trucks, and warehouse equipment.", "", "## Product families"]
+    llms = ["# LEXYGO Material Handling Equipment", "", f"> {COMPANY['legal_name']} supplies electric pallet trucks, stackers, electric forklifts, manual pallet trucks, and warehouse equipment.", "", "## Product families"]
     llms += [f"- [{data['name']}]({route_url(f'/products/{slug}/')}): {data['short']}" for slug, data in CATEGORIES.items()]
-    llms += ["", "## Model pages"] + [f"- [{item['model']} {item['name']}]({route_url('/products/' + item['slug'] + '/')}): {item['capacity']}; {item['lift']}; {item['operation']}." for item in PRODUCTS]
-    llms += ["", "## Contact", f"- Email: {COMPANY['email']}", "- Final specifications are confirmed against the quotation and project configuration."]
+    llms += ["", "## Product models"] + [f"- [{item['model']} {item['name']}]({route_url('/products/' + item['slug'] + '/')}): {known(item['capacity'])}; {known(item['lift'])}; {known(item['operation'])}." for item in PRODUCTS]
+    llms += ["", "## Contact", f"- Email: {COMPANY['email']}"]
     (DIST / "llms.txt").write_text("\n".join(llms) + "\n", encoding="utf-8")
     print(f"Built {len(routes)} routes and {len(PRODUCTS)} product pages in {DIST}")
 

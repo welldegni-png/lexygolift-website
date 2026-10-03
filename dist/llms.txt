@@ -1,6 +1,6 @@
 # LEXYGO Material Handling Equipment
 
-> Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. supplies model-specific pallet trucks, pallet stackers, electric forklifts, manual pallet trucks, and warehouse equipment.
+> Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. supplies electric pallet trucks, stackers, electric forklifts, manual pallet trucks, and warehouse equipment.
 
 ## Product families
 - [Electric Pallet Trucks](https://www.lexygolift.com/products/electric-pallet-trucks/): Move palletized loads efficiently across warehouses, docks, and mixed surfaces.
@@ -9,7 +9,7 @@
 - [Manual Pallet Trucks](https://www.lexygolift.com/products/manual-pallet-trucks/): Simple, dependable pallet movement and manual high-lift handling.
 - [Warehouse Equipment](https://www.lexygolift.com/products/warehouse-equipment/): Compact lifting tables, platform trucks, and support equipment for material flow.
 
-## Model pages
+## Product models
 - [WEP20J 2.0 t Walkie Electric Pallet Truck](https://www.lexygolift.com/products/wep20j/): 2,000 kg; 205 mm; Walk-behind.
 - [REP3000E 3.0 t Rider Electric Pallet Truck](https://www.lexygolift.com/products/rep3000e/): 3,000 kg; 205 mm; Ride-on.
 - [ATEP3000Y 3.0 t All-Terrain Electric Pallet Truck](https://www.lexygolift.com/products/atep3000y/): 3,000 kg; 205 mm; Walk-behind.
@@ -26,9 +26,9 @@
 - [WCES1000J 1.0 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/products/wces1000j/): 1,000 kg; 1,600-3,500 mm; Walk-behind.
 - [WCES1300J 1.3 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/products/wces1300j/): 1,300 kg; 1,600-3,500 mm; Walk-behind.
 - [WCES1500J 1.5 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/products/wces1500j/): 1,500 kg; 1,600-3,500 mm; Walk-behind.
-- [RCES1000B 1.0 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces1000b/): 1,000 kg; Configuration based; Stand-on.
-- [RCES1500E 1.5 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces1500e/): 1,500 kg; Configuration based; Stand-on.
-- [RCES2000E 2.0 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces2000e/): 2,000 kg; Configuration based; Stand-on.
+- [RCES1000B 1.0 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces1000b/): 1,000 kg; ; Stand-on.
+- [RCES1500E 1.5 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces1500e/): 1,500 kg; ; Stand-on.
+- [RCES2000E 2.0 t Rider Counterbalanced Stacker](https://www.lexygolift.com/products/rces2000e/): 2,000 kg; ; Stand-on.
 - [HES1500A 1.5 t Reach Electric Stacker](https://www.lexygolift.com/products/hes1500a/): 1,500 kg; 3,000 mm; Stand-on.
 - [HES2000A 2.0 t Reach Electric Stacker](https://www.lexygolift.com/products/hes2000a/): 2,000 kg; 1,600-3,500 mm; Stand-on.
 - [EFL1200R3 1.2 t Three-Wheel Electric Forklift](https://www.lexygolift.com/products/efl1200r3/): 1,200 kg; 3,000 mm; Seated.
@@ -45,9 +45,8 @@
 - [QES15/E 1.5 t Walkie Electric Stacker](https://www.lexygolift.com/products/qes15e/): 1,500 kg; 3,000 mm; Walk-behind.
 - [QES15-LI/E 1.5 t Lithium Walkie Electric Stacker](https://www.lexygolift.com/products/qes15lie/): 1,500 kg; 3,000 mm; Walk-behind.
 - [QED1530 1.5 t Electric Stacker](https://www.lexygolift.com/products/qed1530/): 1,500 kg; 3,000 mm configurable; Electric.
-- [Lift Table Mobile Scissor Lift Table](https://www.lexygolift.com/products/warehouse-scissor-lift-table/): Configuration based; Configuration based; Manual mobile.
-- [Lift Cart Compact Material Lift Cart](https://www.lexygolift.com/products/warehouse-material-lift-cart/): Configuration based; Configuration based; Manual mobile.
+- [Lift Table Mobile Scissor Lift Table](https://www.lexygolift.com/products/warehouse-scissor-lift-table/): ; ; Manual mobile.
+- [Lift Cart Compact Material Lift Cart](https://www.lexygolift.com/products/warehouse-material-lift-cart/): ; ; Manual mobile.
 
 ## Contact
 - Email: degni@shengliclean.com
-- Final specifications are confirmed against the quotation and project configuration.
