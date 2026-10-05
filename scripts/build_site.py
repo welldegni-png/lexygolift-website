@@ -14,6 +14,7 @@ ASSETS = DIST / "assets"
 PRODUCT_ASSETS = ASSETS / "products"
 BASE_URL = COMPANY["domain"]
 FULL_SPECS = json.loads((ROOT / "product_specs.json").read_text(encoding="utf-8"))
+LOGO_SOURCE = ROOT / "assets" / "lexygo-logo.gif"
 
 
 def esc(value):
@@ -74,7 +75,7 @@ def header(active=""):
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="top-strip"><div class="shell"><span>{esc(COMPANY['location'])}</span><a href="tel:{esc(COMPANY['telephone_href'])}">{esc(COMPANY['telephone'])}</a><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></div></div>
     <header class="site-header"><div class="shell nav-row">
-      <a class="brand" href="/" aria-label="LEXYGO home"><strong>LEXYGO</strong><small>MATERIAL HANDLING EQUIPMENT</small></a>
+      <a class="brand" href="/" aria-label="LEXYGO home"><img src="/assets/lexygo-logo.gif" alt="LEXYGO Material Handling Equipment"></a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>{icon('menu', 22)}</button>
       <nav class="main-nav" aria-label="Main navigation" data-menu>
         <a class="{'active' if active == 'home' else ''}" href="/">Home</a>
@@ -101,7 +102,7 @@ def footer():
         <section><h2>PRODUCT CATEGORY</h2><ul>{category_links}</ul></section>
         <section><h2>NEWSLETTER</h2><p>Receive product and company updates.</p><form class="newsletter" onsubmit="return false"><label><span class="sr-only">Email address</span><input type="email" placeholder="Email address"></label><button type="submit" aria-label="Subscribe">{icon('send', 18)}</button></form></section>
       </div>
-      <div class="footer-bottom"><div class="shell"><span>&copy; 2026 {esc(COMPANY['legal_name'])}</span><span>{esc(COMPANY['brand'])}</span></div></div>
+      <div class="footer-bottom"><div class="shell"><span>&copy; 2026 {esc(COMPANY['legal_name'])}</span><a class="footer-brand" href="/" aria-label="LEXYGO home"><img src="/assets/lexygo-logo.gif" alt="LEXYGO"></a></div></div>
     </footer>
     """
 
@@ -151,7 +152,7 @@ def page(title, description, route, body, schema=None, active=""):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} | LEXYGO</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}/assets/og-cover.png">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{json_ld}</script></head>
+<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{json_ld}</script></head>
 <body>{header(active)}<main id="main">{body}</main>{footer()}<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><script src="/assets/site.js"></script></body></html>"""
 
 
@@ -464,6 +465,11 @@ body{color:var(--ink);font-family:"Segoe UI",Arial,"Helvetica Neue",sans-serif;b
 @media(max-width:760px){.brand:after{width:32px;height:2px;margin-top:5px}.hero{background:var(--graphite)}.hero-grid{grid-template-columns:1fr}.hero-machine{margin-inline:-14px;padding-inline:14px;background:#101518;box-shadow:none}.hero-machine:before{height:3px}.about-grid>div:first-child:before{display:none}.inner-banner{background-position:center}.company-contact-strip{background:var(--blue-dark)}}
 """
 
+CSS += r"""
+.brand{width:194px;min-width:194px;height:68px;display:flex;align-items:center;justify-content:flex-start}.brand:after{display:none}.brand img{width:180px;height:64px;object-fit:contain;object-position:left center}.footer-brand{display:flex;align-items:center;justify-content:center;width:122px;min-height:48px;padding:5px 8px;background:#fff;border:1px solid #39464d}.footer-brand img{display:block;width:104px;height:38px;object-fit:contain}.footer-brand:hover{border-color:#7fc0e7;background:#f6f8f9}
+@media(max-width:760px){.brand{width:150px;min-width:150px;height:58px}.brand img{width:142px;height:54px}.footer-brand{width:116px}}
+"""
+
 
 JS = r"""
 document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)window.lucide.createIcons();const button=document.querySelector('[data-menu-button]');const menu=document.querySelector('[data-menu]');if(button&&menu){button.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open))});menu.querySelectorAll('.nav-group>a').forEach(link=>link.addEventListener('click',event=>{if(window.innerWidth<=1050&&link.nextElementSibling){event.preventDefault();link.parentElement.classList.toggle('is-open')}}))}const model=new URLSearchParams(location.search).get('model');document.querySelectorAll('[data-model-field]').forEach(field=>{if(model)field.value=model});document.querySelectorAll('[data-mailto-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`LEXYGO inquiry: ${data.get('model')||'material handling equipment'}${data.get('company')?' - '+data.get('company'):''}`;const body=[`Name: ${data.get('name')||''}`,`Email: ${data.get('email')||''}`,`Company: ${data.get('company')||''}`,`Country / Region: ${data.get('country')||''}`,`Product / Model: ${data.get('model')||''}`,'',`Message:`,` ${data.get('details')||''}`].join('\n');location.href=`mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}))});
@@ -481,6 +487,7 @@ def build():
     (ASSETS / "site.css").write_text(CSS, encoding="utf-8")
     (ASSETS / "site.js").write_text(JS, encoding="utf-8")
     (ASSETS / "favicon.svg").write_text(FAVICON, encoding="utf-8")
+    shutil.copy2(LOGO_SOURCE, ASSETS / "lexygo-logo.gif")
 
     routes = ["/", "/products/"]
     write_route("/", home_page())
