@@ -8,9 +8,16 @@ SOURCE_ROOT = Path(
 
 COMPANY = {
     "brand": "LEXYGO",
+    "display_name": "LEXYGO Material Handling Equipment",
     "legal_name": "Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd.",
-    "email": "degni@shengliclean.com",
-    "location": "Changxing, Zhejiang, China",
+    "email": "info@lexygolift.com",
+    "telephone": "+86-159 6826 3134",
+    "telephone_href": "+8615968263134",
+    "whatsapp": "+63-915-0522-944",
+    "whatsapp_href": "639150522944",
+    "address": "No. 4 Workshop, No. 188 Baixi Road, Changxing Development Zone, Huzhou, Zhejiang, China",
+    "location": "Huzhou, Zhejiang, China",
+    "website": "www.lexygolift.com",
     "domain": "https://www.lexygolift.com",
 }
 

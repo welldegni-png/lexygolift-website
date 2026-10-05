@@ -72,7 +72,7 @@ def header(active=""):
     )
     return f"""
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="top-strip"><div class="shell"><span>{esc(COMPANY['location'])}</span><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></div></div>
+    <div class="top-strip"><div class="shell"><span>{esc(COMPANY['location'])}</span><a href="tel:{esc(COMPANY['telephone_href'])}">{esc(COMPANY['telephone'])}</a><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></div></div>
     <header class="site-header"><div class="shell nav-row">
       <a class="brand" href="/" aria-label="LEXYGO home"><strong>LEXYGO</strong><small>MATERIAL HANDLING EQUIPMENT</small></a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>{icon('menu', 22)}</button>
@@ -96,7 +96,7 @@ def footer():
     return f"""
     <footer class="site-footer">
       <div class="shell footer-grid">
-        <section><h2>CONTACT US</h2><dl class="contact-list"><div><dt>Address</dt><dd>{esc(COMPANY['location'])}</dd></div><div><dt>Telephone</dt><dd>&nbsp;</dd></div><div><dt>WhatsApp</dt><dd>&nbsp;</dd></div><div><dt>Email</dt><dd><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></dd></div></dl></section>
+        <section><h2>CONTACT US</h2><dl class="contact-list"><div><dt>Address</dt><dd>{esc(COMPANY['address'])}</dd></div><div><dt>Telephone</dt><dd><a href="tel:{esc(COMPANY['telephone_href'])}">{esc(COMPANY['telephone'])}</a></dd></div><div><dt>WhatsApp</dt><dd><a href="https://wa.me/{esc(COMPANY['whatsapp_href'])}">{esc(COMPANY['whatsapp'])}</a></dd></div><div><dt>Email</dt><dd><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></dd></div><div><dt>Web</dt><dd><a href="{esc(COMPANY['domain'])}">{esc(COMPANY['website'])}</a></dd></div></dl></section>
         <section><h2>QUICK LINKS</h2><ul><li><a href="/">Home</a></li><li><a href="/company/">Company Profile</a></li><li><a href="/services/">Services</a></li><li><a href="/resources/download/">Download</a></li><li><a href="/resources/faq/">FAQ</a></li><li><a href="/resources/cases/">Cases</a></li><li><a href="/blogs/">Blogs</a></li><li><a href="/contact/">Contact Us</a></li></ul></section>
         <section><h2>PRODUCT CATEGORY</h2><ul>{category_links}</ul></section>
         <section><h2>NEWSLETTER</h2><p>Receive product and company updates.</p><form class="newsletter" onsubmit="return false"><label><span class="sr-only">Email address</span><input type="email" placeholder="Email address"></label><button type="submit" aria-label="Subscribe">{icon('send', 18)}</button></form></section>
@@ -109,11 +109,35 @@ def footer():
 def organization_schema():
     return {
         "@type": "Organization",
-        "name": COMPANY["legal_name"],
+        "name": COMPANY["display_name"],
+        "legalName": COMPANY["legal_name"],
+        "alternateName": COMPANY["brand"],
         "brand": COMPANY["brand"],
         "url": BASE_URL,
         "email": COMPANY["email"],
-        "address": {"@type": "PostalAddress", "addressLocality": "Changxing", "addressRegion": "Zhejiang", "addressCountry": "CN"},
+        "telephone": COMPANY["telephone_href"],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "No. 4 Workshop, No. 188 Baixi Road, Changxing Development Zone",
+            "addressLocality": "Huzhou",
+            "addressRegion": "Zhejiang",
+            "addressCountry": "CN",
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "telephone": COMPANY["telephone_href"],
+            "email": COMPANY["email"],
+            "availableLanguage": ["English", "Chinese"],
+        },
+        "knowsAbout": [
+            "Electric forklifts",
+            "Electric pallet stackers",
+            "Electric pallet trucks",
+            "ANSI/ITSDF B56.1-2020",
+            "UL 583 NRTL Type E",
+            "UN 38.3 lithium battery transport testing",
+        ],
     }
 
 
@@ -273,8 +297,89 @@ def blank_page(route, title, parent=None, active=""):
 
 def company_page():
     banner, crumb_schema = inner_banner("COMPANY PROFILE", [("Home", "/"), ("Company", None)])
-    body = f"""{banner}<section class="company-profile"><div class="shell profile-grid"><div><p class="section-kicker">COMPANY PROFILE</p><h2>{esc(COMPANY['legal_name'])}</h2><p>LEXYGO is the material handling equipment range of our intelligent machinery factory in {esc(COMPANY['location'])}.</p><p>Our current range includes electric pallet trucks, electric pallet stackers, electric forklifts, manual pallet trucks, and warehouse equipment.</p></div><div class="company-machine"><img src="/assets/products/r4efl5t.png" alt="LEXYGO electric forklift"></div></div></section><section class="factory-stats"><div class="shell stats-grid"><div><strong>&nbsp;</strong><span>Factory Area</span></div><div><strong>&nbsp;</strong><span>Production Lines</span></div><div><strong>&nbsp;</strong><span>Annual Capacity</span></div><div><strong>&nbsp;</strong><span>Export Markets</span></div></div></section>"""
-    return page("Company Profile", "Company profile for LEXYGO material handling equipment.", "/company/", body, crumb_schema, "company")
+    product_links = "".join(
+        f'<a href="/products/{slug}/"><span>{esc(data["name"])}</span>{icon("arrow-up-right", 17)}</a>'
+        for slug, data in CATEGORIES.items()
+    )
+    body = f"""{banner}
+    <section class="company-profile"><div class="shell profile-grid"><div><p class="section-kicker">WHO WE ARE</p><h2>{esc(COMPANY['display_name'])}</h2><p class="answer-lead">LEXYGO is a China-based material handling equipment manufacturer serving professional buyers, distributors, warehouses, factories, and logistics operations.</p><p>Our product range includes electric pallet trucks, electric pallet stackers, electric forklifts, manual pallet trucks, and supporting warehouse equipment.</p><p>LEXYGO is operated by {esc(COMPANY['legal_name'])} in Huzhou, Zhejiang, China.</p></div><div class="company-machine"><img src="/assets/products/r4efl5t.png" alt="LEXYGO electric forklift manufactured in Zhejiang, China"></div></div></section>
+    <section class="entity-section"><div class="shell entity-grid"><div><p class="section-kicker">COMPANY FACTS</p><h2>LEXYGO At A Glance</h2><p>These facts identify the manufacturer, location, product scope, and direct sales contact for sourcing and supplier verification.</p></div><dl class="entity-facts"><div><dt>Business name</dt><dd>{esc(COMPANY['display_name'])}</dd></div><div><dt>Legal entity</dt><dd>{esc(COMPANY['legal_name'])}</dd></div><div><dt>Business type</dt><dd>Material handling equipment manufacturer and supplier</dd></div><div><dt>Address</dt><dd>{esc(COMPANY['address'])}</dd></div><div><dt>Primary products</dt><dd>Electric forklifts, pallet stackers, pallet trucks, and warehouse equipment</dd></div><div><dt>Sales email</dt><dd><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></dd></div></dl></div></section>
+    <section class="profile-range"><div class="shell">{section_heading('PRODUCT SCOPE', 'Material Handling Equipment By Category', 'Open a category to compare models, capacities, lift heights, and available technical parameters.')}<div class="profile-product-links">{product_links}</div></div></section>
+    <section class="compliance-band"><div class="shell compliance-band-grid"><div><p class="section-kicker">DOCUMENTED COMPLIANCE</p><h2>Compliance Evidence For International Buyers</h2><p>LEXYGO products are supplied with the applicable compliance package for their product type and configuration.</p></div><ul><li>EU CE certification and test documentation</li><li>ANSI/ITSDF B56.1-2020 test reports</li><li>UL 583 NRTL Type E certification for applicable electric industrial trucks</li><li>UN 38.3 documentation for applicable lithium battery packs</li><li>English safety and operating documentation</li></ul></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Discuss a product or sourcing project</strong><span>{esc(COMPANY['email'])} &nbsp; | &nbsp; {esc(COMPANY['telephone'])}</span></div>{button('Contact LEXYGO', '/contact/', 'primary', 'send')}</div></section>"""
+    about_schema = {"@type": "AboutPage", "name": "LEXYGO Company Profile", "url": route_url("/company/"), "about": {"@id": route_url("/")}}
+    return page("Company Profile", "LEXYGO is a material handling equipment manufacturer in Huzhou, Zhejiang, China, supplying electric forklifts, pallet stackers, pallet trucks, and warehouse equipment.", "/company/", body, [about_schema, crumb_schema], "company")
+
+
+def why_choose_page():
+    banner, crumb_schema = inner_banner("WHY CHOOSE US", [("Home", "/"), ("Company", "/company/"), ("Why Choose Us", None)])
+    reasons = [
+        ("Documented Compliance", "Applicable products are supported by CE documentation, ANSI/ITSDF B56.1-2020 test reports, UL 583 NRTL Type E certification, UN 38.3 battery documentation, and English safety materials."),
+        ("Manufacturer-Direct Communication", "Buyers communicate directly with the LEXYGO team about model selection, load capacity, lift height, battery configuration, and application conditions."),
+        ("A Focused Product Directory", "Products are organized by truck type, model, capacity, operation method, and application so professional buyers can compare suitable equipment quickly."),
+        ("Configuration-Level Documentation", "Compliance and safety documents are matched to the applicable product type and supplied configuration rather than presented as generic marketing claims."),
+    ]
+    reason_html = "".join(f'<article><span>{index:02d}</span><h3>{esc(title)}</h3><p>{esc(copy)}</p></article>' for index, (title, copy) in enumerate(reasons, start=1))
+    evidence_rows = [
+        ("European market conformity", "EU CE certification and test documentation", "Supports technical review for applicable EU product requirements"),
+        ("Industrial truck safety", "ANSI/ITSDF B56.1-2020 test report", "Provides model-level safety and performance evidence"),
+        ("Electrical and fire safety", "UL 583 NRTL Type E certification for applicable electric trucks", "Supports U.S. industrial buyer and workplace approval reviews"),
+        ("Lithium battery transport", "UN 38.3 test documentation for applicable battery packs", "Supports international lithium battery shipment documentation"),
+        ("Safe operation", "English safety, operating, and product documentation", "Helps distributors and end users review correct use and maintenance"),
+    ]
+    evidence_html = "".join(f'<tr><th scope="row">{esc(claim)}</th><td>{esc(evidence)}</td><td>{esc(benefit)}</td></tr>' for claim, evidence, benefit in evidence_rows)
+    faqs = [
+        ("What does LEXYGO manufacture?", "LEXYGO manufactures and supplies electric forklifts, electric pallet stackers, electric pallet trucks, manual pallet trucks, and warehouse equipment."),
+        ("Do LEXYGO products have CE documentation?", "Yes. LEXYGO products are supported by the applicable EU CE certification and test documentation."),
+        ("Are ANSI/ITSDF B56.1-2020 test reports available?", "Yes. ANSI/ITSDF B56.1-2020 test reports are available for LEXYGO industrial truck products according to the applicable model and configuration."),
+        ("Is UL 583 NRTL Type E certification available?", "Yes. Applicable LEXYGO electric industrial trucks are supported by UL 583 NRTL Type E certification."),
+        ("Are lithium battery documents available?", "Yes. Applicable lithium battery packs are supported by UN 38.3 documentation, together with English safety information."),
+    ]
+    faq_html = "".join(f'<details><summary>{esc(question)}{icon("plus", 18)}</summary><p>{esc(answer)}</p></details>' for question, answer in faqs)
+    faq_schema = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
+    body = f"""{banner}
+    <section class="answer-section"><div class="shell answer-grid"><p class="section-kicker">THE SHORT ANSWER</p><h2>Why Do Buyers Choose LEXYGO?</h2><p>LEXYGO combines manufacturer-direct product support with documented international compliance, model-level technical information, and English safety documentation.</p></div></section>
+    <section class="reason-section"><div class="shell">{section_heading('BUYER VALUE', 'Four Reasons To Work With LEXYGO')}<div class="reason-grid">{reason_html}</div></div></section>
+    <section class="evidence-section"><div class="shell"><div class="section-heading left"><span>VERIFIABLE EVIDENCE</span><h2>Compliance And Documentation Matrix</h2><p>Documents are supplied according to the applicable product type, battery configuration, and destination-market requirement.</p></div><div class="table-wrap"><table class="evidence-table"><thead><tr><th>Buyer question</th><th>Available evidence</th><th>Buyer value</th></tr></thead><tbody>{evidence_html}</tbody></table></div></div></section>
+    <section class="faq-section"><div class="shell faq-grid"><div><p class="section-kicker">QUICK ANSWERS</p><h2>Frequently Asked Questions</h2><p>Direct answers for sourcing teams, distributors, and industrial buyers.</p></div><div class="faq-list">{faq_html}</div></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Request model-specific compliance documents</strong><span>Contact {esc(COMPANY['email'])} with the product model and destination market.</span></div>{button('Request Documents', '/contact/', 'primary', 'send')}</div></section>"""
+    return page("Why Choose LEXYGO", "Choose LEXYGO for manufacturer-direct material handling equipment, documented international compliance, model-level specifications, and English safety documentation.", "/company/why-choose-us/", body, [faq_schema, crumb_schema], "company")
+
+
+def quality_management_page():
+    banner, crumb_schema = inner_banner("QUALITY MANAGEMENT", [("Home", "/"), ("Company", "/company/"), ("Quality Management", None)])
+    controls = [
+        ("Product Conformity", "Applicable CE certification and test documentation support product conformity review."),
+        ("Industrial Truck Safety", "ANSI/ITSDF B56.1-2020 test reports provide model-level industrial truck safety evidence."),
+        ("Electrical Fire Safety", "Applicable electric industrial trucks are supported by UL 583 NRTL Type E certification."),
+        ("Battery Transport Safety", "Applicable lithium battery packs are supported by UN 38.3 transport test documentation."),
+        ("English Safety Information", "English operating, warning, and safety materials support distributor and end-user review."),
+        ("Configuration Matching", "Documents are matched to the applicable model and supplied configuration for buyer review."),
+    ]
+    control_html = "".join(f'<article><span>{icon("check-circle", 22)}</span><h3>{esc(title)}</h3><p>{esc(copy)}</p></article>' for title, copy in controls)
+    document_rows = [
+        ("CE certification and test documentation", "Applicable LEXYGO products", "European conformity review"),
+        ("ANSI/ITSDF B56.1-2020 test report", "Applicable industrial truck models", "Safety and performance review"),
+        ("UL 583 NRTL Type E certification", "Applicable electric industrial trucks", "Electrical and fire-safety review"),
+        ("UN 38.3 battery documentation", "Applicable lithium battery packs", "Dangerous-goods transport preparation"),
+        ("English safety documentation", "Applicable products and configurations", "Operation, warning, and maintenance review"),
+    ]
+    documents_html = "".join(f'<tr><th scope="row">{esc(document)}</th><td>{esc(applies)}</td><td>{esc(purpose)}</td></tr>' for document, applies, purpose in document_rows)
+    steps = [
+        ("01", "Identify The Product Configuration", "Confirm the model, capacity, lift height, mast, battery, charger, and destination market."),
+        ("02", "Match Applicable Compliance", "Determine which CE, B56.1, UL 583, UN 38.3, and English safety documents apply to the configuration."),
+        ("03", "Review Product Identification", "Check the model information, rated capacity, product markings, and configuration references."),
+        ("04", "Prepare The Document Package", "Compile the applicable test, certification, battery, and English safety documents for buyer review."),
+        ("05", "Release For Shipment", "Confirm the supplied configuration and corresponding document package before shipment release."),
+    ]
+    step_html = "".join(f'<li><span>{number}</span><div><h3>{esc(title)}</h3><p>{esc(copy)}</p></div></li>' for number, title, copy in steps)
+    body = f"""{banner}
+    <section class="answer-section"><div class="shell answer-grid"><p class="section-kicker">QUALITY POLICY</p><h2>How Does LEXYGO Manage Product Quality?</h2><p>LEXYGO uses a compliance-led quality framework that connects each applicable product configuration with test evidence, certification records, battery transport documentation, and English safety information.</p></div></section>
+    <section class="quality-controls"><div class="shell">{section_heading('CONTROL FRAMEWORK', 'Six Quality And Compliance Controls')}<div class="quality-grid">{control_html}</div></div></section>
+    <section class="document-section"><div class="shell"><div class="section-heading left"><span>DOCUMENT CONTROL</span><h2>Quality Document Matrix</h2><p>The exact document package depends on the product type, battery, charger, configuration, and destination market.</p></div><div class="table-wrap"><table class="evidence-table"><thead><tr><th>Document</th><th>Applies to</th><th>Purpose</th></tr></thead><tbody>{documents_html}</tbody></table></div></div></section>
+    <section class="release-section"><div class="shell release-grid"><div><p class="section-kicker">CONFIGURATION CONTROL</p><h2>From Product Selection To Shipment Release</h2><p>Our quality workflow keeps the supplied machine and its applicable compliance documentation aligned.</p></div><ol>{step_html}</ol></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Need a compliance package for supplier approval?</strong><span>Send the model, configuration, and destination market to {esc(COMPANY['email'])}.</span></div>{button('Contact Quality Team', '/contact/', 'primary', 'send')}</div></section>"""
+    return page("Quality Management", "LEXYGO quality management connects applicable product configurations with CE, ANSI/ITSDF B56.1-2020, UL 583 NRTL Type E, UN 38.3, and English safety documentation.", "/company/quality-management/", body, crumb_schema, "company")
 
 
 def resources_page():
@@ -287,7 +392,7 @@ def blogs_page():
 
 def contact_page():
     banner, crumb_schema = inner_banner("CONTACT US", [("Home", "/"), ("Contact Us", None)])
-    body = f"""{banner}<section class="contact-page"><div class="shell contact-page-grid"><div><p class="section-kicker">CONTACT DETAILS</p><h2>Contact LEXYGO</h2><dl class="contact-details"><div><dt>Company</dt><dd>{esc(COMPANY['legal_name'])}</dd></div><div><dt>Address</dt><dd>{esc(COMPANY['location'])}</dd></div><div><dt>Email</dt><dd><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></dd></div><div><dt>Telephone</dt><dd>&nbsp;</dd></div><div><dt>WhatsApp</dt><dd>&nbsp;</dd></div></dl></div>{inquiry_form()}</div></section>"""
+    body = f"""{banner}<section class="contact-page"><div class="shell contact-page-grid"><div><p class="section-kicker">CONTACT DETAILS</p><h2>Contact LEXYGO</h2><dl class="contact-details"><div><dt>Business name</dt><dd>{esc(COMPANY['display_name'])}</dd></div><div><dt>Legal entity</dt><dd>{esc(COMPANY['legal_name'])}</dd></div><div><dt>Address</dt><dd>{esc(COMPANY['address'])}</dd></div><div><dt>Telephone</dt><dd><a href="tel:{esc(COMPANY['telephone_href'])}">{esc(COMPANY['telephone'])}</a></dd></div><div><dt>WhatsApp</dt><dd><a href="https://wa.me/{esc(COMPANY['whatsapp_href'])}">{esc(COMPANY['whatsapp'])}</a></dd></div><div><dt>Email</dt><dd><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></dd></div><div><dt>Website</dt><dd><a href="{esc(COMPANY['domain'])}">{esc(COMPANY['website'])}</a></dd></div></dl></div>{inquiry_form()}</div></section>"""
     return page("Contact Us", "Contact LEXYGO for material handling product and configuration inquiries.", "/contact/", body, crumb_schema, "contact")
 
 
@@ -334,6 +439,12 @@ CSS = r"""
 @media(max-width:500px){.hero h1{font-size:32px}.button{width:100%;margin-right:0}.solution-grid,.product-grid,.product-grid.four{grid-template-columns:1fr}.solution-card{height:245px}.featured-stack .product-card{grid-template-columns:115px 1fr}.category-menu{grid-template-columns:1fr}.product-card h3{min-height:0}.product-image{height:240px}.product-identity{flex-direction:column;gap:4px}.availability{grid-template-columns:1fr}.product-gallery .product-image{height:300px}}
 """
 
+CSS += r"""
+.answer-lead{font-size:19px!important;line-height:1.55;color:var(--ink)!important;font-weight:700}.entity-section,.profile-range,.answer-section,.reason-section,.evidence-section,.faq-section,.quality-controls,.document-section,.release-section{padding:65px 0}.entity-section,.evidence-section,.document-section{background:var(--soft)}.entity-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:60px;align-items:start}.entity-grid h2,.answer-grid h2,.faq-grid h2,.release-grid h2{font-size:32px;line-height:1.2;margin:0 0 14px}.entity-grid p,.answer-grid p,.faq-grid>div>p:last-child,.release-grid>div>p:last-child{color:var(--muted)}.entity-facts{margin:0;background:#fff;border-top:3px solid var(--green)}.entity-facts div{display:grid;grid-template-columns:165px minmax(0,1fr);gap:18px;padding:12px 15px;border-bottom:1px solid var(--line)}.entity-facts dt{font-size:12px;color:var(--muted)}.entity-facts dd{margin:0;font-size:13px;font-weight:700}.entity-facts a,.contact-details a{color:var(--green)}.profile-product-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}.profile-product-links a{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;font-weight:800;background:#fff}.profile-product-links a:hover{color:var(--green);background:var(--soft)}.compliance-band{padding:58px 0;background:var(--green-dark);color:#fff}.compliance-band-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}.compliance-band h2{font-size:31px;line-height:1.2;margin:0 0 14px}.compliance-band p{color:#d5e8e7}.compliance-band ul{margin:0;padding:0;list-style:none;border-top:1px solid rgba(255,255,255,.24)}.compliance-band li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.24);font-size:13px;font-weight:700}.company-contact-strip{padding:29px 0;background:#293033;color:#fff}.company-contact-strip .shell{display:flex;align-items:center;justify-content:space-between;gap:30px}.company-contact-strip strong,.company-contact-strip span{display:block}.company-contact-strip strong{font-size:18px}.company-contact-strip span{font-size:12px;color:#bcc7ca;margin-top:3px}.company-contact-strip .button{margin:0;flex:0 0 auto}.answer-section{background:#fff}.answer-grid{max-width:860px;margin-inline:auto;text-align:center}.answer-grid>p:last-child{font-size:19px;margin-bottom:0}.reason-grid,.quality-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}.reason-grid article,.quality-grid article{position:relative;min-height:210px;padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.reason-grid article>span{display:block;color:var(--orange);font-size:12px;font-weight:900}.reason-grid h3,.quality-grid h3{font-size:18px;line-height:1.3;margin:18px 0 9px}.reason-grid p,.quality-grid p{margin:0;color:var(--muted);font-size:13px}.quality-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.quality-grid article{min-height:225px}.quality-grid article>span{color:var(--green)}.section-heading.left{text-align:left;margin-inline:0}.evidence-table thead th{background:var(--green-dark);color:#fff}.evidence-table tbody th{width:25%;background:#fff;font-size:12px}.evidence-table td{background:#fff;vertical-align:top}.faq-grid{display:grid;grid-template-columns:.62fr 1.38fr;gap:70px;align-items:start}.faq-list{border-top:2px solid var(--green)}.faq-list details{border-bottom:1px solid var(--line)}.faq-list summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:17px 4px;cursor:pointer;font-size:14px;font-weight:800;list-style:none}.faq-list summary::-webkit-details-marker{display:none}.faq-list p{margin:0;padding:0 36px 18px 4px;color:var(--muted);font-size:13px}.faq-list details[open] summary{color:var(--green)}.release-grid{display:grid;grid-template-columns:.62fr 1.38fr;gap:70px;align-items:start}.release-grid ol{margin:0;padding:0;list-style:none;border-top:2px solid var(--green)}.release-grid li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:17px 0;border-bottom:1px solid var(--line)}.release-grid li>span{color:var(--orange);font-size:13px;font-weight:900}.release-grid h3{font-size:16px;margin:0 0 4px}.release-grid li p{margin:0;color:var(--muted);font-size:13px}
+@media(max-width:1050px){.profile-product-links,.quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.entity-section,.profile-range,.answer-section,.reason-section,.evidence-section,.faq-section,.quality-controls,.document-section,.release-section{padding:50px 0}.entity-grid,.compliance-band-grid,.faq-grid,.release-grid{grid-template-columns:1fr;gap:30px}.entity-grid h2,.answer-grid h2,.faq-grid h2,.release-grid h2,.compliance-band h2{font-size:27px}.profile-product-links,.reason-grid,.quality-grid{grid-template-columns:1fr}.reason-grid article,.quality-grid article{min-height:0}.entity-facts div{grid-template-columns:1fr;gap:2px}.company-contact-strip .shell{align-items:flex-start;flex-direction:column}.company-contact-strip .button{width:100%}.answer-grid{text-align:left}}
+"""
+
 
 JS = r"""
 document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)window.lucide.createIcons();const button=document.querySelector('[data-menu-button]');const menu=document.querySelector('[data-menu]');if(button&&menu){button.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open))});menu.querySelectorAll('.nav-group>a').forEach(link=>link.addEventListener('click',event=>{if(window.innerWidth<=1050&&link.nextElementSibling){event.preventDefault();link.parentElement.classList.toggle('is-open')}}))}const model=new URLSearchParams(location.search).get('model');document.querySelectorAll('[data-model-field]').forEach(field=>{if(model)field.value=model});document.querySelectorAll('[data-mailto-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`LEXYGO inquiry: ${data.get('model')||'material handling equipment'}${data.get('company')?' - '+data.get('company'):''}`;const body=[`Name: ${data.get('name')||''}`,`Email: ${data.get('email')||''}`,`Company: ${data.get('company')||''}`,`Country / Region: ${data.get('country')||''}`,`Product / Model: ${data.get('model')||''}`,'',`Message:`,` ${data.get('details')||''}`].join('\n');location.href=`mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}))});
@@ -366,8 +477,8 @@ def build():
 
     static_pages = {
         "/company/": company_page(),
-        "/company/why-choose-us/": blank_page("/company/why-choose-us/", "Why Choose Us", ("Company", "/company/"), "company"),
-        "/company/quality-management/": blank_page("/company/quality-management/", "Quality Management", ("Company", "/company/"), "company"),
+        "/company/why-choose-us/": why_choose_page(),
+        "/company/quality-management/": quality_management_page(),
         "/services/": blank_page("/services/", "Services", active="services"),
         "/resources/": resources_page(),
         "/resources/download/": blank_page("/resources/download/", "Download", ("Resources", "/resources/"), "resources"),
