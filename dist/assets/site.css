@@ -55,4 +55,6 @@ body{color:var(--ink);background:#fff}::selection{background:#bfeeff;color:#1732
 
 .product-gallery .product-image img{position:absolute;inset:17px;width:calc(100% - 34px);height:calc(100% - 34px);max-width:none;object-fit:contain}
 .product-image-compact img{width:86%;height:86%}.product-gallery .product-image-compact img{inset:34px;width:calc(100% - 68px);height:calc(100% - 68px)}
+.product-card .product-image:not(.source-brochure) img{position:absolute;inset:22px;width:calc(100% - 44px);height:calc(100% - 44px);max-width:none;max-height:none;object-fit:contain}
+.product-card .source-brochure img{transform:scale(2.15)}.product-card .source-brochure-highlift img{transform:scale(2)}
 @media(max-width:760px){.product-gallery .product-image-compact img{inset:26px;width:calc(100% - 52px);height:calc(100% - 52px)}}

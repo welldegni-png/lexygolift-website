@@ -154,7 +154,7 @@ def page(title, description, route, body, schema=None, active=""):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} | LEXYGO</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}/assets/og-cover.png">
-<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css?v=20261006-3"><script type="application/ld+json">{json_ld}</script></head>
+<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css?v=20261006-4"><script type="application/ld+json">{json_ld}</script></head>
 <body>{header(active)}<main id="main">{body}</main>{footer()}<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><script src="/assets/site.js"></script></body></html>"""
 
 
@@ -495,6 +495,8 @@ body{color:var(--ink);background:#fff}::selection{background:#bfeeff;color:#1732
 CSS += r"""
 .product-gallery .product-image img{position:absolute;inset:17px;width:calc(100% - 34px);height:calc(100% - 34px);max-width:none;object-fit:contain}
 .product-image-compact img{width:86%;height:86%}.product-gallery .product-image-compact img{inset:34px;width:calc(100% - 68px);height:calc(100% - 68px)}
+.product-card .product-image:not(.source-brochure) img{position:absolute;inset:22px;width:calc(100% - 44px);height:calc(100% - 44px);max-width:none;max-height:none;object-fit:contain}
+.product-card .source-brochure img{transform:scale(2.15)}.product-card .source-brochure-highlift img{transform:scale(2)}
 @media(max-width:760px){.product-gallery .product-image-compact img{inset:26px;width:calc(100% - 52px);height:calc(100% - 52px)}}
 """
 
