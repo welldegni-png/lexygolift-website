@@ -48,12 +48,6 @@ def image_class(item):
     classes = ["product-image"]
     if item["slug"] in {"wces500j", "wces1000j"}:
         classes.append("product-image-compact")
-    if item["slug"] in {"mpt5tn", "mpjsc1500", "mpjtsc1500"}:
-        classes.append("source-brochure")
-    if item["slug"] in {"mpjsc1500", "mpjtsc1500"}:
-        classes.append("source-brochure-highlift")
-    if item["slug"] == "mpjtsc1500":
-        classes.append("source-brochure-two-stage")
     return " ".join(classes)
 
 
@@ -413,12 +407,9 @@ def find_source_file(name):
 
 def copy_product_assets():
     PRODUCT_ASSETS.mkdir(parents=True, exist_ok=True)
-    warehouse = ROOT / "tmp" / "warehouse-assets"
     explicit = {
-        "atep3000y-v2.png": find_source_file("ATEP3000Y.png"),
-        "r4efl12t.png": find_source_file("REEF12T.png"), "sc1016.png": warehouse / "image190.png", "qes12e.png": warehouse / "image251.png",
-        "qes15e.png": warehouse / "image252.png", "qes15lie.png": warehouse / "image254.png", "qed1530.png": warehouse / "image191.png",
-        "warehouse-scissor-lift-table.png": warehouse / "image139.png", "warehouse-material-lift-cart.png": warehouse / "image3.png",
+        "r4efl12t.png": find_source_file("REEF12T.png"),
+        "qes15lion.png": find_source_file("QES15LION.png"),
     }
     for item in PRODUCTS:
         source = explicit[item["image"]] if item["image"] in explicit else find_source_file(item["image"])

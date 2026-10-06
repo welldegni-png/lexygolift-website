@@ -1512,6 +1512,1249 @@
       ]
     }
   ],
+  "ept30": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "300"
+        },
+        {
+          "name": "Maximum table height",
+          "unit": "mm",
+          "value": "880"
+        },
+        {
+          "name": "Minimum table height",
+          "unit": "mm",
+          "value": "290"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "850 x 500"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø125 x 40"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,145"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "920"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "65 / 94"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "98 / 74"
+        },
+        {
+          "name": "Lifting cycles per full charge",
+          "unit": "cycles",
+          "value": "120"
+        },
+        {
+          "name": "Battery configuration",
+          "unit": "",
+          "value": "4 x 12 V / 15 Ah"
+        },
+        {
+          "name": "Lift stroke",
+          "unit": "mm",
+          "value": "590"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "kW",
+          "value": "0.8"
+        },
+        {
+          "name": "Charging time with built-in 24 V / 3 A charger",
+          "unit": "h",
+          "value": "8.5"
+        },
+        {
+          "name": "Approximate lifting time",
+          "unit": "s",
+          "value": "10"
+        },
+        {
+          "name": "Net weight",
+          "unit": "kg",
+          "value": "116"
+        }
+      ]
+    }
+  ],
+  "ept50": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "500"
+        },
+        {
+          "name": "Maximum table height",
+          "unit": "mm",
+          "value": "1,025"
+        },
+        {
+          "name": "Minimum table height",
+          "unit": "mm",
+          "value": "440"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "1,010 x 520"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø150 x 48"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,305"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "970"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "65 / 94"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "98 / 74"
+        },
+        {
+          "name": "Lifting cycles per full charge",
+          "unit": "cycles",
+          "value": "100"
+        },
+        {
+          "name": "Battery configuration",
+          "unit": "",
+          "value": "2 x 12 V / 24 Ah"
+        },
+        {
+          "name": "Lift stroke",
+          "unit": "mm",
+          "value": "585"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "kW",
+          "value": "0.8"
+        },
+        {
+          "name": "Charging time with built-in 24 V / 3 A charger",
+          "unit": "h",
+          "value": "8.5"
+        },
+        {
+          "name": "Approximate lifting time",
+          "unit": "s",
+          "value": "10"
+        },
+        {
+          "name": "Net weight",
+          "unit": "kg",
+          "value": "157"
+        }
+      ]
+    }
+  ],
+  "eptd35": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "350"
+        },
+        {
+          "name": "Maximum table height",
+          "unit": "mm",
+          "value": "1,300"
+        },
+        {
+          "name": "Minimum table height",
+          "unit": "mm",
+          "value": "370"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "910 x 500"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø125 x 40"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,210"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "920"
+        },
+        {
+          "name": "Lift speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "90 / 110"
+        },
+        {
+          "name": "Lowering speed, laden/unladen",
+          "unit": "mm/s",
+          "value": "100 / 90"
+        },
+        {
+          "name": "Lifting cycles per full charge",
+          "unit": "cycles",
+          "value": "100"
+        },
+        {
+          "name": "Battery configuration",
+          "unit": "",
+          "value": "4 x 12 V / 15 Ah"
+        },
+        {
+          "name": "Lift stroke",
+          "unit": "mm",
+          "value": "930"
+        },
+        {
+          "name": "Lift motor rating",
+          "unit": "kW",
+          "value": "0.8"
+        },
+        {
+          "name": "Charging time with built-in 24 V / 3 A charger",
+          "unit": "h",
+          "value": "8.5"
+        },
+        {
+          "name": "Approximate lifting time",
+          "unit": "s",
+          "value": "10"
+        },
+        {
+          "name": "Net weight",
+          "unit": "kg",
+          "value": "142"
+        }
+      ]
+    }
+  ],
+  "exl0412": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "400"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,425"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "1,115"
+        },
+        {
+          "name": "Platform height, lowered",
+          "unit": "mm",
+          "value": "85"
+        },
+        {
+          "name": "Platform top height",
+          "unit": "mm",
+          "value": "1,200"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "600"
+        },
+        {
+          "name": "Platform length",
+          "unit": "mm",
+          "value": "650"
+        },
+        {
+          "name": "Platform width",
+          "unit": "mm",
+          "value": "576"
+        },
+        {
+          "name": "Steering wheel size",
+          "unit": "mm",
+          "value": "Ø127 x 40"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "mm",
+          "value": "Ø75 x 40"
+        },
+        {
+          "name": "Lift speed, unladen",
+          "unit": "mm/s",
+          "value": "185"
+        },
+        {
+          "name": "Lowering speed, unladen",
+          "unit": "mm/s",
+          "value": "0-75"
+        },
+        {
+          "name": "Lift speed, laden",
+          "unit": "mm/s",
+          "value": "0-115"
+        },
+        {
+          "name": "Battery",
+          "unit": "",
+          "value": "12 V / 60 Ah"
+        },
+        {
+          "name": "Lift motor",
+          "unit": "",
+          "value": "12 V / 700 W"
+        }
+      ]
+    }
+  ],
+  "exl0415": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "400"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,725"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "1,415"
+        },
+        {
+          "name": "Platform height, lowered",
+          "unit": "mm",
+          "value": "85"
+        },
+        {
+          "name": "Platform top height",
+          "unit": "mm",
+          "value": "1,500"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "600"
+        },
+        {
+          "name": "Platform length",
+          "unit": "mm",
+          "value": "650"
+        },
+        {
+          "name": "Platform width",
+          "unit": "mm",
+          "value": "576"
+        },
+        {
+          "name": "Steering wheel size",
+          "unit": "mm",
+          "value": "Ø127 x 40"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "mm",
+          "value": "Ø75 x 40"
+        },
+        {
+          "name": "Lift speed, unladen",
+          "unit": "mm/s",
+          "value": "185"
+        },
+        {
+          "name": "Lowering speed, unladen",
+          "unit": "mm/s",
+          "value": "0-75"
+        },
+        {
+          "name": "Lift speed, laden",
+          "unit": "mm/s",
+          "value": "0-115"
+        },
+        {
+          "name": "Battery",
+          "unit": "",
+          "value": "12 V / 60 Ah"
+        },
+        {
+          "name": "Lift motor",
+          "unit": "",
+          "value": "12 V / 700 W"
+        }
+      ]
+    }
+  ],
+  "pt15": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "150"
+        },
+        {
+          "name": "Table height, lowered",
+          "unit": "mm",
+          "value": "220"
+        },
+        {
+          "name": "Table height, raised",
+          "unit": "mm",
+          "value": "720"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "700 x 450"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø100 x 25"
+        },
+        {
+          "name": "Pump strokes to maximum height",
+          "unit": "strokes",
+          "value": "<=28"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "46"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "950"
+        }
+      ]
+    }
+  ],
+  "pt30": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "300"
+        },
+        {
+          "name": "Table height, lowered",
+          "unit": "mm",
+          "value": "285"
+        },
+        {
+          "name": "Table height, raised",
+          "unit": "mm",
+          "value": "880"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "815 x 500"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø125 x 40"
+        },
+        {
+          "name": "Pump strokes to maximum height",
+          "unit": "strokes",
+          "value": "<=27"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "77"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "990"
+        }
+      ]
+    }
+  ],
+  "pt50": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "500"
+        },
+        {
+          "name": "Table height, lowered",
+          "unit": "mm",
+          "value": "285"
+        },
+        {
+          "name": "Table height, raised",
+          "unit": "mm",
+          "value": "880"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "815 x 500"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø125 x 40"
+        },
+        {
+          "name": "Pump strokes to maximum height",
+          "unit": "strokes",
+          "value": "<=27"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "81"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "990"
+        }
+      ]
+    }
+  ],
+  "pt75": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "750"
+        },
+        {
+          "name": "Table height, lowered",
+          "unit": "mm",
+          "value": "420"
+        },
+        {
+          "name": "Table height, raised",
+          "unit": "mm",
+          "value": "1,000"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "1,000 x 510"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø147 x 50"
+        },
+        {
+          "name": "Pump strokes to maximum height",
+          "unit": "strokes",
+          "value": "<=45"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "125"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "990"
+        }
+      ]
+    }
+  ],
+  "pt100": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,000"
+        },
+        {
+          "name": "Table height, lowered",
+          "unit": "mm",
+          "value": "380"
+        },
+        {
+          "name": "Table height, raised",
+          "unit": "mm",
+          "value": "1,000"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "1,016 x 510"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø125 x 50"
+        },
+        {
+          "name": "Pump strokes to maximum height",
+          "unit": "strokes",
+          "value": "<=82"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "140"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "980"
+        }
+      ]
+    }
+  ],
+  "ptd35": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "350"
+        },
+        {
+          "name": "Table height, lowered",
+          "unit": "mm",
+          "value": "355"
+        },
+        {
+          "name": "Table height, raised",
+          "unit": "mm",
+          "value": "1,300"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "910 x 500"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø125 x 40"
+        },
+        {
+          "name": "Pump strokes to maximum height",
+          "unit": "strokes",
+          "value": "<=53"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "110"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "975"
+        }
+      ]
+    }
+  ],
+  "ptd70": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "700"
+        },
+        {
+          "name": "Table height, lowered",
+          "unit": "mm",
+          "value": "445"
+        },
+        {
+          "name": "Table height, raised",
+          "unit": "mm",
+          "value": "1,500"
+        },
+        {
+          "name": "Platform dimensions",
+          "unit": "mm",
+          "value": "1,220 x 610"
+        },
+        {
+          "name": "Wheel size",
+          "unit": "mm",
+          "value": "Ø125 x 40"
+        },
+        {
+          "name": "Pump strokes to maximum height",
+          "unit": "strokes",
+          "value": "<=97"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "195"
+        },
+        {
+          "name": "Handle height",
+          "unit": "mm",
+          "value": "980"
+        }
+      ]
+    }
+  ],
+  "sl0485": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "400"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,075"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "765"
+        },
+        {
+          "name": "Platform height, lowered",
+          "unit": "mm",
+          "value": "85"
+        },
+        {
+          "name": "Platform top height",
+          "unit": "mm",
+          "value": "850"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "600"
+        },
+        {
+          "name": "Platform length",
+          "unit": "mm",
+          "value": "650"
+        },
+        {
+          "name": "Platform width",
+          "unit": "mm",
+          "value": "576"
+        },
+        {
+          "name": "Fork dimensions",
+          "unit": "mm",
+          "value": "650 x 110"
+        },
+        {
+          "name": "Steering wheel size",
+          "unit": "mm",
+          "value": "Ø127 x 40"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "mm",
+          "value": "Ø75 x 40"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "75"
+        }
+      ]
+    }
+  ],
+  "sl0412": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "400"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,425"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "1,115"
+        },
+        {
+          "name": "Platform height, lowered",
+          "unit": "mm",
+          "value": "85"
+        },
+        {
+          "name": "Platform top height",
+          "unit": "mm",
+          "value": "1,200"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "600"
+        },
+        {
+          "name": "Platform length",
+          "unit": "mm",
+          "value": "650"
+        },
+        {
+          "name": "Platform width",
+          "unit": "mm",
+          "value": "576"
+        },
+        {
+          "name": "Fork dimensions",
+          "unit": "mm",
+          "value": "650 x 110"
+        },
+        {
+          "name": "Steering wheel size",
+          "unit": "mm",
+          "value": "Ø127 x 40"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "mm",
+          "value": "Ø75 x 40"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "81"
+        }
+      ]
+    }
+  ],
+  "sl0415": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "400"
+        },
+        {
+          "name": "Overall height",
+          "unit": "mm",
+          "value": "1,725"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "1,415"
+        },
+        {
+          "name": "Platform height, lowered",
+          "unit": "mm",
+          "value": "85"
+        },
+        {
+          "name": "Platform top height",
+          "unit": "mm",
+          "value": "1,500"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "600"
+        },
+        {
+          "name": "Platform length",
+          "unit": "mm",
+          "value": "650"
+        },
+        {
+          "name": "Platform width",
+          "unit": "mm",
+          "value": "576"
+        },
+        {
+          "name": "Fork dimensions",
+          "unit": "mm",
+          "value": "650 x 110"
+        },
+        {
+          "name": "Steering wheel size",
+          "unit": "mm",
+          "value": "Ø127 x 40"
+        },
+        {
+          "name": "Load wheel size",
+          "unit": "mm",
+          "value": "Ø75 x 40"
+        },
+        {
+          "name": "Service weight",
+          "unit": "kg",
+          "value": "91"
+        }
+      ]
+    }
+  ],
+  "bed1016": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,000"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,778"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "777"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "1,978"
+        },
+        {
+          "name": "Maximum mast height in operation",
+          "unit": "mm",
+          "value": "1,978"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "1,600"
+        },
+        {
+          "name": "Fork dimensions",
+          "unit": "mm",
+          "value": "60 x 160 x 1,150"
+        },
+        {
+          "name": "Front wheel size",
+          "unit": "mm",
+          "value": "Ø180 x 50"
+        },
+        {
+          "name": "Rear wheel size",
+          "unit": "mm",
+          "value": "Ø74 x 70"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "305"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "kg",
+          "value": "35"
+        },
+        {
+          "name": "Lift motor rating, S3 10%",
+          "unit": "kW",
+          "value": "1.6"
+        },
+        {
+          "name": "Battery voltage / capacity",
+          "unit": "V/Ah",
+          "value": "12 / 150"
+        }
+      ]
+    }
+  ],
+  "bed1025": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,000"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,786"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "777"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "1,828"
+        },
+        {
+          "name": "Maximum mast height in operation",
+          "unit": "mm",
+          "value": "3,066"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "2,500"
+        },
+        {
+          "name": "Fork dimensions",
+          "unit": "mm",
+          "value": "60 x 160 x 1,150"
+        },
+        {
+          "name": "Front wheel size",
+          "unit": "mm",
+          "value": "Ø180 x 50"
+        },
+        {
+          "name": "Rear wheel size",
+          "unit": "mm",
+          "value": "Ø74 x 70"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "364"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "kg",
+          "value": "35"
+        },
+        {
+          "name": "Lift motor rating, S3 10%",
+          "unit": "kW",
+          "value": "1.6"
+        },
+        {
+          "name": "Battery voltage / capacity",
+          "unit": "V/Ah",
+          "value": "12 / 150"
+        }
+      ]
+    }
+  ],
+  "bed1030": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,000"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,786"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "777"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "2,078"
+        },
+        {
+          "name": "Maximum mast height in operation",
+          "unit": "mm",
+          "value": "3,566"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "3,000"
+        },
+        {
+          "name": "Fork dimensions",
+          "unit": "mm",
+          "value": "60 x 160 x 1,150"
+        },
+        {
+          "name": "Front wheel size",
+          "unit": "mm",
+          "value": "Ø180 x 50"
+        },
+        {
+          "name": "Rear wheel size",
+          "unit": "mm",
+          "value": "Ø74 x 70"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "380"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "kg",
+          "value": "35"
+        },
+        {
+          "name": "Lift motor rating, S3 10%",
+          "unit": "kW",
+          "value": "1.6"
+        },
+        {
+          "name": "Battery voltage / capacity",
+          "unit": "V/Ah",
+          "value": "12 / 150"
+        }
+      ]
+    }
+  ],
+  "bed1516": [
+    {
+      "title": "Technical specifications",
+      "rows": [
+        {
+          "name": "Rated load capacity",
+          "unit": "kg",
+          "value": "1,500"
+        },
+        {
+          "name": "Overall length",
+          "unit": "mm",
+          "value": "1,778"
+        },
+        {
+          "name": "Overall width",
+          "unit": "mm",
+          "value": "844"
+        },
+        {
+          "name": "Mast height, lowered",
+          "unit": "mm",
+          "value": "1,978"
+        },
+        {
+          "name": "Maximum mast height in operation",
+          "unit": "mm",
+          "value": "1,978"
+        },
+        {
+          "name": "Lift height",
+          "unit": "mm",
+          "value": "1,600"
+        },
+        {
+          "name": "Fork dimensions",
+          "unit": "mm",
+          "value": "60 x 182 x 1,150"
+        },
+        {
+          "name": "Front wheel size",
+          "unit": "mm",
+          "value": "Ø180 x 50"
+        },
+        {
+          "name": "Rear wheel size",
+          "unit": "mm",
+          "value": "Ø74 x 93"
+        },
+        {
+          "name": "Service weight with battery",
+          "unit": "kg",
+          "value": "429"
+        },
+        {
+          "name": "Battery weight",
+          "unit": "kg",
+          "value": "35"
+        },
+        {
+          "name": "Lift motor rating, S3 10%",
+          "unit": "kW",
+          "value": "1.6"
+        },
+        {
+          "name": "Battery voltage / capacity",
+          "unit": "V/Ah",
+          "value": "12 / 150"
+        }
+      ]
+    }
+  ],
   "wep20j": [
     {
       "title": "Characteristics",

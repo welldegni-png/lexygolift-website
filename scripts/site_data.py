@@ -44,7 +44,7 @@ CATEGORIES = {
         "name": "Manual Pallet Trucks",
         "short": "Simple, dependable pallet movement and manual high-lift handling.",
         "answer": "Use a standard pallet truck for horizontal movement or a high-lift model when ergonomic working height is required.",
-        "image": "mpt5tn.jpg",
+        "image": "mpt5tn.png",
     },
     "warehouse-equipment": {
         "name": "Warehouse Equipment",
@@ -83,7 +83,7 @@ PRODUCTS = [
         {"Load center": "600 mm", "Service weight": "670 kg", "Travel mode": "Rider"},
     ),
     product(
-        "atep3000y", "ATEP3000Y", "3.0 t All-Terrain Electric Pallet Truck", "electric-pallet-trucks", "atep3000y-v2.png",
+        "atep3000y", "ATEP3000Y", "3.0 t All-Terrain Electric Pallet Truck", "electric-pallet-trucks", "atep3000y.png",
         "3,000 kg", "205 mm", "Walk-behind", "Uneven yards, construction supply, and mixed surfaces",
         {"Load center": "600 mm", "Service weight": "268 kg", "Drive/load wheels": "Rubber / nylon"},
     ),
@@ -208,54 +208,139 @@ PRODUCTS = [
         {"Overall width": "2,250 mm", "Turning radius": "3,850 mm", "Power": "Storage battery"},
     ),
     product(
-        "mpt5tn", "MPT5TN", "5.0 t Manual Pallet Truck", "manual-pallet-trucks", "mpt5tn.jpg",
+        "mpt5tn", "MPT5TN", "5.0 t Manual Pallet Truck", "manual-pallet-trucks", "mpt5tn.png",
         "5,000 kg", "85-185 mm fork height", "Manual", "Heavy horizontal pallet movement over short distances",
         {"Fork length": "1,150 / 1,220 mm", "Overall length": "1,670 mm", "Drive": "Manual"},
     ),
     product(
-        "mpjsc1500", "MPJSC1500", "1.5 t Single-Cylinder High-Lift Pallet Jack", "manual-pallet-trucks", "mpjsc1500.jpg",
+        "mpjsc1500", "MPJSC1500", "1.5 t Single-Cylinder High-Lift Pallet Jack", "manual-pallet-trucks", "mpjsc1500.png",
         "1,500 kg", "85-800 mm fork height", "Manual", "Ergonomic loading, feeding, and workstation positioning",
         {"Cylinder": "Single-stage", "Fork length": "1,150 mm", "Drive": "Manual"},
     ),
     product(
-        "mpjtsc1500", "MPJTSC1500", "1.5 t Two-Stage High-Lift Pallet Jack", "manual-pallet-trucks", "mpjtsc1500.jpg",
+        "mpjtsc1500", "MPJTSC1500", "1.5 t Two-Stage High-Lift Pallet Jack", "manual-pallet-trucks", "mpjtsc1500.png",
         "1,500 kg", "85-800 mm fork height", "Manual", "Higher manual positioning and occasional stacking tasks",
         {"Cylinder": "Two-stage", "Fork length": "1,150 mm", "Drive": "Manual"},
     ),
     product(
-        "sc1016", "SC1016", "1.0 t Compact Semi-Electric Stacker", "warehouse-equipment", "sc1016.png",
-        "1,000 kg", "1,600 mm configurable", "Manual travel / electric lift", "Light warehouse lifting and compact work areas",
+        "sc1016", "SC1016", "1.0 t Self-Loading Pallet Stacker", "warehouse-equipment", "sc1016.png",
+        "1,000 kg", "1,600 mm configurable", "Manual travel / electric lift", "Vehicle loading, delivery support, and compact warehouse lifting",
         {"Overall width": "860 mm", "Overall length": "1,500 mm", "Battery": "48 V / 10 Ah LiFePO4"},
     ),
     product(
-        "qes12e", "QES12E", "1.2 t Walkie Electric Stacker", "warehouse-equipment", "qes12e.png",
+        "qes12e", "QES12E", "1.2 t Offset-Tiller Walkie Electric Stacker", "electric-pallet-stackers", "qes12e.png",
         "1,200 kg", "3,000 mm", "Walk-behind", "Compact electric pallet stacking and internal handling",
         {"Load center": "600 mm", "Overall width": "820 mm", "Turning radius": "1,385 mm"},
     ),
     product(
-        "qes15e", "QES15/E", "1.5 t Walkie Electric Stacker", "warehouse-equipment", "qes15e.png",
+        "qes15e", "QES15E", "1.5 t Offset-Tiller Walkie Electric Stacker", "electric-pallet-stackers", "qes15e.png",
         "1,500 kg", "3,000 mm", "Walk-behind", "General warehouse pallet stacking on level floors",
         {"Load center": "600 mm", "Overall width": "800 mm", "Turning radius": "1,440 mm"},
     ),
     product(
-        "qes15lie", "QES15-LI/E", "1.5 t Lithium Walkie Electric Stacker", "warehouse-equipment", "qes15lie.png",
+        "qes15lie", "QES15LION", "1.5 t Lithium Offset-Tiller Walkie Electric Stacker", "electric-pallet-stackers", "qes15lion.png",
         "1,500 kg", "3,000 mm", "Walk-behind", "Lithium-powered pallet stacking and frequent indoor use",
         {"Load center": "600 mm", "Service weight": "470 kg", "Overall width": "800 mm"},
     ),
     product(
-        "qed1530", "QED1530", "1.5 t Electric Stacker", "warehouse-equipment", "qed1530.png",
+        "qed1530", "QED1530", "1.5 t Walkie Electric Pallet Stacker", "electric-pallet-stackers", "qed1530.png",
         "1,500 kg", "3,000 mm configurable", "Electric", "Warehouse pallet lifting with customizable lift height",
         {"Drive power": "2,200 W", "Lift motor": "750 W", "Battery": "24 V / 80 Ah optional"},
     ),
     product(
-        "warehouse-scissor-lift-table", "Lift Table", "Mobile Scissor Lift Table", "warehouse-equipment", "warehouse-scissor-lift-table.png",
-        "Configuration based", "Configuration based", "Manual mobile", "Workstation feeding, packing, and ergonomic load positioning",
-        {"Platform": "Configuration based", "Mobility": "Caster mounted"},
+        "ept30", "EPT30", "300 kg Electric Hydraulic Lift Table Cart", "warehouse-equipment", "ept30.png",
+        "300 kg", "290-880 mm", "Electric lift / manual travel", "Ergonomic load positioning and workstation feeding",
+        {"Platform": "850 x 500 mm", "Lift stroke": "590 mm", "Motor": "0.8 kW"},
     ),
     product(
-        "warehouse-material-lift-cart", "Lift Cart", "Compact Material Lift Cart", "warehouse-equipment", "warehouse-material-lift-cart.png",
-        "Configuration based", "Configuration based", "Manual mobile", "Small-part handling and workstation replenishment",
-        {"Platform": "Configuration based", "Mobility": "Caster mounted"},
+        "ept50", "EPT50", "500 kg Electric Hydraulic Lift Table Cart", "warehouse-equipment", "ept50.png",
+        "500 kg", "440-1,025 mm", "Electric lift / manual travel", "Heavier workstation feeding and ergonomic load positioning",
+        {"Platform": "1,010 x 520 mm", "Lift stroke": "585 mm", "Motor": "0.8 kW"},
+    ),
+    product(
+        "eptd35", "EPTD35", "350 kg Double-Scissor Electric Lift Table Cart", "warehouse-equipment", "eptd35.png",
+        "350 kg", "370-1,300 mm", "Electric lift / manual travel", "Higher workstation feeding and ergonomic load positioning",
+        {"Platform": "910 x 500 mm", "Lift stroke": "930 mm", "Motor": "0.8 kW"},
+    ),
+    product(
+        "exl0412", "EXL0412", "400 kg Electric Platform Stacker", "warehouse-equipment", "exl0412.png",
+        "400 kg", "1,115 mm", "Electric lift / manual travel", "Platform lifting for luggage, parcels, and non-palletized loads",
+        {"Platform": "650 x 576 mm", "Platform top height": "1,200 mm", "Motor": "12 V / 700 W"},
+    ),
+    product(
+        "exl0415", "EXL0415", "400 kg Electric Platform Stacker", "warehouse-equipment", "exl0415.png",
+        "400 kg", "1,415 mm", "Electric lift / manual travel", "Higher platform lifting for luggage, parcels, and non-palletized loads",
+        {"Platform": "650 x 576 mm", "Platform top height": "1,500 mm", "Motor": "12 V / 700 W"},
+    ),
+    product(
+        "pt15", "PT15", "150 kg Manual Hydraulic Lift Table Cart", "warehouse-equipment", "pt15.png",
+        "150 kg", "220-720 mm", "Manual hydraulic", "Light workstation feeding and ergonomic load positioning",
+        {"Platform": "700 x 450 mm", "Pump strokes": "<=28", "Service weight": "46 kg"},
+    ),
+    product(
+        "pt30", "PT30", "300 kg Manual Hydraulic Lift Table Cart", "warehouse-equipment", "pt30.png",
+        "300 kg", "285-880 mm", "Manual hydraulic", "Workstation feeding and ergonomic load positioning",
+        {"Platform": "815 x 500 mm", "Pump strokes": "<=27", "Service weight": "77 kg"},
+    ),
+    product(
+        "pt50", "PT50", "500 kg Manual Hydraulic Lift Table Cart", "warehouse-equipment", "pt50.png",
+        "500 kg", "285-880 mm", "Manual hydraulic", "Medium-duty workstation feeding and load positioning",
+        {"Platform": "815 x 500 mm", "Pump strokes": "<=27", "Service weight": "81 kg"},
+    ),
+    product(
+        "pt75", "PT75", "750 kg Manual Hydraulic Lift Table Cart", "warehouse-equipment", "pt75.png",
+        "750 kg", "420-1,000 mm", "Manual hydraulic", "Heavy workstation feeding and ergonomic load positioning",
+        {"Platform": "1,000 x 510 mm", "Pump strokes": "<=45", "Service weight": "125 kg"},
+    ),
+    product(
+        "pt100", "PT100", "1.0 t Manual Hydraulic Lift Table Cart", "warehouse-equipment", "pt100.png",
+        "1,000 kg", "380-1,000 mm", "Manual hydraulic", "High-capacity workstation feeding and load positioning",
+        {"Platform": "1,016 x 510 mm", "Pump strokes": "<=82", "Service weight": "140 kg"},
+    ),
+    product(
+        "ptd35", "PTD35", "350 kg Double-Scissor Manual Lift Table Cart", "warehouse-equipment", "ptd35.png",
+        "350 kg", "355-1,300 mm", "Manual hydraulic", "Higher ergonomic positioning for lighter loads",
+        {"Platform": "910 x 500 mm", "Pump strokes": "<=53", "Service weight": "110 kg"},
+    ),
+    product(
+        "ptd70", "PTD70", "700 kg Double-Scissor Manual Lift Table Cart", "warehouse-equipment", "ptd70.png",
+        "700 kg", "445-1,500 mm", "Manual hydraulic", "High-lift ergonomic positioning for heavier loads",
+        {"Platform": "1,220 x 610 mm", "Pump strokes": "<=97", "Service weight": "195 kg"},
+    ),
+    product(
+        "sl0485", "SL0485", "400 kg Manual Platform Stacker", "warehouse-equipment", "sl0485.png",
+        "400 kg", "765 mm", "Manual hydraulic", "Low-height platform lifting for luggage, parcels, and loose loads",
+        {"Platform": "650 x 576 mm", "Platform top height": "850 mm", "Service weight": "75 kg"},
+    ),
+    product(
+        "sl0412", "SL0412", "400 kg Manual Platform Stacker", "warehouse-equipment", "sl0412.png",
+        "400 kg", "1,115 mm", "Manual hydraulic", "Platform lifting for luggage, parcels, and loose loads",
+        {"Platform": "650 x 576 mm", "Platform top height": "1,200 mm", "Service weight": "81 kg"},
+    ),
+    product(
+        "sl0415", "SL0415", "400 kg Manual Platform Stacker", "warehouse-equipment", "sl0415.png",
+        "400 kg", "1,415 mm", "Manual hydraulic", "Higher platform lifting for luggage, parcels, and loose loads",
+        {"Platform": "650 x 576 mm", "Platform top height": "1,500 mm", "Service weight": "91 kg"},
+    ),
+    product(
+        "bed1016", "BED1016", "1.0 t Semi-Electric Pallet Stacker", "warehouse-equipment", "bed1016.png",
+        "1,000 kg", "1,600 mm", "Manual travel / electric lift", "Light warehouse pallet lifting on level floors",
+        {"Overall width": "777 mm", "Forks": "60 x 160 x 1,150 mm", "Battery": "12 V / 150 Ah"},
+    ),
+    product(
+        "bed1025", "BED1025", "1.0 t Semi-Electric Pallet Stacker", "warehouse-equipment", "bed1025.png",
+        "1,000 kg", "2,500 mm", "Manual travel / electric lift", "Medium-height warehouse pallet lifting on level floors",
+        {"Overall width": "777 mm", "Forks": "60 x 160 x 1,150 mm", "Battery": "12 V / 150 Ah"},
+    ),
+    product(
+        "bed1030", "BED1030", "1.0 t Semi-Electric Pallet Stacker", "warehouse-equipment", "bed1030.png",
+        "1,000 kg", "3,000 mm", "Manual travel / electric lift", "Higher warehouse pallet lifting on level floors",
+        {"Overall width": "777 mm", "Forks": "60 x 160 x 1,150 mm", "Battery": "12 V / 150 Ah"},
+    ),
+    product(
+        "bed1516", "BED1516", "1.5 t Semi-Electric Pallet Stacker", "warehouse-equipment", "bed1516.png",
+        "1,500 kg", "1,600 mm", "Manual travel / electric lift", "Higher-capacity pallet lifting on level floors",
+        {"Overall width": "844 mm", "Forks": "60 x 182 x 1,150 mm", "Battery": "12 V / 150 Ah"},
     ),
 ]
 

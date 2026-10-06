@@ -40,13 +40,30 @@
 - [MPT5TN 5.0 t Manual Pallet Truck](https://www.lexygolift.com/products/mpt5tn/): 5,000 kg; 85-185 mm fork height; Manual.
 - [MPJSC1500 1.5 t Single-Cylinder High-Lift Pallet Jack](https://www.lexygolift.com/products/mpjsc1500/): 1,500 kg; 85-800 mm fork height; Manual.
 - [MPJTSC1500 1.5 t Two-Stage High-Lift Pallet Jack](https://www.lexygolift.com/products/mpjtsc1500/): 1,500 kg; 85-800 mm fork height; Manual.
-- [SC1016 1.0 t Compact Semi-Electric Stacker](https://www.lexygolift.com/products/sc1016/): 1,000 kg; 1,600 mm configurable; Manual travel / electric lift.
-- [QES12E 1.2 t Walkie Electric Stacker](https://www.lexygolift.com/products/qes12e/): 1,200 kg; 3,000 mm; Walk-behind.
-- [QES15/E 1.5 t Walkie Electric Stacker](https://www.lexygolift.com/products/qes15e/): 1,500 kg; 3,000 mm; Walk-behind.
-- [QES15-LI/E 1.5 t Lithium Walkie Electric Stacker](https://www.lexygolift.com/products/qes15lie/): 1,500 kg; 3,000 mm; Walk-behind.
-- [QED1530 1.5 t Electric Stacker](https://www.lexygolift.com/products/qed1530/): 1,500 kg; 3,000 mm configurable; Electric.
-- [Lift Table Mobile Scissor Lift Table](https://www.lexygolift.com/products/warehouse-scissor-lift-table/): ; ; Manual mobile.
-- [Lift Cart Compact Material Lift Cart](https://www.lexygolift.com/products/warehouse-material-lift-cart/): ; ; Manual mobile.
+- [SC1016 1.0 t Self-Loading Pallet Stacker](https://www.lexygolift.com/products/sc1016/): 1,000 kg; 1,600 mm configurable; Manual travel / electric lift.
+- [QES12E 1.2 t Offset-Tiller Walkie Electric Stacker](https://www.lexygolift.com/products/qes12e/): 1,200 kg; 3,000 mm; Walk-behind.
+- [QES15E 1.5 t Offset-Tiller Walkie Electric Stacker](https://www.lexygolift.com/products/qes15e/): 1,500 kg; 3,000 mm; Walk-behind.
+- [QES15LION 1.5 t Lithium Offset-Tiller Walkie Electric Stacker](https://www.lexygolift.com/products/qes15lie/): 1,500 kg; 3,000 mm; Walk-behind.
+- [QED1530 1.5 t Walkie Electric Pallet Stacker](https://www.lexygolift.com/products/qed1530/): 1,500 kg; 3,000 mm configurable; Electric.
+- [EPT30 300 kg Electric Hydraulic Lift Table Cart](https://www.lexygolift.com/products/ept30/): 300 kg; 290-880 mm; Electric lift / manual travel.
+- [EPT50 500 kg Electric Hydraulic Lift Table Cart](https://www.lexygolift.com/products/ept50/): 500 kg; 440-1,025 mm; Electric lift / manual travel.
+- [EPTD35 350 kg Double-Scissor Electric Lift Table Cart](https://www.lexygolift.com/products/eptd35/): 350 kg; 370-1,300 mm; Electric lift / manual travel.
+- [EXL0412 400 kg Electric Platform Stacker](https://www.lexygolift.com/products/exl0412/): 400 kg; 1,115 mm; Electric lift / manual travel.
+- [EXL0415 400 kg Electric Platform Stacker](https://www.lexygolift.com/products/exl0415/): 400 kg; 1,415 mm; Electric lift / manual travel.
+- [PT15 150 kg Manual Hydraulic Lift Table Cart](https://www.lexygolift.com/products/pt15/): 150 kg; 220-720 mm; Manual hydraulic.
+- [PT30 300 kg Manual Hydraulic Lift Table Cart](https://www.lexygolift.com/products/pt30/): 300 kg; 285-880 mm; Manual hydraulic.
+- [PT50 500 kg Manual Hydraulic Lift Table Cart](https://www.lexygolift.com/products/pt50/): 500 kg; 285-880 mm; Manual hydraulic.
+- [PT75 750 kg Manual Hydraulic Lift Table Cart](https://www.lexygolift.com/products/pt75/): 750 kg; 420-1,000 mm; Manual hydraulic.
+- [PT100 1.0 t Manual Hydraulic Lift Table Cart](https://www.lexygolift.com/products/pt100/): 1,000 kg; 380-1,000 mm; Manual hydraulic.
+- [PTD35 350 kg Double-Scissor Manual Lift Table Cart](https://www.lexygolift.com/products/ptd35/): 350 kg; 355-1,300 mm; Manual hydraulic.
+- [PTD70 700 kg Double-Scissor Manual Lift Table Cart](https://www.lexygolift.com/products/ptd70/): 700 kg; 445-1,500 mm; Manual hydraulic.
+- [SL0485 400 kg Manual Platform Stacker](https://www.lexygolift.com/products/sl0485/): 400 kg; 765 mm; Manual hydraulic.
+- [SL0412 400 kg Manual Platform Stacker](https://www.lexygolift.com/products/sl0412/): 400 kg; 1,115 mm; Manual hydraulic.
+- [SL0415 400 kg Manual Platform Stacker](https://www.lexygolift.com/products/sl0415/): 400 kg; 1,415 mm; Manual hydraulic.
+- [BED1016 1.0 t Semi-Electric Pallet Stacker](https://www.lexygolift.com/products/bed1016/): 1,000 kg; 1,600 mm; Manual travel / electric lift.
+- [BED1025 1.0 t Semi-Electric Pallet Stacker](https://www.lexygolift.com/products/bed1025/): 1,000 kg; 2,500 mm; Manual travel / electric lift.
+- [BED1030 1.0 t Semi-Electric Pallet Stacker](https://www.lexygolift.com/products/bed1030/): 1,000 kg; 3,000 mm; Manual travel / electric lift.
+- [BED1516 1.5 t Semi-Electric Pallet Stacker](https://www.lexygolift.com/products/bed1516/): 1,500 kg; 1,600 mm; Manual travel / electric lift.
 
 ## Contact
 - Email: info@lexygolift.com
