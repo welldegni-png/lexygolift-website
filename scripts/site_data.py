@@ -83,7 +83,7 @@ PRODUCTS = [
         {"Load center": "600 mm", "Service weight": "670 kg", "Travel mode": "Rider"},
     ),
     product(
-        "atep3000y", "ATEP3000Y", "3.0 t All-Terrain Electric Pallet Truck", "electric-pallet-trucks", "atep3000y.png",
+        "atep3000y", "ATEP3000Y", "3.0 t All-Terrain Electric Pallet Truck", "electric-pallet-trucks", "atep3000y-v2.png",
         "3,000 kg", "205 mm", "Walk-behind", "Uneven yards, construction supply, and mixed surfaces",
         {"Load center": "600 mm", "Service weight": "268 kg", "Drive/load wheels": "Rubber / nylon"},
     ),

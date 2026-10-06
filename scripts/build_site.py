@@ -413,6 +413,7 @@ def copy_product_assets():
     PRODUCT_ASSETS.mkdir(parents=True, exist_ok=True)
     warehouse = ROOT / "tmp" / "warehouse-assets"
     explicit = {
+        "atep3000y-v2.png": find_source_file("ATEP3000Y.png"),
         "r4efl12t.png": find_source_file("REEF12T.png"), "sc1016.png": warehouse / "image190.png", "qes12e.png": warehouse / "image251.png",
         "qes15e.png": warehouse / "image252.png", "qes15lie.png": warehouse / "image254.png", "qed1530.png": warehouse / "image191.png",
         "warehouse-scissor-lift-table.png": warehouse / "image139.png", "warehouse-material-lift-cart.png": warehouse / "image3.png",
@@ -487,6 +488,10 @@ body{color:var(--ink);background:#fff}::selection{background:#bfeeff;color:#1732
 .site-footer{background:var(--blue-dark);color:#d8effb;border-top-color:var(--cyan)}.site-footer h2{color:#fff}.site-footer h2:after{background:var(--orange)}.site-footer a:hover{color:var(--yellow)}.contact-list dt{color:#aad4ea}.newsletter input{background:#fff;color:var(--ink)}.newsletter button{background:var(--orange);color:var(--ink)}.newsletter button:hover{background:#fff;color:var(--blue-dark)}.footer-bottom{border-top-color:rgba(255,255,255,.2);color:#b7d9eb}.footer-brand{border-color:#79cde0}.footer-brand:hover{border-color:var(--yellow);background:#fff}
 @media(max-width:1050px){.main-nav{border-top-color:var(--orange)}.main-nav>a,.nav-group>a{border-bottom-color:#e1eef5}}
 @media(max-width:760px){.hero{min-height:0;background:#eff9ff}.hero-grid{min-height:0;grid-template-columns:1fr}.hero-copy{padding:40px 0 18px}.hero-machine{height:270px;margin-inline:-14px;padding:0 14px;background:var(--cyan-soft);box-shadow:none}.hero-machine:before{background:var(--cyan)}.hero-machine img{height:268px;width:100%}.inner-banner{background-position:78% center;background-size:auto 88%}.company-contact-strip{background:var(--orange)}}
+"""
+
+CSS += r"""
+.product-gallery .product-image img{position:absolute;inset:17px;width:calc(100% - 34px);height:calc(100% - 34px);max-width:none;object-fit:contain}
 """
 
 
