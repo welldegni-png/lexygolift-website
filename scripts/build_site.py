@@ -46,7 +46,7 @@ def button(label, href, style="primary", icon_name="arrow-right"):
 
 def image_class(item):
     classes = ["product-image"]
-    if item["slug"] == "wces500j":
+    if item["slug"] in {"wces500j", "wces1000j"}:
         classes.append("product-image-compact")
     if item["slug"] in {"mpt5tn", "mpjsc1500", "mpjtsc1500"}:
         classes.append("source-brochure")
@@ -154,7 +154,7 @@ def page(title, description, route, body, schema=None, active=""):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} | LEXYGO</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}/assets/og-cover.png">
-<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css?v=20261006-2"><script type="application/ld+json">{json_ld}</script></head>
+<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css?v=20261006-3"><script type="application/ld+json">{json_ld}</script></head>
 <body>{header(active)}<main id="main">{body}</main>{footer()}<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><script src="/assets/site.js"></script></body></html>"""
 
 
