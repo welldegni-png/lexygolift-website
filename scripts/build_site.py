@@ -15,6 +15,7 @@ PRODUCT_ASSETS = ASSETS / "products"
 BASE_URL = COMPANY["domain"]
 FULL_SPECS = json.loads((ROOT / "product_specs.json").read_text(encoding="utf-8"))
 LOGO_SOURCE = ROOT / "assets" / "lexygo-logo.gif"
+APPLICATIONS_VIDEO_SOURCE = ROOT / "assets" / "videos" / "lexygo-applications.mp4"
 
 
 def esc(value):
@@ -168,7 +169,7 @@ def page(title, description, route, body, schema=None, active=""):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} | LEXYGO</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}/assets/og-cover.png">
-<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css?v=20261007-2"><script type="application/ld+json">{json_ld}</script></head>
+<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css?v=20261008-1"><script type="application/ld+json">{json_ld}</script></head>
 <body>{header(active)}<main id="main">{body}</main>{footer()}<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><script src="/assets/site.js?v=20261007-2"></script></body></html>"""
 
 
@@ -239,7 +240,7 @@ def home_page():
     <section class="home-section why-section"><div class="shell">{section_heading('FACTORY & SERVICE', 'WHY CHOOSE LEXYGO')}
       <div class="why-grid">{why_html}</div></div></section>
     <section class="home-section showroom-section"><div class="shell">{section_heading('FACTORY VIEW', 'DIGITAL SHOWROOM')}<div class="blank-media" aria-label="Digital showroom content pending"></div></div></section>
-    <section class="home-section cases-section"><div class="shell">{section_heading('APPLICATIONS', 'OUR CASES')}<div class="blank-grid"><article></article><article></article></div></div></section>
+    <section class="home-section cases-section"><div class="shell">{section_heading('APPLICATIONS', 'OUR CASES')}<div class="case-video"><video controls preload="metadata" playsinline aria-label="OUR CASES"><source src="/assets/videos/lexygo-applications.mp4" type="video/mp4">OUR CASES</video></div></div></section>
     <section class="home-section insights-section"><div class="shell">{section_heading('LEARN MORE', 'INDUSTRY INSIGHTS & PRODUCT KNOWLEDGE')}<div class="blank-grid three"><article></article><article></article><article></article></div></div></section>
     <section class="contact-band"><div class="shell contact-band-grid"><div><p class="section-kicker">CONTACT US</p><h2>Tell Us What You Need To Move Or Lift</h2><p>Share the load, lift height, aisle, route, quantity, and destination.</p></div>{inquiry_form()}</div></section>
     """
@@ -946,6 +947,10 @@ CSS += r"""
 @media(max-width:560px){.nav-row{gap:7px}.brand{min-width:0}.brand img{width:128px}.language-switcher summary{width:42px;padding:0;justify-content:center}.language-switcher summary span,.language-switcher summary svg:last-child{display:none}.language-menu{position:fixed;top:68px;left:14px;right:14px;width:auto;grid-template-columns:1fr 1fr}.language-menu a{font-size:12px;padding:9px}}
 """
 
+CSS += r"""
+.case-video{width:min(100%,1000px);margin-inline:auto;background:#101518;box-shadow:0 16px 36px rgba(18,54,75,.14)}.case-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#101518}
+"""
+
 
 JS = r"""
 document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)window.lucide.createIcons();const button=document.querySelector('[data-menu-button]');const menu=document.querySelector('[data-menu]');if(button&&menu){button.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open))});menu.querySelectorAll('.nav-group>a').forEach(link=>link.addEventListener('click',event=>{if(window.innerWidth<=1050&&link.nextElementSibling){event.preventDefault();link.parentElement.classList.toggle('is-open')}}))}document.addEventListener('click',event=>{document.querySelectorAll('.language-switcher[open]').forEach(item=>{if(!item.contains(event.target))item.removeAttribute('open')})});const model=new URLSearchParams(location.search).get('model');document.querySelectorAll('[data-model-field]').forEach(field=>{if(model)field.value=model});const t=window.LEXYGO_I18N||{inquiry:'LEXYGO inquiry',equipment:'material handling equipment',name:'Name',email:'Email',company:'Company',country:'Country / Region',model:'Product / Model',message:'Message'};document.querySelectorAll('[data-mailto-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`${t.inquiry}: ${data.get('model')||t.equipment}${data.get('company')?' - '+data.get('company'):''}`;const body=[`${t.name}: ${data.get('name')||''}`,`${t.email}: ${data.get('email')||''}`,`${t.company}: ${data.get('company')||''}`,`${t.country}: ${data.get('country')||''}`,`${t.model}: ${data.get('model')||''}`,'',`${t.message}:`,` ${data.get('details')||''}`].join('\n');location.href=`mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}))});
@@ -964,6 +969,9 @@ def build():
     (ASSETS / "site.js").write_text(JS, encoding="utf-8")
     (ASSETS / "favicon.svg").write_text(FAVICON, encoding="utf-8")
     shutil.copy2(LOGO_SOURCE, ASSETS / "lexygo-logo.gif")
+    video_assets = ASSETS / "videos"
+    video_assets.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(APPLICATIONS_VIDEO_SOURCE, video_assets / APPLICATIONS_VIDEO_SOURCE.name)
 
     routes = ["/", "/products/"]
     write_route("/", home_page())
