@@ -19,6 +19,28 @@ COMPANY = {
     "location": "Huzhou, Zhejiang, China",
     "website": "www.lexygolift.com",
     "domain": "https://www.lexygolift.com",
+    "social": [
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/people/Lexygo-Lift/61595381690867/",
+            "icon": "messages-square",
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/company/lexygo-lift/",
+            "icon": "briefcase-business",
+        },
+        {
+            "name": "YouTube",
+            "url": "https://www.youtube.com/@lexygolift",
+            "icon": "play",
+        },
+        {
+            "name": "Instagram",
+            "url": "https://www.instagram.com/lexygolift/",
+            "icon": "camera",
+        },
+    ],
 }
 
 CATEGORIES = {
