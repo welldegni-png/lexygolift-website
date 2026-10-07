@@ -5,7 +5,7 @@ import json
 import shutil
 from pathlib import Path
 
-from site_data import CATEGORIES, COMPANY, PRODUCTS, SOURCE_ROOT
+from site_data import CATEGORIES, COMPANY, GUIDES, PRODUCTS, SOURCE_ROOT
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -78,7 +78,7 @@ def header(active=""):
         <div class="nav-group"><a class="{'active' if active == 'company' else ''}" href="/company/">Company {icon('chevron-down', 14)}</a><div class="dropdown"><a href="/company/">Company Profile</a><a href="/company/why-choose-us/">Why Choose Us</a><a href="/company/quality-management/">Quality Management</a></div></div>
         <div class="nav-group"><a class="{'active' if active == 'products' else ''}" href="/products/">Products {icon('chevron-down', 14)}</a><div class="dropdown wide-dropdown">{product_links}</div></div>
         <a class="{'active' if active == 'services' else ''}" href="/services/">Services</a>
-        <div class="nav-group"><a class="{'active' if active == 'resources' else ''}" href="/resources/">Resources {icon('chevron-down', 14)}</a><div class="dropdown"><a href="/resources/download/">Download</a><a href="/resources/faq/">FAQ</a><a href="/resources/cases/">Cases</a></div></div>
+        <div class="nav-group"><a class="{'active' if active == 'resources' else ''}" href="/resources/">Resources {icon('chevron-down', 14)}</a><div class="dropdown resource-dropdown"><a href="/guides/">Buyer Guides</a><a href="/resources/compliance/">Compliance Center</a><a href="/resources/download/">Downloads</a><a href="/resources/faq/">FAQ</a><a href="/resources/cases/">Application Cases</a></div></div>
         <div class="nav-group"><a class="{'active' if active == 'blogs' else ''}" href="/blogs/">Blogs {icon('chevron-down', 14)}</a><div class="dropdown"><a href="/blogs/company-news/">Company News</a><a href="/blogs/industry-knowledge/">Industry Knowledge</a></div></div>
         <a class="{'active' if active == 'contact' else ''}" href="/contact/">Contact Us</a>
       </nav>
@@ -94,7 +94,7 @@ def footer():
     <footer class="site-footer">
       <div class="shell footer-grid">
         <section><h2>CONTACT US</h2><dl class="contact-list"><div><dt>Address</dt><dd>{esc(COMPANY['address'])}</dd></div><div><dt>Telephone</dt><dd><a href="tel:{esc(COMPANY['telephone_href'])}">{esc(COMPANY['telephone'])}</a></dd></div><div><dt>WhatsApp</dt><dd><a href="https://wa.me/{esc(COMPANY['whatsapp_href'])}">{esc(COMPANY['whatsapp'])}</a></dd></div><div><dt>Email</dt><dd><a href="mailto:{esc(COMPANY['email'])}">{esc(COMPANY['email'])}</a></dd></div><div><dt>Web</dt><dd><a href="{esc(COMPANY['domain'])}">{esc(COMPANY['website'])}</a></dd></div></dl></section>
-        <section><h2>QUICK LINKS</h2><ul><li><a href="/">Home</a></li><li><a href="/company/">Company Profile</a></li><li><a href="/services/">Services</a></li><li><a href="/resources/download/">Download</a></li><li><a href="/resources/faq/">FAQ</a></li><li><a href="/resources/cases/">Cases</a></li><li><a href="/blogs/">Blogs</a></li><li><a href="/contact/">Contact Us</a></li></ul></section>
+        <section><h2>QUICK LINKS</h2><ul><li><a href="/">Home</a></li><li><a href="/company/">Company Profile</a></li><li><a href="/services/">Services</a></li><li><a href="/resources/">Resource Center</a></li><li><a href="/guides/">Buyer Guides</a></li><li><a href="/resources/compliance/">Compliance Center</a></li><li><a href="/resources/download/">Downloads</a></li><li><a href="/resources/faq/">FAQ</a></li><li><a href="/contact/">Contact Us</a></li></ul></section>
         <section><h2>PRODUCT CATEGORY</h2><ul>{category_links}</ul></section>
         <section><h2>NEWSLETTER</h2><p>Receive product and company updates.</p><form class="newsletter" onsubmit="return false"><label><span class="sr-only">Email address</span><input type="email" placeholder="Email address"></label><button type="submit" aria-label="Subscribe">{icon('send', 18)}</button></form></section>
       </div>
@@ -148,7 +148,7 @@ def page(title, description, route, body, schema=None, active=""):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} | LEXYGO</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{BASE_URL}/assets/og-cover.png">
-<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css?v=20261006-4"><script type="application/ld+json">{json_ld}</script></head>
+<link rel="icon" href="/assets/lexygo-logo.gif" type="image/gif"><link rel="stylesheet" href="/assets/site.css?v=20261007-1"><script type="application/ld+json">{json_ld}</script></head>
 <body>{header(active)}<main id="main">{body}</main>{footer()}<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><script src="/assets/site.js"></script></body></html>"""
 
 
@@ -500,7 +500,302 @@ def quality_management_page():
 
 
 def resources_page():
-    return blank_page("/resources/", "Resources", active="resources")
+    banner, crumb_schema = inner_banner("RESOURCE CENTER", [("Home", "/"), ("Resources", None)])
+    resources = [
+        ("list-checks", "Buyer Guides", "Practical selection guides for comparing equipment types, capacity, lift height, aisle space, terrain, battery, and duty cycle.", "/guides/", "Open buyer guides"),
+        ("badge-check", "Compliance Center", "Understand the document package that may apply to the selected machine, battery, charger, configuration, and destination market.", "/resources/compliance/", "Review compliance information"),
+        ("file-down", "Downloads & Documents", "Find product data online and request model-specific datasheets, manuals, safety information, and available compliance documents.", "/resources/download/", "Find a document"),
+        ("circle-help", "Buyer FAQ", "Direct answers about product selection, pallets, batteries, OEM orders, documents, shipping, warranty, and spare parts.", "/resources/faq/", "Read buyer questions"),
+        ("warehouse", "Application Cases", "Application notes that connect working conditions with suitable equipment families without using unverified customer claims.", "/resources/cases/", "Explore applications"),
+    ]
+    resource_html = "".join(
+        f'<article><span class="resource-icon">{icon(icon_name, 23)}</span><h3>{esc(title)}</h3><p>{esc(copy)}</p><a href="{href}">{esc(link)}{icon("arrow-right", 16)}</a></article>'
+        for icon_name, title, copy, href, link in resources
+    )
+    questions = [
+        ("How do I choose an electric pallet truck?", "/guides/how-to-choose-an-electric-pallet-truck/"),
+        ("Should I use a pallet truck or a pallet stacker?", "/guides/pallet-truck-vs-stacker/"),
+        ("How do capacity, lift height, and aisle width affect forklift selection?", "/guides/forklift-capacity-and-aisle-width/"),
+        ("Which documents should I request before ordering?", "/resources/compliance/"),
+        ("What information is needed for an accurate quotation?", "/resources/faq/#ordering-shipping"),
+        ("How can I request a model-specific manual or test document?", "/resources/download/"),
+    ]
+    question_html = "".join(f'<a href="{href}"><span>{esc(question)}</span>{icon("arrow-up-right", 17)}</a>' for question, href in questions)
+    matrix = [
+        ("Compare equipment", "Buyer Guides", "Load, pallet, travel route, lift height, aisle, terrain, and duty cycle", "/guides/"),
+        ("Verify document scope", "Compliance Center", "Model, battery, charger, supplied configuration, and destination market", "/resources/compliance/"),
+        ("Obtain technical files", "Downloads & Documents", "Model number, required file, language, company, and intended market", "/resources/download/"),
+        ("Resolve a purchase question", "Buyer FAQ", "Selection, OEM, batteries, shipping, warranty, or spare-parts question", "/resources/faq/"),
+        ("Review a working condition", "Application Cases", "Load, pallet, floor, route, stacking height, and operating frequency", "/resources/cases/"),
+    ]
+    matrix_html = "".join(
+        f'<tr><th scope="row">{esc(task)}</th><td><a href="{href}">{esc(area)}</a></td><td>{esc(inputs)}</td></tr>'
+        for task, area, inputs, href in matrix
+    )
+    collection_schema = {
+        "@type": "CollectionPage",
+        "name": "LEXYGO Material Handling Equipment Resource Center",
+        "description": "Buyer guides, compliance information, technical documents, FAQs, and application notes for material handling equipment buyers.",
+        "url": route_url("/resources/"),
+    }
+    body = f"""{banner}
+    <section class="resource-intro"><div class="shell resource-answer"><p class="section-kicker">TECHNICAL AND BUYER INFORMATION</p><h2>Material Handling Equipment Resource Center</h2><p>Use this center to select equipment, understand the available document package, review technical data, and prepare a complete purchasing inquiry for electric pallet trucks, stackers, forklifts, manual pallet trucks, and warehouse equipment.</p><p class="resource-note">Technical and compliance information is matched to the selected model and supplied configuration. Request the current model-specific document package before placing an order.</p></div></section>
+    <section class="resource-directory"><div class="shell">{section_heading('RESOURCE DIRECTORY', 'Find Information By Buyer Task', 'Each section answers a specific sourcing, selection, verification, or application question.')}<div class="resource-grid">{resource_html}</div></div></section>
+    <section class="resource-questions"><div class="shell resource-question-grid"><div><p class="section-kicker">POPULAR QUESTIONS</p><h2>Start With The Decision You Need To Make</h2><p>These pages provide direct answers first, followed by tables, checklists, relevant product links, and the information needed for confirmation.</p></div><div class="question-links">{question_html}</div></div></section>
+    <section class="resource-matrix-section"><div class="shell"><div class="section-heading left"><span>RESOURCE MAP</span><h2>Where To Find The Right Information</h2><p>Choose the resource area that matches the current step in your purchasing process.</p></div><div class="table-wrap"><table class="evidence-table resource-matrix"><thead><tr><th>Buyer task</th><th>Resource area</th><th>Information to prepare</th></tr></thead><tbody>{matrix_html}</tbody></table></div></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Cannot find the document or answer you need?</strong><span>Send the model, application, destination market, and requested document to {esc(COMPANY['email'])}.</span></div>{button('Ask The Technical Team', '/contact/', 'primary', 'send')}</div></section>"""
+    return page(
+        "Material Handling Equipment Resource Center",
+        "Access LEXYGO buyer guides, compliance information, technical documents, FAQs, and application notes for pallet trucks, stackers, forklifts, and warehouse equipment.",
+        "/resources/",
+        body,
+        [collection_schema, crumb_schema],
+        "resources",
+    )
+
+
+def downloads_page():
+    banner, crumb_schema = inner_banner("DOWNLOADS & DOCUMENTS", [("Home", "/"), ("Resources", "/resources/"), ("Downloads & Documents", None)])
+    groups = [
+        ("file-text", "Product Datasheets", "Model specifications, dimensions, capacity, lift range, battery, charger, and configuration information.", "Use the technical parameter table on each product page or request a revision-controlled datasheet."),
+        ("book-open", "Operation & Safety Manuals", "Operating instructions, safety information, inspection points, charging guidance, and maintenance references.", "Request by model, serial number when available, supplied language, and destination market."),
+        ("battery-charging", "Battery & Charger Documents", "Battery identification, charger information, lithium battery transport records, and available safety information.", "Confirm the battery chemistry, voltage, capacity, charger input, plug, and destination."),
+        ("badge-check", "Compliance Documents", "Available declarations, test reports, certificates, labels, and supporting documents for the supplied configuration.", "Request by exact product model, battery, charger, configuration, and intended market."),
+        ("wrench", "Spare Parts Information", "Parts identification and replacement support for supplied equipment.", "Provide the model, serial number, part photos, quantity, and a clear description of the requirement."),
+    ]
+    group_html = "".join(
+        f'<article><span class="resource-icon">{icon(icon_name, 23)}</span><h3>{esc(title)}</h3><p>{esc(copy)}</p><strong>{esc(action)}</strong></article>'
+        for icon_name, title, copy, action in groups
+    )
+    rows = [
+        ("Product catalog", "Product family or full range", "English", "Current available edition", "Request"),
+        ("Model datasheet", "Exact product model", "English", "Model and revision specific", "Product page / request"),
+        ("Operation manual", "Model and supplied configuration", "English", "Confirm before shipment", "Request"),
+        ("Safety information", "Product, battery, and charger", "English", "Configuration specific", "Request"),
+        ("Compliance package", "Model, battery, charger, and market", "English", "Availability varies", "Request"),
+        ("Spare-parts identification", "Model and serial number", "English", "Order specific", "Request"),
+    ]
+    rows_html = "".join(f'<tr><th scope="row">{esc(document)}</th><td>{esc(applies)}</td><td>{esc(language)}</td><td>{esc(revision)}</td><td>{esc(access)}</td></tr>' for document, applies, language, revision, access in rows)
+    checklist = ["Product model", "Requested document type", "Company and contact name", "Destination country or market", "Battery and charger configuration", "Serial number for manuals or parts support", "Preferred language", "Reason for request or project stage"]
+    checklist_html = "".join(f'<li>{icon("check", 16)}<span>{esc(item)}</span></li>' for item in checklist)
+    body = f"""{banner}
+    <section class="resource-intro"><div class="shell resource-answer"><p class="section-kicker">CONTROLLED TECHNICAL INFORMATION</p><h2>Find Product Data And Request Model-Specific Documents</h2><p>Product specifications are published directly on each model page. Revision-controlled manuals, safety information, battery records, compliance documents, and spare-parts information are supplied according to the selected product and configuration.</p><p class="resource-note">A document title alone does not confirm that it applies to every model. LEXYGO verifies the model, battery, charger, supplied configuration, and intended market before releasing a document package.</p>{button('Browse Product Data', '/products/', 'outline')} {button('Request Documents', '/contact/?subject=Document%20request', 'primary', 'file-down')}</div></section>
+    <section class="document-groups"><div class="shell">{section_heading('DOCUMENT TYPES', 'Technical Information Available By Product And Configuration')}<div class="document-grid">{group_html}</div></div></section>
+    <section class="resource-matrix-section"><div class="shell"><div class="section-heading left"><span>DOCUMENT INDEX</span><h2>Document Availability And Access</h2><p>Use the product page for published parameters and contact LEXYGO for controlled or configuration-specific files.</p></div><div class="table-wrap"><table class="evidence-table download-table"><thead><tr><th>Document</th><th>Applies to</th><th>Language</th><th>Revision basis</th><th>Access</th></tr></thead><tbody>{rows_html}</tbody></table></div></div></section>
+    <section class="requirements-section"><div class="shell requirements-grid"><div><p class="section-kicker">REQUEST CHECKLIST</p><h2>Information Needed To Locate The Correct File</h2><p>Providing this information prevents the wrong model, battery, charger, or market document from being used.</p>{button('Send A Document Request', '/contact/?subject=Document%20request', 'primary', 'send')}</div><ul>{checklist_html}</ul></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Need a file for supplier approval or shipment review?</strong><span>Email the model, configuration, destination, and document name to {esc(COMPANY['email'])}.</span></div>{button('Contact LEXYGO', '/contact/', 'primary', 'send')}</div></section>"""
+    return page("Downloads & Technical Documents", "Find LEXYGO product data and request model-specific datasheets, manuals, safety information, battery documents, compliance records, and spare-parts support.", "/resources/download/", body, crumb_schema, "resources")
+
+
+def compliance_page():
+    banner, crumb_schema = inner_banner("COMPLIANCE CENTER", [("Home", "/"), ("Resources", "/resources/"), ("Compliance Center", None)])
+    documents = [
+        ("CE documentation", "Supports review of applicable EU conformity requirements.", "Applicable products and configurations", "Model, configuration, declaration details, and referenced standards"),
+        ("ANSI/ITSDF B56.1-2020 test report", "Provides test evidence against the stated powered industrial truck safety standard.", "Applicable powered industrial truck models", "Exact model, tested configuration, report scope, and report issuer"),
+        ("UL 583 NRTL Type E certification", "Supports review of the stated electrical and fire-hazard classification for applicable electric industrial trucks.", "Applicable electric industrial truck configurations", "Certification listing, model/configuration coverage, labels, and supplied electrical system"),
+        ("UN 38.3 battery documentation", "Supports transport review for applicable lithium battery packs.", "Applicable lithium battery configurations", "Battery model, voltage, capacity, test summary/report, and shipment configuration"),
+        ("English operating and safety information", "Provides model-related operating, inspection, charging, and safety guidance.", "Supplied machine, battery, and charger", "Model, serial number when available, language, and document revision"),
+    ]
+    document_html = "".join(f'<tr><th scope="row">{esc(name)}</th><td>{esc(purpose)}</td><td>{esc(applies)}</td><td>{esc(verify)}</td></tr>' for name, purpose, applies, verify in documents)
+    steps = [
+        ("01", "Identify The Exact Model", "Use the full model name and intended capacity, lift height, battery, charger, and options."),
+        ("02", "State The Destination Market", "Country, end-use environment, importer requirements, and workplace rules may affect the requested package."),
+        ("03", "Request The Document List", "Ask which reports, certificates, declarations, manuals, labels, and battery records apply."),
+        ("04", "Match Documents To Configuration", "Check model numbers, configuration scope, report references, battery data, and document revision."),
+        ("05", "Confirm Before Order Approval", "Record the agreed document package in the quotation, purchase order, or sales contract."),
+        ("06", "Retain Shipment Records", "Keep the final documents together with serial, battery, charger, packing, and shipment information."),
+    ]
+    step_html = "".join(f'<li><span>{number}</span><div><h3>{esc(title)}</h3><p>{esc(copy)}</p></div></li>' for number, title, copy in steps)
+    faqs = [
+        ("Does every LEXYGO model use the same compliance documents?", "No. The applicable package depends on the product type, exact model, battery, charger, supplied options, destination market, and intended application."),
+        ("Can I receive a report before placing an order?", "Send the exact model, configuration, company details, destination market, and the document required for review. Availability and release conditions are confirmed case by case."),
+        ("Does a CE document automatically satisfy U.S. requirements?", "No. EU and U.S. requirements are different. The importer, employer, dealer, or project owner should confirm the rules that apply to the destination and workplace."),
+        ("What should I verify on a lithium battery document?", "Verify the battery manufacturer and model, voltage, capacity, test reference, document revision, and that the supplied battery configuration matches the document."),
+        ("Can OEM branding change the document package?", "Branding, labels, manuals, electrical configuration, battery, charger, forks, mast, and other changes may affect the applicable documents and must be reviewed before approval."),
+        ("Who confirms local import and workplace requirements?", "The buyer, importer, dealer, employer, or appointed compliance professional should confirm the laws, customs rules, workplace requirements, and project specifications that apply locally."),
+    ]
+    faq_html = "".join(f'<details><summary>{esc(question)}{icon("plus", 18)}</summary><p>{esc(answer)}</p></details>' for question, answer in faqs)
+    faq_schema = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
+    body = f"""{banner}
+    <section class="resource-intro"><div class="shell resource-answer"><p class="section-kicker">MODEL-SPECIFIC VERIFICATION</p><h2>What Compliance Information Should A Buyer Request?</h2><p>Request a document list that identifies the exact product model, battery, charger, supplied configuration, destination market, and document revision. The name of a standard or certificate is not enough unless its scope matches the machine being purchased.</p><p class="resource-note">This page explains LEXYGO document handling for buyer review. It is not legal advice and does not replace confirmation of local import, product, workplace, or project requirements.</p>{button('Request A Compliance Package', '/contact/?subject=Compliance%20document%20request', 'primary', 'file-check-2')}</div></section>
+    <section class="resource-matrix-section"><div class="shell"><div class="section-heading left"><span>DOCUMENT MATRIX</span><h2>Available Evidence And What To Verify</h2><p>Document availability and applicability are confirmed against the ordered configuration.</p></div><div class="table-wrap"><table class="evidence-table compliance-table"><thead><tr><th>Document</th><th>Purpose</th><th>Typical scope</th><th>Buyer verification</th></tr></thead><tbody>{document_html}</tbody></table></div></div></section>
+    <section class="release-section compliance-workflow"><div class="shell release-grid"><div><p class="section-kicker">VERIFICATION PROCESS</p><h2>Six Steps Before Order Approval</h2><p>Use this process to keep the product, supplied configuration, labels, manuals, battery records, and compliance evidence aligned.</p></div><ol>{step_html}</ol></div></section>
+    <section class="faq-section"><div class="shell faq-grid"><div><p class="section-kicker">COMPLIANCE FAQ</p><h2>Direct Answers For International Buyers</h2><p>Confirm the final requirements with the destination-market importer, employer, dealer, project owner, or qualified compliance professional.</p></div><div class="faq-list">{faq_html}</div></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Request evidence for a specific model and market</strong><span>Send the model, configuration, battery, charger, and destination to {esc(COMPANY['email'])}.</span></div>{button('Contact Quality Team', '/contact/', 'primary', 'send')}</div></section>"""
+    return page("Material Handling Equipment Compliance Center", "Review the LEXYGO model-specific process for CE, ANSI/ITSDF B56.1-2020, UL 583 Type E, UN 38.3, and English safety documents.", "/resources/compliance/", body, [faq_schema, crumb_schema], "resources")
+
+
+def faq_page():
+    banner, crumb_schema = inner_banner("BUYER FAQ", [("Home", "/"), ("Resources", "/resources/"), ("Buyer FAQ", None)])
+    groups = [
+        ("product-selection", "Product Selection", [
+            ("What information is needed to recommend a material handling machine?", "Provide the load weight and dimensions, pallet type, lift height, aisle width, travel distance, floor or terrain condition, daily operating hours, quantity, and destination country."),
+            ("What is the difference between a pallet truck and a pallet stacker?", "A pallet truck is mainly used for horizontal pallet movement. A pallet stacker also raises pallets for stacking, racking, loading, or process positioning."),
+            ("Can rated capacity be used at every lift height?", "Not automatically. Residual capacity can change with lift height, load center, mast, attachments, and configuration. Confirm the capacity plate and model-specific data for the intended load."),
+        ]),
+        ("pallets-applications", "Pallets & Applications", [
+            ("Why does pallet type matter when selecting a stacker?", "Fork access, pallet bottom-board design, opening direction, and straddle-leg clearance determine whether a standard, straddle, reach, or counterbalanced stacker can enter and support the load."),
+            ("Which machine is suitable for closed pallets or loads without fork access underneath?", "A counterbalanced stacker may be suitable because it does not rely on support legs entering beneath the pallet, but capacity, load center, floor, and turning space must still be confirmed."),
+            ("Can an indoor pallet truck be used on rough outdoor ground?", "Standard warehouse trucks are intended for prepared surfaces. Uneven ground, slopes, gaps, water, debris, and outdoor travel require a machine designed and configured for those conditions."),
+        ]),
+        ("battery-charger", "Battery & Charger", [
+            ("Should I choose lithium-ion or lead-acid batteries?", "The choice depends on operating hours, charging opportunities, maintenance capability, temperature, cost, charger power, transport requirements, and expected duty cycle."),
+            ("What charger information should I provide?", "Provide destination voltage and frequency, plug type, battery chemistry, battery voltage and capacity, charging environment, and any project-specific electrical requirement."),
+            ("Are battery transport documents available?", "Applicable lithium battery configurations can be matched with the available transport and safety documentation. Confirm the exact battery model and shipment configuration before booking transport."),
+        ]),
+        ("oem-documents", "OEM & Documents", [
+            ("Can LEXYGO provide OEM or private-label products?", "Logo, color, labels, manuals, packaging, and selected configuration requests can be evaluated by model, quantity, safety requirements, and destination market."),
+            ("Which compliance documents are supplied?", "The applicable package depends on the product model, battery, charger, supplied configuration, and destination. Request the exact document list before order approval."),
+            ("Can I request English manuals and safety information?", "Yes. Request the manual and safety document list for the selected model and configuration. The final revision should match the supplied machine, battery, and charger."),
+        ]),
+        ("ordering-shipping", "Ordering, Shipping & Support", [
+            ("What should be included in an RFQ?", "Include the model or application, quantity, load, lift height, pallet dimensions, aisle width, terrain, duty cycle, battery, charger, destination, required documents, and OEM requirements."),
+            ("Can inspection photos or videos be provided before shipment?", "Agreed photos, operating video, labels, serial information, packing confirmation, and available inspection records can be included in the pre-shipment scope."),
+            ("How do I request spare parts or technical support?", "Provide the model, serial number, part photos, operating hours, error information, and a clear description or video of the issue."),
+            ("What warranty applies to an order?", "Warranty duration, covered parts, exclusions, responsibilities, and claim conditions are confirmed in the quotation or sales contract for the ordered model and configuration."),
+        ]),
+    ]
+    all_faqs = []
+    group_html = []
+    for group_id, title, faqs in groups:
+        all_faqs.extend(faqs)
+        details = "".join(f'<details><summary>{esc(question)}{icon("plus", 18)}</summary><p>{esc(answer)}</p></details>' for question, answer in faqs)
+        group_html.append(f'<section class="faq-group" id="{group_id}"><h2>{esc(title)}</h2><div class="faq-list">{details}</div></section>')
+    faq_schema = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in all_faqs]}
+    body = f"""{banner}
+    <section class="resource-intro"><div class="shell resource-answer"><p class="section-kicker">DIRECT ANSWERS FOR PROFESSIONAL BUYERS</p><h2>Material Handling Equipment Buyer FAQ</h2><p>Find concise answers about equipment selection, pallet compatibility, batteries, chargers, OEM orders, compliance documents, shipping, warranty, and spare-parts support.</p><p class="resource-note">For a final recommendation, provide the exact application, model, configuration, and destination market. General answers do not replace the model-specific quotation and technical confirmation.</p></div></section>
+    <section class="faq-library"><div class="shell"><nav class="faq-jump" aria-label="FAQ categories"><a href="#product-selection">Product Selection</a><a href="#pallets-applications">Pallets & Applications</a><a href="#battery-charger">Battery & Charger</a><a href="#oem-documents">OEM & Documents</a><a href="#ordering-shipping">Ordering & Support</a></nav>{''.join(group_html)}</div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Need an answer for a specific project?</strong><span>Send the load, lift height, pallet, aisle, terrain, quantity, and destination to {esc(COMPANY['email'])}.</span></div>{button('Ask LEXYGO', '/contact/', 'primary', 'send')}</div></section>"""
+    return page("Material Handling Equipment Buyer FAQ", "Answers to common buyer questions about material handling equipment selection, pallets, batteries, chargers, OEM orders, compliance, shipping, warranty, and spare parts.", "/resources/faq/", body, [faq_schema, crumb_schema], "resources")
+
+
+def cases_page():
+    banner, crumb_schema = inner_banner("APPLICATION CASES", [("Home", "/"), ("Resources", "/resources/"), ("Application Cases", None)])
+    cases = [
+        ("mountain", "Uneven-Ground Pallet Transport", "Outdoor or uneven routes require evaluation of surface condition, slope, gaps, water, debris, load stability, travel distance, and turning space.", "All-terrain electric pallet trucks", "/products/atep3000y/"),
+        ("container", "Closed-Pallet And Machine-Side Handling", "Loads without suitable under-clearance may require a counterbalanced configuration instead of support legs beneath the pallet.", "Counterbalanced electric stackers", "/products/wces1000j/"),
+        ("between-horizontal-start", "Narrow-Aisle Pallet Stacking", "The selected truck must be checked against pallet orientation, load length, right-angle stacking space, mast height, overhead clearance, and residual capacity.", "Walkie, rider, and reach stackers", "/products/electric-pallet-stackers/"),
+        ("move-up", "Ergonomic Workstation Positioning", "Lift table carts raise boxes, components, or materials to a practical working height and reduce repeated low-level handling.", "Manual and electric lift table carts", "/products/warehouse-equipment/"),
+    ]
+    case_html = "".join(
+        f'<article><span class="resource-icon">{icon(icon_name, 23)}</span><p class="case-label">APPLICATION NOTE</p><h3>{esc(title)}</h3><p>{esc(copy)}</p><strong>{esc(equipment)}</strong><a href="{href}">View relevant equipment{icon("arrow-right", 16)}</a></article>'
+        for icon_name, title, copy, equipment, href in cases
+    )
+    fields = ["Country and customer type", "Material and load weight", "Load dimensions and center of gravity", "Pallet type and fork-entry direction", "Required lift height", "Aisle, doorway, and turning dimensions", "Floor, slope, and terrain condition", "Travel distance and daily operating hours", "Selected model and configuration", "Measured result with date and evidence"]
+    fields_html = "".join(f'<li>{icon("check", 16)}<span>{esc(item)}</span></li>' for item in fields)
+    body = f"""{banner}
+    <section class="resource-intro"><div class="shell resource-answer"><p class="section-kicker">APPLICATION-LED SELECTION</p><h2>Match Working Conditions To The Right Equipment Family</h2><p>These application notes show the information that should be checked before recommending a pallet truck, stacker, forklift, or lift table. They are technical selection examples, not invented customer success claims.</p><p class="resource-note">Customer-specific results are published only when the application, selected configuration, outcome, and supporting evidence have been verified.</p></div></section>
+    <section class="application-notes"><div class="shell">{section_heading('APPLICATION NOTES', 'Common Material Handling Scenarios', 'Use these starting points to identify the product family, then confirm the exact model and configuration.')}<div class="application-grid">{case_html}</div></div></section>
+    <section class="requirements-section"><div class="shell requirements-grid"><div><p class="section-kicker">CASE EVIDENCE</p><h2>Information Required For A Verifiable Case Study</h2><p>This evidence keeps future customer cases useful to professional buyers and prevents unsupported performance claims.</p>{button('Discuss Your Application', '/contact/?subject=Application%20review', 'primary', 'send')}</div><ul>{fields_html}</ul></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Need a recommendation for your working conditions?</strong><span>Send photos, load data, pallet details, dimensions, terrain, duty cycle, and destination to {esc(COMPANY['email'])}.</span></div>{button('Request Application Review', '/contact/', 'primary', 'send')}</div></section>"""
+    return page("Material Handling Equipment Application Cases", "Review LEXYGO application notes for uneven-ground pallet transport, closed pallets, narrow-aisle stacking, and ergonomic workstation positioning.", "/resources/cases/", body, crumb_schema, "resources")
+
+
+GUIDE_CONTENT = {
+    "how-to-choose-an-electric-pallet-truck": {
+        "answer": "Choose an electric pallet truck by matching rated load, pallet entry, travel distance, floor or terrain, slope, turning space, duty cycle, battery, charger, and operator position. Do not select by capacity alone; the complete route and operating pattern determine the suitable model.",
+        "rows": [
+            ("Load", "Maximum load weight, dimensions, center of gravity, and stability", "Rated capacity must cover the real load and application"),
+            ("Pallet", "Fork entry, opening direction, bottom boards, fork spacing, and lowered height", "The forks and wheels must enter and support the pallet correctly"),
+            ("Route", "Distance, turning areas, doorways, ramps, dock plates, and traffic", "Long routes may justify a rider platform or higher-capacity battery"),
+            ("Surface", "Flat indoor floor, uneven ground, gaps, debris, water, and outdoor exposure", "Use equipment designed for the actual surface and environment"),
+            ("Duty cycle", "Loads per hour, shifts, travel time, charging windows, and temperature", "Battery capacity and charging method must support the work pattern"),
+            ("Destination", "Voltage, frequency, plug, language, documents, and local requirements", "Confirm the supplied charger and document package before ordering"),
+        ],
+        "checklist": ["Maximum load weight and dimensions", "Pallet type and fork-entry direction", "Fork width, length, and lowered height", "One-way and round-trip travel distance", "Aisle, doorway, and turning dimensions", "Slope and floor or terrain condition", "Loads per hour and shifts per day", "Battery and charger preference", "Operator position: walkie or rider", "Destination country and required documents"],
+        "faqs": [
+            ("When should I choose a rider pallet truck?", "A rider model may be appropriate when travel distances, operating frequency, and throughput make repeated walk-behind travel inefficient. Confirm route safety, turning space, operator training, and local workplace rules."),
+            ("Can I use a warehouse pallet truck outdoors?", "Only when the selected machine and configuration are suitable for the actual surface, slope, weather exposure, gaps, and debris. Standard indoor trucks are intended for prepared floors."),
+            ("How do I choose fork dimensions?", "Match fork length, overall fork width, individual fork width, lowered height, and wheel position to the pallet openings and support boards."),
+            ("What battery information should I compare?", "Compare chemistry, voltage, capacity, charging time, charger input, opportunity charging, temperature, maintenance, and the required transport documents."),
+        ],
+        "links": [("Electric Pallet Trucks", "/products/electric-pallet-trucks/"), ("All-Terrain ATEP3000Y", "/products/atep3000y/"), ("Request Selection Support", "/contact/?subject=Pallet%20truck%20selection")],
+    },
+    "pallet-truck-vs-stacker": {
+        "answer": "Use a pallet truck when the main task is horizontal pallet transport at low lift height. Use a pallet stacker when the task includes raising pallets for racking, stacking, loading, unloading, or process positioning. Pallet construction and available fork access can determine which stacker design is suitable.",
+        "rows": [
+            ("Primary task", "Horizontal pallet movement", "Pallet movement plus vertical lifting and stacking"),
+            ("Typical lift", "Low lift for floor transport", "Mast lift for stacking or elevated placement"),
+            ("Pallet compatibility", "Requires suitable fork entry", "Also depends on support legs, straddle clearance, reach, or counterbalance design"),
+            ("Selection dimensions", "Forks, lowered height, turning radius, route", "Forks, mast height, lift height, aisle, overhead clearance, residual capacity"),
+            ("Common types", "Walkie, rider, all-terrain", "Walkie, rider, reach, straddle, counterbalanced"),
+            ("Typical use", "Truck loading areas, staging, short or long horizontal routes", "Warehouse racking, production, closed pallets, machine-side handling"),
+        ],
+        "checklist": ["Is the task transport only or does it include stacking?", "What is the maximum load and load center?", "Is the pallet open or closed underneath?", "Can support legs enter below or around the pallet?", "What lift height and overhead clearance are available?", "What aisle and right-angle stacking space are available?", "How far and how often will the machine travel?", "Is the floor level, smooth, and suitable for the selected truck?"],
+        "faqs": [
+            ("Can a pallet truck place loads in racking?", "A standard low-lift pallet truck is not designed to raise pallets to rack levels. Use a suitable stacker or forklift for elevated placement."),
+            ("Why can closed pallets be difficult for a standard stacker?", "Support legs or wheel arms may need to enter beneath or around the pallet. Closed bottom boards can block that path, so a counterbalanced or other suitable configuration may be required."),
+            ("Is a stacker a replacement for every forklift task?", "No. Capacity, lift height, residual capacity, load center, aisle, travel speed, floor, attachments, operator position, and duty cycle must be matched to the application."),
+            ("Which product information should I send for selection?", "Send pallet photos and dimensions, fork-entry direction, load weight and dimensions, lift height, aisle, route, floor, duty cycle, quantity, and destination."),
+        ],
+        "links": [("Electric Pallet Trucks", "/products/electric-pallet-trucks/"), ("Electric Pallet Stackers", "/products/electric-pallet-stackers/"), ("Request An Application Review", "/contact/?subject=Truck%20or%20stacker%20selection")],
+    },
+    "forklift-capacity-and-aisle-width": {
+        "answer": "Forklift selection requires more than nominal capacity. Confirm the real load weight, load center, load dimensions, required lift height, residual capacity, mast and attachment configuration, truck dimensions, turning radius, aisle layout, overhead clearance, floor, slope, and duty cycle.",
+        "rows": [
+            ("Rated capacity", "Capacity under the stated reference conditions", "Do not assume it applies to every lift height, load center, or attachment"),
+            ("Load center", "Distance from the fork face to the load center of gravity", "Long or uneven loads can increase the load moment"),
+            ("Lift height", "Maximum required fork height", "Higher lifts may reduce available capacity and affect mast choice"),
+            ("Residual capacity", "Permitted load for the actual height and configuration", "Confirm using model-specific data and the truck capacity plate"),
+            ("Aisle width", "Working space for approach, turning, load, and clearance", "Use the real pallet/load dimensions and site layout"),
+            ("Mast and overhead", "Lowered mast, raised mast, free lift, guard, doorway, and ceiling", "Verify all vertical clearances along the route"),
+            ("Floor and grade", "Surface strength, levelness, traction, gaps, ramps, and slopes", "Affects stability, traction, braking, tires, and safe operation"),
+        ],
+        "checklist": ["Maximum load weight and dimensions", "Load center and center-of-gravity position", "Required lift and placement height", "Required residual capacity at height", "Pallet orientation and fork dimensions", "Aisle and right-angle stacking dimensions", "Doorway, container, ceiling, and overhead clearance", "Attachments and side-shift requirements", "Floor loading, surface, slope, and tire requirement", "Daily hours, travel distance, charging, and destination requirements"],
+        "faqs": [
+            ("Why can available capacity decrease at greater lift height?", "Higher lift, changed load center, mast configuration, and attachments can change the truck's permitted capacity. Use model-specific residual-capacity data and the capacity plate."),
+            ("Is turning radius the same as required aisle width?", "No. Aisle selection also considers the truck, load, pallet, approach angle, clearances, and operating method. Check the complete site layout."),
+            ("Do attachments affect forklift selection?", "They can add weight, change load center, reduce capacity, and change dimensions. Include the intended attachment in the technical review."),
+            ("What site measurements should I provide?", "Provide aisle width, rack face-to-face distance, pallet orientation, load length, doorway dimensions, overhead restrictions, floor condition, slopes, and turning areas."),
+        ],
+        "links": [("Electric Forklifts", "/products/electric-forklifts/"), ("Electric Pallet Stackers", "/products/electric-pallet-stackers/"), ("Request Capacity Review", "/contact/?subject=Forklift%20capacity%20review")],
+    },
+}
+
+
+def guides_page():
+    banner, crumb_schema = inner_banner("BUYER GUIDES", [("Home", "/"), ("Resources", "/resources/"), ("Buyer Guides", None)])
+    cards = []
+    for guide in GUIDES:
+        cards.append(f'''<article><p class="guide-type">SELECTION GUIDE</p><h2><a href="/guides/{guide['slug']}/">{esc(guide['title'])}</a></h2><p>{esc(guide['summary'])}</p><div><span>Reviewed by LEXYGO Technical Team</span><span>Updated 2026-10-07</span></div><a class="guide-link" href="/guides/{guide['slug']}/">Read guide{icon("arrow-right", 16)}</a></article>''')
+    questions = ["What must the machine move or lift?", "What is the maximum load and load center?", "Which pallet or load-support structure is used?", "What route, aisle, doorway, and overhead space are available?", "What floor, slope, terrain, and environment are involved?", "How often and how long will the machine operate?", "Which battery, charger, documents, and market requirements apply?"]
+    question_html = "".join(f'<li>{icon("check", 16)}<span>{esc(item)}</span></li>' for item in questions)
+    collection_schema = {"@type": "CollectionPage", "name": "LEXYGO Material Handling Equipment Buyer Guides", "url": route_url("/guides/"), "description": "Selection guides for pallet trucks, pallet stackers, and electric forklifts."}
+    body = f"""{banner}
+    <section class="resource-intro"><div class="shell resource-answer"><p class="section-kicker">PRACTICAL EQUIPMENT SELECTION</p><h2>Choose By Application, Not By Model Name Alone</h2><p>These guides provide a direct answer, comparison tables, measurement checklists, common selection risks, and links to relevant LEXYGO product families.</p><p class="resource-note">A guide supports initial comparison. Final selection requires model-specific capacity, configuration, application, document, and destination-market confirmation.</p></div></section>
+    <section class="buyer-guides"><div class="shell"><div class="guide-grid">{''.join(cards)}</div></div></section>
+    <section class="requirements-section"><div class="shell requirements-grid"><div><p class="section-kicker">SELECTION INPUTS</p><h2>Seven Questions To Answer Before Comparing Models</h2><p>These inputs make the recommendation more accurate and reduce repeated clarification during quotation.</p>{button('Request Selection Support', '/contact/?subject=Product%20selection', 'primary', 'send')}</div><ul>{question_html}</ul></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Need help turning site conditions into a product shortlist?</strong><span>Send the load, pallet, route, lift height, dimensions, duty cycle, and destination to {esc(COMPANY['email'])}.</span></div>{button('Contact LEXYGO', '/contact/', 'primary', 'send')}</div></section>"""
+    return page("Material Handling Equipment Buyer Guides", "Use LEXYGO buyer guides to compare pallet trucks, pallet stackers, and electric forklifts by load, pallet, lift height, aisle, terrain, battery, and duty cycle.", "/guides/", body, [collection_schema, crumb_schema], "resources")
+
+
+def buyer_guide_page(guide):
+    content = GUIDE_CONTENT[guide["slug"]]
+    route = f'/guides/{guide["slug"]}/'
+    banner, crumb_schema = inner_banner(guide["title"].upper(), [("Home", "/"), ("Resources", "/resources/"), ("Buyer Guides", "/guides/"), (guide["title"], None)])
+    rows_html = "".join(f'<tr><th scope="row">{esc(factor)}</th><td>{esc(check)}</td><td>{esc(reason)}</td></tr>' for factor, check, reason in content["rows"])
+    checklist_html = "".join(f'<li>{icon("check", 16)}<span>{esc(item)}</span></li>' for item in content["checklist"])
+    faq_html = "".join(f'<details><summary>{esc(question)}{icon("plus", 18)}</summary><p>{esc(answer)}</p></details>' for question, answer in content["faqs"])
+    related_html = "".join(f'<a href="{href}"><span>{esc(label)}</span>{icon("arrow-up-right", 17)}</a>' for label, href in content["links"])
+    article_schema = {
+        "@type": "TechArticle",
+        "headline": guide["title"],
+        "description": guide["summary"],
+        "datePublished": "2026-10-07",
+        "dateModified": "2026-10-07",
+        "author": {"@type": "Organization", "name": "LEXYGO Technical Team"},
+        "publisher": {"@type": "Organization", "name": COMPANY["display_name"], "url": BASE_URL},
+        "mainEntityOfPage": route_url(route),
+    }
+    faq_schema = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in content["faqs"]]}
+    body = f"""{banner}
+    <article class="guide-article"><section class="guide-answer"><div class="shell"><p class="section-kicker">DIRECT ANSWER</p><h2>{esc(guide['title'])}</h2><p class="answer-lead">{esc(content['answer'])}</p><div class="article-meta"><span>Reviewed by LEXYGO Technical Team</span><span>Last reviewed: 2026-10-07</span></div></div></section>
+    <section class="guide-table-section"><div class="shell"><div class="section-heading left"><span>DECISION TABLE</span><h2>Factors To Check Before Selecting A Model</h2><p>Use the actual load and site conditions rather than nominal capacity alone.</p></div><div class="table-wrap"><table class="evidence-table guide-table"><thead><tr><th>Selection factor</th><th>What to check</th><th>Why it matters</th></tr></thead><tbody>{rows_html}</tbody></table></div></div></section>
+    <section class="guide-checklist"><div class="shell guide-checklist-grid"><div><p class="section-kicker">BUYER CHECKLIST</p><h2>Information To Include In Your Inquiry</h2><p>Photos, dimensioned layouts, pallet details, and a short operating video can make the selection review more accurate.</p>{button('Send Application Details', '/contact/?subject=Technical%20selection%20review', 'primary', 'send')}</div><ul>{checklist_html}</ul></div></section>
+    <section class="guide-related"><div class="shell resource-question-grid"><div><p class="section-kicker">NEXT STEP</p><h2>Relevant Products And Support</h2><p>Open the product family for model parameters or send the complete application for a technical comparison.</p></div><div class="question-links">{related_html}</div></div></section>
+    <section class="faq-section"><div class="shell faq-grid"><div><p class="section-kicker">GUIDE FAQ</p><h2>Questions Buyers Often Ask</h2><p>The final answer depends on the selected model, load, site, configuration, and destination requirements.</p></div><div class="faq-list">{faq_html}</div></div></section></article>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Request a model comparison for your application</strong><span>Send the load, pallet, lift height, route, site dimensions, duty cycle, and destination to {esc(COMPANY['email'])}.</span></div>{button('Ask The Technical Team', '/contact/', 'primary', 'send')}</div></section>"""
+    return page(guide["title"], guide["summary"], route, body, [article_schema, faq_schema, crumb_schema], "resources")
 
 
 def blogs_page():
@@ -617,6 +912,12 @@ CSS += r"""
 @media(max-width:760px){.services-intro,.services-section,.service-matrix-section,.requirements-section{padding:50px 0}.services-answer{text-align:left}.services-answer h2,.requirements-grid h2{font-size:27px}.services-answer>p:not(.section-kicker){font-size:16px}.services-grid{grid-template-columns:1fr}.services-grid article{min-height:0}.service-matrix th,.service-matrix td{min-width:190px}.requirements-grid ul{grid-template-columns:1fr}}
 """
 
+CSS += r"""
+.resource-dropdown{min-width:255px}.resource-intro,.resource-directory,.resource-questions,.resource-matrix-section,.document-groups,.application-notes,.buyer-guides,.guide-answer,.guide-table-section,.guide-checklist,.guide-related,.faq-library{padding:65px 0}.resource-intro{background:#fff}.resource-answer{max-width:930px;text-align:center}.resource-answer h2,.resource-question-grid h2,.guide-checklist h2{font-size:34px;line-height:1.2;margin:0 0 18px}.resource-answer>p:not(.section-kicker){font-size:18px;color:var(--muted)}.resource-answer .resource-note{margin:24px auto 0;padding:15px 18px;border-left:4px solid var(--orange);background:var(--cyan-soft);font-size:13px!important;text-align:left;color:var(--ink)!important}.resource-directory,.document-groups,.buyer-guides{background:var(--soft)}.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}.resource-grid article,.document-grid article{padding:27px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.resource-grid article{min-height:275px}.resource-grid article:hover,.document-grid article:hover{background:var(--cyan-soft)}.resource-icon{width:46px;height:46px;display:grid;place-items:center;background:var(--blue);color:#fff;border-bottom:4px solid var(--orange)}.resource-grid h3,.document-grid h3,.application-grid h3{font-size:18px;line-height:1.3;margin:18px 0 9px}.resource-grid p,.document-grid p,.application-grid p{color:var(--muted);font-size:13px}.resource-grid article>a,.application-grid article>a{display:inline-flex;align-items:center;gap:7px;margin-top:14px;color:var(--blue);font-size:12px;font-weight:800}.resource-grid article>a:hover,.application-grid article>a:hover{color:var(--orange-dark)}.resource-questions,.guide-related{background:#fff}.resource-question-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:start}.resource-question-grid>div:first-child>p:not(.section-kicker){color:var(--muted)}.question-links{border-top:3px solid var(--cyan)}.question-links a{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 16px;border-bottom:1px solid var(--line);background:#fff;font-weight:700;font-size:14px}.question-links a:hover{background:var(--cyan-soft);color:var(--blue)}.question-links svg{flex:0 0 auto;color:var(--orange-dark)}.resource-matrix-section,.guide-table-section{background:var(--soft)}.resource-matrix-section .table-wrap,.guide-table-section .table-wrap{overflow-y:hidden}.resource-matrix a{color:var(--blue);font-weight:800}.resource-matrix tbody th{width:23%}.document-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}.document-grid article{min-height:285px}.document-grid article strong{display:block;margin-top:16px;padding-top:13px;border-top:1px solid var(--line);font-size:12px;color:var(--blue-dark)}.download-table th,.download-table td,.compliance-table th,.compliance-table td{vertical-align:top}.compliance-workflow{background:#fff}.faq-library{background:var(--soft)}.faq-jump{position:sticky;top:82px;z-index:10;display:flex;flex-wrap:wrap;gap:1px;margin-bottom:38px;background:var(--line);border:1px solid var(--line)}.faq-jump a{flex:1 1 170px;padding:11px 13px;background:#fff;color:var(--blue-dark);font-size:12px;font-weight:800;text-align:center}.faq-jump a:hover{background:var(--cyan-soft)}.faq-group{scroll-margin-top:150px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:45px;margin-bottom:46px}.faq-group h2{margin:0;font-size:23px}.faq-group .faq-list{background:#fff}.application-notes{background:var(--soft)}.application-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.application-grid article{min-height:330px;padding:28px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--cyan)}.application-grid article:hover{border-top-color:var(--orange);box-shadow:0 12px 30px rgba(7,90,153,.1)}.application-grid .case-label,.guide-type{margin:16px 0 0;color:var(--orange-dark);font-size:11px;font-weight:900}.application-grid article>strong{display:block;margin-top:18px;color:var(--blue-dark);font-size:13px}.guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.guide-grid article{display:flex;flex-direction:column;min-height:345px;padding:28px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--cyan)}.guide-grid article:hover{border-top-color:var(--orange);box-shadow:0 12px 30px rgba(7,90,153,.1)}.guide-grid .guide-type{margin:0}.guide-grid h2{font-size:20px;line-height:1.3;margin:13px 0 9px}.guide-grid h2 a:hover{color:var(--blue)}.guide-grid>article>p:not(.guide-type){color:var(--muted);font-size:13px}.guide-grid article>div{display:grid;gap:3px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.guide-link{display:inline-flex;align-items:center;gap:7px;margin-top:15px;color:var(--blue);font-size:12px;font-weight:800}.guide-answer{background:#fff}.guide-answer .shell{max-width:930px}.guide-answer h2{font-size:34px;line-height:1.2;margin:0 0 18px}.guide-answer .answer-lead{font-size:19px;line-height:1.7;color:var(--ink)}.article-meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:25px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.guide-table-section .guide-table tbody th{width:20%}.guide-checklist{background:var(--blue);color:#fff}.guide-checklist-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.guide-checklist h2{color:#fff}.guide-checklist-grid>div>p:not(.section-kicker){color:#e2f5ff}.guide-checklist ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin:0;padding:0;list-style:none;border-top:1px solid rgba(255,255,255,.35)}.guide-checklist li{display:flex;align-items:flex-start;gap:9px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.25);font-size:13px;font-weight:700}.guide-checklist li svg{flex:0 0 auto;margin-top:3px;color:var(--yellow)}
+@media(max-width:900px){.resource-grid,.document-grid,.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.resource-question-grid,.guide-checklist-grid{grid-template-columns:1fr;gap:35px}.faq-group{grid-template-columns:1fr;gap:15px}}
+@media(max-width:760px){.resource-intro,.resource-directory,.resource-questions,.resource-matrix-section,.document-groups,.application-notes,.buyer-guides,.guide-answer,.guide-table-section,.guide-checklist,.guide-related,.faq-library{padding:50px 0}.resource-answer{text-align:left}.resource-answer h2,.resource-question-grid h2,.guide-checklist h2,.guide-answer h2{font-size:27px}.resource-answer>p:not(.section-kicker),.guide-answer .answer-lead{font-size:16px}.resource-grid,.document-grid,.application-grid,.guide-grid{grid-template-columns:1fr}.resource-grid article,.document-grid article,.application-grid article,.guide-grid article{min-height:0}.faq-jump{position:static}.resource-matrix th,.resource-matrix td,.download-table th,.download-table td,.compliance-table th,.compliance-table td,.guide-table th,.guide-table td{min-width:185px}.guide-checklist ul{grid-template-columns:1fr}}
+"""
+
 
 JS = r"""
 document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)window.lucide.createIcons();const button=document.querySelector('[data-menu-button]');const menu=document.querySelector('[data-menu]');if(button&&menu){button.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open))});menu.querySelectorAll('.nav-group>a').forEach(link=>link.addEventListener('click',event=>{if(window.innerWidth<=1050&&link.nextElementSibling){event.preventDefault();link.parentElement.classList.toggle('is-open')}}))}const model=new URLSearchParams(location.search).get('model');document.querySelectorAll('[data-model-field]').forEach(field=>{if(model)field.value=model});document.querySelectorAll('[data-mailto-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`LEXYGO inquiry: ${data.get('model')||'material handling equipment'}${data.get('company')?' - '+data.get('company'):''}`;const body=[`Name: ${data.get('name')||''}`,`Email: ${data.get('email')||''}`,`Company: ${data.get('company')||''}`,`Country / Region: ${data.get('country')||''}`,`Product / Model: ${data.get('model')||''}`,'',`Message:`,` ${data.get('details')||''}`].join('\n');location.href=`mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}))});
@@ -654,9 +955,10 @@ def build():
         "/company/quality-management/": quality_management_page(),
         "/services/": services_page(),
         "/resources/": resources_page(),
-        "/resources/download/": blank_page("/resources/download/", "Download", ("Resources", "/resources/"), "resources"),
-        "/resources/faq/": blank_page("/resources/faq/", "FAQ", ("Resources", "/resources/"), "resources"),
-        "/resources/cases/": blank_page("/resources/cases/", "Cases", ("Resources", "/resources/"), "resources"),
+        "/resources/compliance/": compliance_page(),
+        "/resources/download/": downloads_page(),
+        "/resources/faq/": faq_page(),
+        "/resources/cases/": cases_page(),
         "/blogs/": blogs_page(),
         "/blogs/company-news/": blank_page("/blogs/company-news/", "Company News", ("Blogs", "/blogs/"), "blogs"),
         "/blogs/industry-knowledge/": blank_page("/blogs/industry-knowledge/", "Industry Knowledge", ("Blogs", "/blogs/"), "blogs"),
@@ -671,17 +973,11 @@ def build():
         "/quality/": static_pages["/company/quality-management/"],
         "/oem-odm/": static_pages["/services/"],
         "/solutions/": static_pages["/services/"],
-        "/guides/": static_pages["/resources/"],
-        "/guides/forklift-capacity-and-aisle-width/": blank_page(
-            "/guides/forklift-capacity-and-aisle-width/", "Forklift Capacity And Aisle Width", ("Resources", "/resources/"), "resources"
-        ),
-        "/guides/how-to-choose-an-electric-pallet-truck/": blank_page(
-            "/guides/how-to-choose-an-electric-pallet-truck/", "How To Choose An Electric Pallet Truck", ("Resources", "/resources/"), "resources"
-        ),
-        "/guides/pallet-truck-vs-stacker/": blank_page(
-            "/guides/pallet-truck-vs-stacker/", "Pallet Truck Vs Stacker", ("Resources", "/resources/"), "resources"
-        ),
+        "/guides/": guides_page(),
     }
+    for guide in GUIDES:
+        route = f'/guides/{guide["slug"]}/'
+        aliases[route] = buyer_guide_page(guide)
     for route, content in aliases.items():
         write_route(route, content)
         routes.append(route)
@@ -693,6 +989,8 @@ def build():
     llms = ["# LEXYGO Material Handling Equipment", "", f"> {COMPANY['legal_name']} supplies electric pallet trucks, stackers, electric forklifts, manual pallet trucks, and warehouse equipment.", "", "## Product families"]
     llms += [f"- [{data['name']}]({route_url(f'/products/{slug}/')}): {data['short']}" for slug, data in CATEGORIES.items()]
     llms += ["", "## Product models"] + [f"- [{item['model']} {item['name']}]({route_url('/products/' + item['slug'] + '/')}): {known(item['capacity'])}; {known(item['lift'])}; {known(item['operation'])}." for item in PRODUCTS]
+    llms += ["", "## Buyer resources", f"- [Resource Center]({route_url('/resources/')}): Product selection, compliance, documents, FAQs, and applications.", f"- [Compliance Center]({route_url('/resources/compliance/')}): Model-specific document verification guidance.", f"- [Downloads and Documents]({route_url('/resources/download/')}): Product data and controlled document requests.", f"- [Buyer FAQ]({route_url('/resources/faq/')}): Direct answers for professional buyers."]
+    llms += [f"- [{guide['title']}]({route_url('/guides/' + guide['slug'] + '/')}): {guide['summary']}" for guide in GUIDES]
     llms += ["", "## Contact", f"- Email: {COMPANY['email']}"]
     (DIST / "llms.txt").write_text("\n".join(llms) + "\n", encoding="utf-8")
     print(f"Built {len(routes)} routes and {len(PRODUCTS)} product pages in {DIST}")
