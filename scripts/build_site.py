@@ -292,6 +292,126 @@ def blank_page(route, title, parent=None, active=""):
     return page(title, f"LEXYGO {title}.", route, body, crumb_schema, active)
 
 
+def services_page():
+    banner, crumb_schema = inner_banner("MATERIAL HANDLING EQUIPMENT SERVICES", [("Home", "/"), ("Services", None)])
+    services = [
+        (
+            "search-check",
+            "Product Selection & Application Matching",
+            "We compare the working conditions with the available model range before a quotation is prepared.",
+            ["Load capacity and lift height", "Pallet type, aisle width, and terrain", "Duty cycle, battery, and destination market"],
+        ),
+        (
+            "settings",
+            "OEM & Private-Label Customization",
+            "Branding and configuration requests are evaluated against the selected model, order quantity, and safety requirements.",
+            ["Logo, color, and product labels", "Battery, charger, forks, and mast options", "Manuals, packaging, and spare-parts kits"],
+        ),
+        (
+            "file-check-2",
+            "Compliance & Export Documentation",
+            "The available document package is confirmed by product model, supplied configuration, battery, and destination market.",
+            ["Applicable CE and industrial-truck reports", "Applicable UL 583 and UN 38.3 documents", "English operating and safety information"],
+        ),
+        (
+            "clipboard-check",
+            "Quality Inspection & Pre-Shipment Testing",
+            "Inspection scope is agreed with the order and can include functional, identification, battery, and packing checks.",
+            ["Assembly, labels, steering, and braking", "Lifting, lowering, and agreed load checks", "Photos, video, and available records on request"],
+        ),
+        (
+            "package-check",
+            "Export Packaging & Shipping Support",
+            "Packaging and shipment documents are prepared according to the machine, transport method, destination, and agreed trade terms.",
+            ["Export packaging and shipping marks", "Loading information and packing confirmation", "Commercial and battery transport documents"],
+        ),
+        (
+            "wrench",
+            "Spare Parts & After-Sales Support",
+            "The product model and serial information are used to identify parts and organize technical support for supplied equipment.",
+            ["Parts identification and replacement support", "English manuals and remote troubleshooting", "Warranty terms confirmed in the sales contract"],
+        ),
+    ]
+    service_html = "".join(
+        f'<article><span class="service-icon">{icon(icon_name, 22)}</span><h3>{esc(title)}</h3><p>{esc(copy)}</p><ul>{"".join(f"<li>{esc(item)}</li>" for item in items)}</ul></article>'
+        for icon_name, title, copy, items in services
+    )
+    matrix_rows = [
+        ("Product selection", "Capacity, lift height, pallet, aisle, terrain, duty cycle, and destination", "Recommended models, comparison, configuration notes, and quotation"),
+        ("OEM / private label", "Selected model, quantity, branding, color, electrical, fork, mast, and packaging requirements", "Feasibility confirmation, available options, cost, and lead-time basis"),
+        ("Compliance documents", "Product model, battery, charger, supplied configuration, and destination market", "List of applicable reports, certificates, manuals, labels, and battery documents"),
+        ("Pre-shipment inspection", "Confirmed order and any customer-specific inspection points", "Agreed inspection evidence, photos, video, and packing confirmation"),
+        ("Export support", "Destination, transport method, consignee marks, and agreed trade terms", "Export packaging, packing information, and agreed commercial documents"),
+        ("After-sales support", "Model, serial number, photos, working hours, and a description or video of the issue", "Parts identification, troubleshooting guidance, and warranty review"),
+    ]
+    matrix_html = "".join(
+        f'<tr><th scope="row">{esc(service)}</th><td>{esc(required)}</td><td>{esc(deliverable)}</td></tr>'
+        for service, required, deliverable in matrix_rows
+    )
+    steps = [
+        ("01", "Submit Application Requirements", "Tell us the load, lift height, pallet, workspace, quantity, and destination."),
+        ("02", "Receive Model Recommendation", "We identify suitable models and clarify any missing technical information."),
+        ("03", "Confirm Configuration & Documents", "Both parties confirm the machine configuration and applicable document package."),
+        ("04", "Approve Quotation & Order Details", "Commercial terms, customization, production basis, and inspection scope are agreed."),
+        ("05", "Inspection & Shipment", "The agreed inspection and packing checks are completed before release."),
+        ("06", "After-Sales & Parts Support", "Use the model and serial number when requesting technical or spare-parts support."),
+    ]
+    step_html = "".join(
+        f'<li><span>{number}</span><div><h3>{esc(title)}</h3><p>{esc(copy)}</p></div></li>'
+        for number, title, copy in steps
+    )
+    requirements = [
+        "Product type or model",
+        "Required quantity",
+        "Rated load capacity",
+        "Required lift height",
+        "Pallet type and dimensions",
+        "Aisle width and working environment",
+        "Floor or terrain condition",
+        "Daily operating hours",
+        "Battery and charger preference",
+        "Destination country",
+        "Required compliance documents",
+        "OEM, branding, or packaging requirements",
+    ]
+    requirement_html = "".join(f'<li>{icon("check", 16)}<span>{esc(item)}</span></li>' for item in requirements)
+    faqs = [
+        ("How do I select the correct pallet truck, stacker, or forklift?", "Send the load capacity, lift height, pallet type, aisle width, floor or terrain condition, daily operating hours, quantity, and destination country. LEXYGO will compare suitable models and configurations."),
+        ("Can LEXYGO customize the logo and machine color?", "Logo, color, labels, manuals, and packaging can be evaluated for OEM or private-label orders. Availability depends on the product model, order quantity, and safety-label requirements."),
+        ("Can fork dimensions, battery, charger, or mast height be customized?", "Configuration options vary by model. Send the required dimensions, voltage, plug type, battery preference, and lift height for a technical feasibility review."),
+        ("Which compliance documents are supplied with the machine?", "Document availability depends on the model, battery, charger, supplied configuration, and destination market. LEXYGO confirms the applicable document list before order approval."),
+        ("Can you provide inspection photos or videos before shipment?", "Photos, operating video, serial information, and available inspection records can be included when they are agreed in the order inspection scope."),
+        ("Do you provide lithium battery transport documents?", "Applicable lithium battery packs can be matched with the available UN 38.3 and safety documentation required for shipment review."),
+        ("How do I request replacement parts or technical support?", "Provide the product model, serial number, photos, operating hours, and a clear description or video of the issue so the correct parts and support route can be identified."),
+        ("What is the warranty period?", "Warranty duration, covered components, exclusions, and claim conditions are confirmed in the sales contract for the ordered model and configuration."),
+    ]
+    faq_html = "".join(f'<details><summary>{esc(question)}{icon("plus", 18)}</summary><p>{esc(answer)}</p></details>' for question, answer in faqs)
+    faq_schema = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
+    service_schema = {
+        "@type": "Service",
+        "name": "Material Handling Equipment Services",
+        "serviceType": "Product selection, OEM customization, compliance documentation, inspection, export support, and after-sales support",
+        "provider": {"@type": "Organization", "name": COMPANY["display_name"], "url": BASE_URL},
+        "url": route_url("/services/"),
+    }
+    body = f"""{banner}
+    <section class="services-intro"><div class="shell services-answer"><p class="section-kicker">FOR PROFESSIONAL BUYERS</p><h2>How Does LEXYGO Support An International Equipment Order?</h2><p>LEXYGO supports distributors, equipment dealers, warehouses, factories, and industrial buyers with product selection, OEM evaluation, model-specific compliance documentation, agreed pre-shipment inspection, export preparation, and after-sales parts support.</p><p class="service-note">Final configuration, document availability, inspection scope, warranty, and commercial terms are confirmed for the selected model in the quotation or sales contract.</p></div></section>
+    <section class="services-section"><div class="shell">{section_heading('SERVICE SCOPE', 'Support From Selection To After-Sales', 'Each service is tied to the selected model, application, order terms, and destination-market requirements.')}<div class="services-grid">{service_html}</div></div></section>
+    <section class="service-matrix-section"><div class="shell"><div class="section-heading left"><span>WHAT TO PROVIDE</span><h2>Service Inputs And Deliverables</h2><p>Clear input information allows us to provide a more accurate technical and commercial response.</p></div><div class="table-wrap"><table class="evidence-table service-matrix"><thead><tr><th>Service</th><th>Information required</th><th>What you receive</th></tr></thead><tbody>{matrix_html}</tbody></table></div></div></section>
+    <section class="release-section service-workflow"><div class="shell release-grid"><div><p class="section-kicker">WORKING PROCESS</p><h2>From Requirement To After-Sales Support</h2><p>A six-step process keeps the product, supplied configuration, documentation, and commercial terms aligned.</p></div><ol>{step_html}</ol></div></section>
+    <section class="requirements-section"><div class="shell requirements-grid"><div><p class="section-kicker">REQUEST A QUOTATION</p><h2>Information Required For An Accurate Recommendation</h2><p>Include as much of this information as possible. If an item is unknown, describe the application and we will help clarify it.</p>{button('Send Your Requirements', '/contact/', 'primary', 'send')}</div><ul>{requirement_html}</ul></div></section>
+    <section class="faq-section"><div class="shell faq-grid"><div><p class="section-kicker">QUICK ANSWERS</p><h2>Service Questions From International Buyers</h2><p>Direct answers about selection, customization, documentation, inspection, warranty, and parts support.</p></div><div class="faq-list">{faq_html}</div></div></section>
+    <section class="company-contact-strip"><div class="shell"><div><strong>Tell us what the machine needs to do</strong><span>Send the application, capacity, lift height, quantity, and destination to {esc(COMPANY['email'])}.</span></div>{button('Contact LEXYGO', '/contact/', 'primary', 'send')}</div></section>"""
+    return page(
+        "Material Handling Equipment Services",
+        "LEXYGO provides product selection, OEM evaluation, compliance documentation, pre-shipment inspection, export support, spare parts, and after-sales support for material handling equipment buyers.",
+        "/services/",
+        body,
+        [service_schema, faq_schema, crumb_schema],
+        "services",
+    )
+
+
 def company_page():
     banner, crumb_schema = inner_banner("COMPANY PROFILE", [("Home", "/"), ("Company", None)])
     product_links = "".join(
@@ -491,6 +611,12 @@ CSS += r"""
 @media(max-width:760px){.product-gallery .product-image-compact img{inset:26px;width:calc(100% - 52px);height:calc(100% - 52px)}}
 """
 
+CSS += r"""
+.services-intro,.services-section,.service-matrix-section,.requirements-section{padding:65px 0}.services-intro{background:#fff}.services-answer{max-width:930px;text-align:center}.services-answer h2{font-size:34px;line-height:1.2;margin:0 0 18px}.services-answer>p:not(.section-kicker){font-size:18px;color:var(--muted)}.services-answer .service-note{margin:24px auto 0;padding:15px 18px;border-left:4px solid var(--orange);background:var(--cyan-soft);font-size:13px!important;text-align:left;color:var(--ink)!important}.services-section{background:#fff}.services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}.services-grid article{min-height:310px;padding:27px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.services-grid article:hover{background:var(--cyan-soft)}.service-icon{width:44px;height:44px;display:grid;place-items:center;background:var(--blue);color:#fff;border-bottom:4px solid var(--orange)}.services-grid h3{font-size:18px;line-height:1.3;margin:18px 0 9px}.services-grid p{margin:0;color:var(--muted);font-size:13px}.services-grid ul{list-style:none;margin:17px 0 0;padding:0;border-top:1px solid var(--line)}.services-grid li{position:relative;padding:8px 0 8px 15px;border-bottom:1px solid var(--line);font-size:12px;font-weight:700}.services-grid li:before{content:"";position:absolute;left:1px;top:15px;width:6px;height:6px;background:var(--orange)}.service-matrix-section{background:var(--soft)}.service-matrix tbody th{width:19%;background:#fff}.service-matrix td{background:#fff;vertical-align:top}.service-workflow{background:#fff}.requirements-section{background:var(--blue);color:#fff}.requirements-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}.requirements-grid h2{font-size:32px;line-height:1.2;margin:0 0 14px;color:#fff}.requirements-grid>div>p:not(.section-kicker){color:#e2f5ff}.requirements-grid .button{margin-bottom:0}.requirements-grid ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin:0;padding:0;list-style:none;border-top:1px solid rgba(255,255,255,.35)}.requirements-grid li{display:flex;align-items:flex-start;gap:9px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.25);font-size:13px;font-weight:700}.requirements-grid li svg{flex:0 0 auto;margin-top:3px;color:var(--yellow)}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.requirements-grid{grid-template-columns:1fr;gap:35px}}
+@media(max-width:760px){.services-intro,.services-section,.service-matrix-section,.requirements-section{padding:50px 0}.services-answer{text-align:left}.services-answer h2,.requirements-grid h2{font-size:27px}.services-answer>p:not(.section-kicker){font-size:16px}.services-grid{grid-template-columns:1fr}.services-grid article{min-height:0}.service-matrix th,.service-matrix td{min-width:190px}.requirements-grid ul{grid-template-columns:1fr}}
+"""
+
 
 JS = r"""
 document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)window.lucide.createIcons();const button=document.querySelector('[data-menu-button]');const menu=document.querySelector('[data-menu]');if(button&&menu){button.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open))});menu.querySelectorAll('.nav-group>a').forEach(link=>link.addEventListener('click',event=>{if(window.innerWidth<=1050&&link.nextElementSibling){event.preventDefault();link.parentElement.classList.toggle('is-open')}}))}const model=new URLSearchParams(location.search).get('model');document.querySelectorAll('[data-model-field]').forEach(field=>{if(model)field.value=model});document.querySelectorAll('[data-mailto-form]').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`LEXYGO inquiry: ${data.get('model')||'material handling equipment'}${data.get('company')?' - '+data.get('company'):''}`;const body=[`Name: ${data.get('name')||''}`,`Email: ${data.get('email')||''}`,`Company: ${data.get('company')||''}`,`Country / Region: ${data.get('country')||''}`,`Product / Model: ${data.get('model')||''}`,'',`Message:`,` ${data.get('details')||''}`].join('\n');location.href=`mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}))});
@@ -526,7 +652,7 @@ def build():
         "/company/": company_page(),
         "/company/why-choose-us/": why_choose_page(),
         "/company/quality-management/": quality_management_page(),
-        "/services/": blank_page("/services/", "Services", active="services"),
+        "/services/": services_page(),
         "/resources/": resources_page(),
         "/resources/download/": blank_page("/resources/download/", "Download", ("Resources", "/resources/"), "resources"),
         "/resources/faq/": blank_page("/resources/faq/", "FAQ", ("Resources", "/resources/"), "resources"),
