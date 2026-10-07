@@ -1,0 +1,78 @@
+# LEXYGO Equipamentos de Manuseio de Materiais
+
+> Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. fornece caminhões de paletes elétricos, empilhadores, empilhadeiras elétricas, caminhões manuais e equipamentos de armazém.
+
+## Famílias de produtos
+- [Caminhões Paletes Elétricos](https://www.lexygolift.com/pt-br/products/electric-pallet-trucks/): Movimentar cargas paletizadas de forma eficiente através de armazéns, docas e superfícies mistas.
+- [Empilhadores Elétricos de Paletes](https://www.lexygolift.com/pt-br/products/electric-pallet-stackers/): Levantar, posicionar e recuperar paletes em áreas de armazenamento de baixa a média altura.
+- [Empilhadeiras Elétricas](https://www.lexygolift.com/pt-br/products/electric-forklifts/): Empilhadeiras elétricas contrabalançadas para logística interna e manuseio industrial.
+- [Caminhões de Paletes Manuais](https://www.lexygolift.com/pt-br/products/manual-pallet-trucks/): Movimento simples e confiável do pallet e manuseio manual de alta elevação.
+- [Equipamentos de Armazém](https://www.lexygolift.com/pt-br/products/warehouse-equipment/): Mesas içáveis compactas, caminhões plataforma e equipamentos de suporte para fluxo de materiais.
+
+## Modelos de produtos
+- [WEP20J Caminhão Palete Elétrico de 2,0 t (https://www.lexygolift.com/pt-br/products/wep20j/): 2.000 kg; 205 mm; Caminhante para trás.
+- [REP3000E Caminhão Elétrico Elétrico de 3,0 t Rider Pallet (https://www.lexygolift.com/pt-br/products/rep3000e/): 3.000 kg; 205 mm; Ride-on.
+- [ATEP3000Y Caminhão Palete Elétrico Todo-Terreno de 3,0 t](https://www.lexygolift.com/pt-br/products/atep3000y/): 3.000 kg; 205 mm; Caminhante para a frente.
+- [WES1500A Empilhador Elétrico de 1,5 t Walkie](https://www.lexygolift.com/pt-br/products/wes1500a/): 1.500 kg; 1.600-3.500 mm; Caminhante.
+- [WES1600A Empilhador Elétrico Walkie de 1,6 t](https://www.lexygolift.com/pt-br/products/wes1600a/): 1.600 kg; 1.600-3.500 mm; Caminhante.
+- [WES1500JP Empilhador Elétrico de 1,5 t Walkie](https://www.lexygolift.com/pt-br/products/wes1500jp/): 1.500 kg; 1.600-3.500 mm; Caminhante.
+- [WES2000A Empilhador Elétrico de 2,0 t Walkie](https://www.lexygolift.com/pt-br/products/wes2000a/): 2.000 kg; 1.600-3.500 mm; Caminhante.
+- [RES1500D Empilhador Elétrico de 1,5 t Rider Electric Stacker](https://www.lexygolift.com/pt-br/products/res1500d/): 1.500 kg; 1.600-3.500 mm; Stand-on.
+- [RES2000D Empilhador Elétrico Rider 2.0 t](https://www.lexygolift.com/pt-br/products/res2000d/): 2.000 kg; 1.600-3.500 mm; Stand-on.
+- [RES1500E Empilhador Elétrico Rider de 1,5 t](https://www.lexygolift.com/pt-br/products/res1500e/): 1.500 kg; 1.600-3.500 mm; Stand-on.
+- [RES2000E Empilhador Elétrico Rider 2.0 t](https://www.lexygolift.com/pt-br/products/res2000e/): 2.000 kg; 1.600-3.500 mm; Stand-on.
+- [RES1500G Empilhador Elétrico Rider de 1,5 t](https://www.lexygolift.com/pt-br/products/res1500g/): 1.500 kg; 1.600-3.000 mm; Stand-on.
+- [WCES500J Stacker Contrabalançado de 0,5 t Walkie](https://www.lexygolift.com/pt-br/products/wces500j/): 500 kg; 1.600-3.500 mm; Caminhante por trás.
+- [WCES1000J Empilhador Contrabalançado de 1,0 t Walkie](https://www.lexygolift.com/pt-br/products/wces1000j/): 1.000 kg; 1.600-3.500 mm; Caminhante.
+- [WCES1300J Empilhador Contrabalançado de 1,3 t Walkie](https://www.lexygolift.com/pt-br/products/wces1300j/): 1.300 kg; 1.600-3.500 mm; Caminhante.
+- [WCES1500J Empilhador Contrabalançado de 1,5 t Walkie](https://www.lexygolift.com/pt-br/products/wces1500j/): 1.500 kg; 1.600-3.500 mm; Caminhante.
+- [RCES1000B Empilhador Contrabalançado de 1,0 t Rider](https://www.lexygolift.com/pt-br/products/rces1000b/): 1.000 kg; Stand-on.
+- [RCES1500E Empilhador Contrabalançado de 1,5 t Rider](https://www.lexygolift.com/pt-br/products/rces1500e/): 1.500 kg; Stand-on.
+- [RCES2000E Empilhador Contrabalançado de 2,0 t Rider] (https://www.lexygolift.com/pt-br/products/rces2000e/): 2.000 kg; Stand-on.
+- [HES1500A 1,5 t Reach Electric Stacker](https://www.lexygolift.com/pt-br/products/hes1500a/): 1.500 kg; 3.000 mm; De pé.
+- [HES2000A Empilhador Elétrico de 2,0 t de alcance](https://www.lexygolift.com/pt-br/products/hes2000a/): 2.000 kg; 1.600-3.500 mm; De apoio.
+- [EFL1200R3 Empilhadeira Elétrica de Três Rodas de 1,2 t](https://www.lexygolift.com/pt-br/products/efl1200r3/): 1.200 kg; 3.000 mm; Sentado.
+- [EFL2000R3 Empilhadeira Elétrica de Três Rodas de 2,0 t](https://www.lexygolift.com/pt-br/products/efl2000r3/): 2.000 kg; 3.000 mm; Sentado.
+- [R4EFL1T Empilhadeira Elétrica de Quatro Rodas de 1,2 t](https://www.lexygolift.com/pt-br/products/r4efl1t/): 1.200 kg; 3.000 mm; Sentado.
+- [R4EFL3T Empilhadeira Elétrica de Quatro Rodas de 3,0 t](https://www.lexygolift.com/pt-br/products/r4efl3t/): 3.000 kg; 3.000 mm; Sentado.
+- [R4EFL5T Empilhadeira Elétrica de Quatro Rodas de 5,0 t](https://www.lexygolift.com/pt-br/products/r4efl5t/): 5.000 kg; 3.000 mm; Sentado.
+- [R4EFL12T Empilhadeira Elétrica de Quatro Rodas de Alta Resistência](https://www.lexygolift.com/pt-br/products/r4efl12t/): 12.000 kg; 3.000 mm; Sentado.
+- [MPT5TN Caminhão Palete Manual 5,0 t](https://www.lexygolift.com/pt-br/products/mpt5tn/): 5.000 kg; Altura do garfo de 85-185 mm; Manual.
+- [MPJSC1500 monocilíndrico monocilíndrico de alta elevação de 1,5 t](https://www.lexygolift.com/pt-br/products/mpjsc1500/): 1.500 kg; Altura do garfo de 85-800 mm; Manual.
+- [MPJTSC1500 Monopalete de Alta Elevação de Dois Estágios de 1,5 t](https://www.lexygolift.com/pt-br/products/mpjtsc1500/): 1.500 kg; Altura do garfo de 85-800 mm; Manual.
+- [SC1016 Empilhador de Paletes Autocarregáveis de 1,0 t](https://www.lexygolift.com/pt-br/products/sc1016/): 1.000 kg; 1.600 mm configurável; Movimento manual / elevação elétrica.
+- [QES12E Empilhador Elétrico Walkie com Timón de Deslocamento de 1,2 t](https://www.lexygolift.com/pt-br/products/qes12e/): 1.200 kg; 3.000 mm; Caminhante.
+- [QES15E Empilhador Elétrico de Walkie com Timre de 1,5 t (https://www.lexygolift.com/pt-br/products/qes15e/): 1.500 kg; 3.000 mm; Caminhante.
+- [QES15LION Empilhador Elétrico de Rádio de Lítio com Timón de Timore de 1,5 t](https://www.lexygolift.com/pt-br/products/qes15lie/): 1.500 kg; 3.000 mm; Caminhante.
+- [QED1530 Empilhador Elétrico de Paletes Walkie de 1,5 t](https://www.lexygolift.com/pt-br/products/qed1530/): 1.500 kg; 3.000 mm configurável; Elétrico.
+- [EPT30 Carrinho de Mesa Hidráulica Elétrica de 300 kg](https://www.lexygolift.com/pt-br/products/ept30/): 300 kg; 290-880 mm; Elevador elétrico / curso manual.
+- [EPT50 Carrinho de Mesa Hidráulica Elétrica de 500 kg](https://www.lexygolift.com/pt-br/products/ept50/): 500 kg; 440-1.025 mm; Elevador elétrico / movimento manual.
+- [EPTD35 Carrinho de Mesa de Elevação Elétrica de Tesoura Dupla de 350 kg](https://www.lexygolift.com/pt-br/products/eptd35/): 350 kg; 370-1.300 mm; Elevação elétrica / curso manual.
+- [EXL0412 400 kg Empilhador Elétrico de Plataforma](https://www.lexygolift.com/pt-br/products/exl0412/): 400 kg; 1.115 mm; Elevador elétrico / curso manual.
+- [EXL0415 400 kg Empilhador de Plataforma Elétrica](https://www.lexygolift.com/pt-br/products/exl0415/): 400 kg; 1.415 mm; Elevação elétrica / curso manual.
+- [PT15 Carro Manual de Mesa Hidráulica de Elevação de 150 kg](https://www.lexygolift.com/pt-br/products/pt15/): 150 kg; 220-720 mm; Hidráulica manual.
+- [PT30 Carrinho Manual de Mesa de Elevação Hidráulica de 300 kg](https://www.lexygolift.com/pt-br/products/pt30/): 300 kg; 285-880 mm; Hidráulica manual.
+- [PT50 Carro Manual de Mesa de Elevação Hidráulica de 500 kg](https://www.lexygolift.com/pt-br/products/pt50/): 500 kg; 285-880 mm; Hidráulica manual.
+- [PT75 Carrinho de 750 kg de Mesa de Elevação Hidráulica Manual](https://www.lexygolift.com/pt-br/products/pt75/): 750 kg; 420-1.000 mm; Hidráulica manual.
+- [PT100 Carro de Mesa de Elevação Hidráulica Manual de 1,0 t](https://www.lexygolift.com/pt-br/products/pt100/): 1.000 kg; 380-1.000 mm; Hidráulica manual.
+- [PTD35 Carro de Mesa de Elevação Manual de Tesoura Dupla de 350 kg](https://www.lexygolift.com/pt-br/products/ptd35/): 350 kg; 355-1.300 mm; Hidráulica manual.
+- [PTD70 Carro de Mesa Manual de Elevação de 700 kg](https://www.lexygolift.com/pt-br/products/ptd70/): 700 kg; 445-1.500 mm; Hidráulico manual.
+- [SL0485 400 Empilhadeira Manual de Plataforma 400 kg](https://www.lexygolift.com/pt-br/products/sl0485/): 400 kg; 765 mm; Hidráulico manual.
+- [SL0412 400 Empilhadeira Manual de Plataforma 400 kg](https://www.lexygolift.com/pt-br/products/sl0412/): 400 kg; 1.115 mm; Hidráulico manual.
+- [SL0415 400 Empilhadeira Manual de Plataforma 400 kg](https://www.lexygolift.com/pt-br/products/sl0415/): 400 kg; 1.415 mm; Hidráulico manual.
+- [BED1016 Empilhadeira Semi-Elétrica de Palete 1,0 t](https://www.lexygolift.com/pt-br/products/bed1016/): 1.000 kg; 1.600 mm; Deslocamento manual / elevação elétrica.
+- [BED1025 Empilhadeira Semi-Elétrica de Palete 1,0 t](https://www.lexygolift.com/pt-br/products/bed1025/): 1.000 kg; 2.500 mm; Deslocamento manual / elevação elétrica.
+- [BED1030 Empilhadeira Semi-Elétrica de Palete 1,0 t](https://www.lexygolift.com/pt-br/products/bed1030/): 1.000 kg; 3.000 mm; Deslocamento manual / elevação elétrica.
+- [BED1516 Empilhadeira Semi-Elétrica de Palete 1,5 t](https://www.lexygolift.com/pt-br/products/bed1516/): 1.500 kg; 1.600 mm; Deslocamento manual / elevação elétrica.
+
+## Recursos para Compradores
+- [Centro de Recursos](https://www.lexygolift.com/pt-br/resources/): Seleção de produtos, conformidade, documentos, perguntas frequentes e aplicações.
+- [Centro de Conformidade](https://www.lexygolift.com/pt-br/resources/compliance/): Orientações de verificação de documentos específicas do modelo.
+- [Downloads e Documentos](https://www.lexygolift.com/pt-br/resources/download/): Dados de produtos e pedidos de documentos controlados.
+- [FAQ para Compradores](https://www.lexygolift.com/pt-br/resources/faq/): Respostas diretas para compradores profissionais.
+- [Como Escolher um Paleteiro Elétrico](https://www.lexygolift.com/pt-br/guides/how-to-choose-an-electric-pallet-truck/): Um checklist prático para carga, comprimento da rota, condição do piso, espaço de manobra, bateria e ciclo de trabalho.
+- [Paleteiro vs. Empilhadeira de Palete](https://www.lexygolift.com/pt-br/guides/pallet-truck-vs-stacker/): Use um paleteiro para mover cargas horizontalmente e uma empilhadeira quando a tarefa inclui elevação para posições de armazenamento.
+- [Capacidade, Altura de Elevação e Largura do Corredor de Empilhadeiras](https://www.lexygolift.com/pt-br/guides/forklift-capacity-and-aisle-width/): Por que apenas a capacidade nominal não é suficiente ao selecionar uma empilhadeira elétrica.
+
+## Contato
+- Email: info@lexygolift.com

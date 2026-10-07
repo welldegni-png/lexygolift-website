@@ -1,0 +1,78 @@
+# LEXYGO อุปกรณ์จัดการวัสดุ
+
+> Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. จัดหารถลากพาเลทไฟฟ้า รถสแต็กเกิร์ต รถโฟล์คลิฟท์ไฟฟ้า รถลากพาเลทแมนนวล และอุปกรณ์คลังสินค้า
+
+## กลุ่มผลิตภัณฑ์
+- [รถลากพาเลทไฟฟ้า](https://www.lexygolift.com/th/products/electric-pallet-trucks/): เคลื่อนย้ายสินค้าบนพาเลทได้อย่างมีประสิทธิภาพข้ามคลังสินค้า ท่าเรือ และพื้นผิวผสม
+- [Electric Pallet Stackers](https://www.lexygolift.com/th/products/electric-pallet-stackers/): ยก วาง และดึงพาเลทในพื้นที่เก็บของที่มีความสูงต่ําถึงปานกลาง
+- [รถโฟล์คลิฟท์ไฟฟ้า](https://www.lexygolift.com/th/products/electric-forklifts/): รถโฟล์คลิฟท์ไฟฟ้าถ่วงสมดุลสําหรับโลจิสติกส์ภายในอาคารและการจัดการอุตสาหกรรม
+- [รถลากพาเลทแบบแมนนวล](https://www.lexygolift.com/th/products/manual-pallet-trucks/): การเคลื่อนย้ายพาเลทที่ง่ายและเชื่อถือได้ พร้อมการจัดการยกสูงด้วยมือ
+- [อุปกรณ์คลังสินค้า](https://www.lexygolift.com/th/products/warehouse-equipment/): โต๊ะยกขนาดกะทัดรัด รถบรรทุกแพลตฟอร์ม และอุปกรณ์สนับสนุนการไหลของวัสดุ
+
+## รุ่นสินค้า
+- [WEP20J รถลากพาเลทไฟฟ้าวิทยุ 2.0 ตัน](https://www.lexygolift.com/th/products/wep20j/): 2,000 กิโลกรัม;205 มม.;เดินกลับหลัง
+- [REP3000E รถลากพาเลทไฟฟ้าไรเดอร์ 3.0 ตัน](https://www.lexygolift.com/th/products/rep3000e/): 3,000 กก.;205 มม.;แบบขี่ได้
+- [ATEP3000Y รถลากพาเลทไฟฟ้าออลเทอร์เรน 3.0 ตัน](https://www.lexygolift.com/th/products/atep3000y/): 3,000 กิโลกรัม;205 มม.;เดินตามหลัง
+- [WES1500A เครื่องวิทยุสื่อสารไฟฟ้า 1.5 ตัน](https://www.lexygolift.com/th/products/wes1500a/): 1,500 กก.;1,600-3,500 มม.;เดินตามหลัง
+- [WES1600A วิทยุสื่อสารไฟฟ้า 1.6 ตัน](https://www.lexygolift.com/th/products/wes1600a/): 1,600 กก.;1,600-3,500 มม.;เดินตามหลัง
+- [WES1500JP วิทยุสื่อสารไฟฟ้า 1.5 ตัน](https://www.lexygolift.com/th/products/wes1500jp/): 1,500 กิโลกรัม;1,600-3,500 มม.;เดินอยู่ด้านหลัง
+- [WES2000A เครื่องวิทยุสื่อสารไฟฟ้า 2.0 ตัน](https://www.lexygolift.com/th/products/wes2000a/): 2,000 กก.;1,600-3,500 มม.;เดินอยู่ด้านหลัง
+- [RES1500D Rider Electric Stacker 1.5 ตัน](https://www.lexygolift.com/th/products/res1500d/): 1,500 กก.;1,600-3,500 มม.;แบบตั้งบน.
+- [RES2000D Rider Electric Stacker 2.0 ตัน](https://www.lexygolift.com/th/products/res2000d/): 2,000 กก.;1,600-3,500 มม.;แบบตั้งบน.
+- [RES1500E Rider Electric Stacker น้ําหนัก 1.5 ตัน](https://www.lexygolift.com/th/products/res1500e/): 1,500 กก.;1,600-3,500 มม.;แบบตั้งรับ
+- [RES2000E Rider Electric Stacker 2.0 ตัน](https://www.lexygolift.com/th/products/res2000e/): 2,000 กก.;1,600-3,500 มม.;แบบตั้งบน.
+- [RES1500G Rider Electric Stacker น้ําหนัก 1.5 ตัน](https://www.lexygolift.com/th/products/res1500g/): 1,500 กก.;1,600-3,000 มม.;แบบตั้งบน.
+- [WCES500J วิทยุสื่อสารแบบถ่วงน้ําหนัก 0.5 ตัน](https://www.lexygolift.com/th/products/wces500j/): 500 กก.;1,600-3,500 มม.;เดินข้างหลัง
+- [WCES1000J 1.0 ตัน วิทยุสื่อสารแบบถ่วงน้ําหนัก](https://www.lexygolift.com/th/products/wces1000j/): 1,000 กิโลกรัม;1,600-3,500 มม.;เดินหลัง
+- [WCES1300J 1.3 ตัน Walkie Counterbalanced Stacker](https://www.lexygolift.com/th/products/wces1300j/): 1,300 กก.;1,600-3,500 มม.;เดินอยู่ด้านหลัง.
+- [WCES1500J Walkie Counterbalanced Stacker ขนาด 1.5 ตัน](https://www.lexygolift.com/th/products/wces1500j/): 1,500 กก.;1,600-3,500 มม.;เดินไปข้างหลัง
+- [RCES1000B 1.0 ตัน Rider Counterbalanced Stacker](https://www.lexygolift.com/th/products/rces1000b/): 1,000 กก.;;แบบยืนบน.
+- [RCES1500E Rider Counterbalanced Stacker น้ําหนัก 1.5 ตัน](https://www.lexygolift.com/th/products/rces1500e/): 1,500 กก.;แบบยืนบนพื้น
+- [RCES2000E Rider Counterbalanced Stacker น้ําหนัก 2.0 ตัน](https://www.lexygolift.com/th/products/rces2000e/): 2,000 กก.;;แบบยืนบนพื้น
+- [HES1500A Reach 1.5 ตัน Reach Electric Stacker](https://www.lexygolift.com/th/products/hes1500a/): 1,500 กก.;3,000 มม.;แบบตั้งบน.
+- [HES2000A 2.0 ตัน Reach Electric Stacker](https://www.lexygolift.com/th/products/hes2000a/): 2,000 กก.;1,600-3,500 มม.;แบบตั้งบน.
+- [EFL1200R3 รถโฟล์คลิฟท์ไฟฟ้าสามล้อ 1.2 ตัน](https://www.lexygolift.com/th/products/efl1200r3/): 1,200 กก.;3,000 มม.;นั่ง.
+- [EFL2000R3 รถยกไฟฟ้าสามล้อ 2.0 ตัน](https://www.lexygolift.com/th/products/efl2000r3/): 2,000 กก.;3,000 มม.;นั่ง.
+- [R4EFL1T รถยกไฟฟ้าสี่ล้อ 1.2 ตัน](https://www.lexygolift.com/th/products/r4efl1t/): 1,200 กก.;3,000 มม.;นั่ง.
+- [R4EFL3T รถยกไฟฟ้าสี่ล้อ 3.0 ตัน](https://www.lexygolift.com/th/products/r4efl3t/): 3,000 กก.;3,000 มม.;นั่ง.
+- [R4EFL5T รถโฟล์คลิฟท์ไฟฟ้าสี่ล้อ 5.0 ตัน](https://www.lexygolift.com/th/products/r4efl5t/): 5,000 กิโลกรัม;3,000 มม.;นั่ง.
+- [R4EFL12T รถยกไฟฟ้าสี่ล้อหนัก](https://www.lexygolift.com/th/products/r4efl12t/): 12,000 กก.;3,000 มม.;นั่ง.
+- [MPT5TN รถลากพาเลทแมนนวล 5.0 ตัน](https://www.lexygolift.com/th/products/mpt5tn/): 5,000 กก.;ความสูงของตะเกียบ 85-185 มม.;แบบแมนนวล.
+- [MPJSC1500 แม่แรงพาเลทยกสูงสูบเดียว 1.5 ตัน](https://www.lexygolift.com/th/products/mpjsc1500/): 1,500 กก.;ความสูงของโช้คหน้า 85-800 มม.;แบบแมนนวล.
+- [MPJTSC1500 1.5 ตัน แม่แรงพาเลทสองขั้นตอนยกสูง](https://www.lexygolift.com/th/products/mpjtsc1500/): 1,500 กก.;ความสูงของส้อม 85-800 มม.;แบบแมนนวล.
+- [SC1016 1.0 ตัน รถวางพาเลทแบบโหลดตัวเอง (https://www.lexygolift.com/th/products/sc1016/): 1,000 กก.;ปรับแต่งได้ 1,600 มม.;เคลื่อนที่ด้วยมือ / ยกไฟฟ้า
+- [QES12E 1.2 ตัน วิทยุสื่อสารไฟฟ้าแบบ Offset-Tiller](https://www.lexygolift.com/th/products/qes12e/): 1,200 กก.;3,000 มม.;เดินหลัง
+- [QES15E 1.5 ตัน วิทยุสื่อสารไฟฟ้าแบบ Offset-Tiller](https://www.lexygolift.com/th/products/qes15e/): 1,500 กก.;3,000 มม.;เดินหลัง
+- [QES15LION วิทยุสื่อสารไฟฟ้าลิเธียมออฟเซ็ต-ไถพรวน 1.5 ตัน](https://www.lexygolift.com/th/products/qes15lie/): 1,500 กก.;3,000 มม.;เดินตามหลัง
+- [QED1530 เครื่องวางพาเลทไฟฟ้าวอล์กกี้ 1.5 ตัน](https://www.lexygolift.com/th/products/qed1530/): 1,500 กก.;ปรับแต่งได้ 3,000 มม.;ไฟฟ้า
+- [EPT30 รถเข็นโต๊ะยกไฮดรอลิกไฟฟ้า 300 กก.](https://www.lexygolift.com/th/products/ept30/): 300 กก.;290-880 มม.;ยกไฟฟ้า / การเคลื่อนที่ด้วยมือ.
+- [EPT50 รถเข็นโต๊ะยกไฮดรอลิกไฟฟ้า 500 กก.](https://www.lexygolift.com/th/products/ept50/): 500 กก.;440-1,025 มม.;ยกไฟฟ้า / การเคลื่อนที่ด้วยมือ.
+- [EPTD35 รถเข็นโต๊ะยกไฟฟ้ากรรไกรคู่ 350 กก.](https://www.lexygolift.com/th/products/eptd35/): 350 กก.;370-1,300 มม.;ยกไฟฟ้า / การเคลื่อนที่ด้วยมือ.
+- [EXL0412 400 กก. แท่นวางแพลตฟอร์มไฟฟ้า](https://www.lexygolift.com/th/products/exl0412/): 400 กก.;1,115 มม.;ยกไฟฟ้า / การเคลื่อนที่ด้วยมือ
+- [EXL0415 400 กก. แท่นวางแท่นไฟฟ้า](https://www.lexygolift.com/th/products/exl0415/): 400 กก.;1,415 มม.;ยกไฟฟ้า / การเคลื่อนที่ด้วยมือ
+- [PT15 รถเข็นโต๊ะยกไฮดรอลิกแบบแมนนวล 150 กก.](https://www.lexygolift.com/th/products/pt15/): 150 กก.;220-720 มม.;ไฮดรอลิกแบบแมนนวล
+- [PT30 รถเข็นโต๊ะยกไฮดรอลิกแบบแมนนวล 300 กก.](https://www.lexygolift.com/th/products/pt30/): 300 กก.;285-880 มม.;ไฮดรอลิกแบบแมนนวล
+- [PT50 รถเข็นโต๊ะยกไฮดรอลิกแบบแมนนวล 500 กก.](https://www.lexygolift.com/th/products/pt50/): 500 กก.;285-880 มม.;ไฮดรอลิกแบบแมนนวล
+- [PT75 รถเข็นโต๊ะยกไฮดรอลิกแบบแมนนวล 750 กก.](https://www.lexygolift.com/th/products/pt75/): 750 กก.;420-1,000 มม.;ไฮดรอลิกแบบแมนนวล
+- [PT100 รถเข็นโต๊ะยกไฮดรอลิกแบบแมนนวล 1.0 ตัน](https://www.lexygolift.com/th/products/pt100/): 1,000 กก.;380-1,000 มม.;ไฮดรอลิกแบบแมนนวล
+- [PTD35 รถเข็นโต๊ะยกมือกรรไกรคู่ 350 กก.](https://www.lexygolift.com/th/products/ptd35/): 350 กก.;355-1,300 มม.;ไฮดรอลิกแบบแมนนวล
+- [PTD70 รถเข็นโต๊ะยกด้วยกรรไกรคู่ 700 กก.](https://www.lexygolift.com/th/products/ptd70/): 700 กก.;445-1,500 มม.;ไฮดรอลิกแบบแมนนวล
+- [SL0485 400 กก. แท่นวางแบบแมนนวล](https://www.lexygolift.com/th/products/sl0485/): 400 กก.;765 มม.;ไฮดรอลิกแบบแมนนวล
+- [SL0412 400 กก. แท่นวางแบบแมนนวล](https://www.lexygolift.com/th/products/sl0412/): 400 กก.;1,115 มม.;ไฮดรอลิกแบบแมนนวล
+- [SL0415 400 กก. แท่นวางแบบแมนนวล](https://www.lexygolift.com/th/products/sl0415/): 400 กก.;1,415 มม.;ไฮดรอลิกแบบแมนนวล
+- [BED1016 รถวางพาเลทกึ่งไฟฟ้า 1.0 ตัน](https://www.lexygolift.com/th/products/bed1016/): 1,000 กก.;1,600 มม.;ระบบเคลื่อนที่ด้วยมือ / ยกด้วยไฟฟ้า
+- [BED1025 เครื่องวางพาเลทกึ่งไฟฟ้า 1.0 ตัน น้ําหนัก 1.0 ตัน](https://www.lexygolift.com/th/products/bed1025/): 1,000 กก.;2,500 มม.;ระบบเคลื่อนที่ด้วยมือ / ยกไฟฟ้า
+- [BED1030 เครื่องวางพาเลทกึ่งไฟฟ้า 1.0 ตัน น้ําหนัก 1.0 ตัน](https://www.lexygolift.com/th/products/bed1030/): 1,000 กก.;3,000 มม.;การเคลื่อนที่ด้วยมือ / ยกไฟฟ้า
+- [BED1516 เครื่องวางพาเลทกึ่งไฟฟ้า 1.5 ตัน https://www.lexygolift.com/th/products/bed1516/ น้ําหนัก 1,500 กก.;1,600 มม.;การเคลื่อนที่ด้วยมือ / ยกไฟฟ้า
+
+## แหล่งข้อมูลสําหรับผู้ซื้อ
+- [ศูนย์ทรัพยากร](https://www.lexygolift.com/th/resources/): การเลือกผลิตภัณฑ์ การปฏิบัติตามข้อกําหนด เอกสาร คําถามที่พบบ่อย และแอปพลิเคชัน
+- [ศูนย์ความปฏิบัติตามกฎระเบียบ](https://www.lexygolift.com/th/resources/compliance/): คําแนะนําในการตรวจสอบเอกสารเฉพาะรุ่น
+- [ดาวน์โหลดและเอกสาร](https://www.lexygolift.com/th/resources/download/): ข้อมูลผลิตภัณฑ์และคําขอเอกสารที่ควบคุมได้
+- [คําถามที่พบบ่อยสําหรับผู้ซื้อ](https://www.lexygolift.com/th/resources/faq/): คําตอบตรงสําหรับผู้ซื้อมืออาชีพ
+- [วิธีเลือกรถพาเลทไฟฟ้า](https://www.lexygolift.com/th/guides/how-to-choose-an-electric-pallet-truck/): รายการตรวจสอบที่ใช้งานได้จริงสําหรับน้ําหนักบรรทุก ความยาวเส้นทาง สภาพพื้น พื้นที่เลี้ยว แบตเตอรี่ และรอบการทํางาน
+- [รถลากพาเลท vs. รถวางซ้อนพาเลท](https://www.lexygolift.com/th/guides/pallet-truck-vs-stacker/): ใช้รถลากพาเลทเพื่อเคลื่อนย้ายสินค้าในแนวนอน และใช้รถวางซ้อนเมื่อมีงานยกขึ้นสู่ตําแหน่งเก็บของ
+- [ความจุรถโฟล์คลิฟท์ ความสูงของลิฟต์ และความกว้างทางเดิน](https://www.lexygolift.com/th/guides/forklift-capacity-and-aisle-width/): ทําไมความจุที่กําหนดเพียงอย่างเดียวจึงไม่เพียงพอเมื่อเลือกรถโฟล์คลิฟท์ไฟฟ้า
+
+## ติดต่อ
+- อีเมล: info@lexygolift.com

@@ -1,0 +1,78 @@
+# LEXYGO Peralatan Penanganan Material
+
+> Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. memasok truk palet listrik, stacker, forklift listrik, truk palet manual, dan peralatan gudang.
+
+## Keluarga produk
+- [Truk Palet Listrik](https://www.lexygolift.com/id/products/electric-pallet-trucks/): Memindahkan muatan palet secara efisien melintasi gudang, dermaga, dan permukaan campuran.
+- [Electric Pallet Stackers](https://www.lexygolift.com/id/products/electric-pallet-stackers/): Angkat, tempatkan, dan ambil palet di area penyimpanan dengan ketinggian rendah hingga menengah.
+- [Forklift Listrik](https://www.lexygolift.com/id/products/electric-forklifts/): Forklift seimbang elektrik untuk logistik dalam ruangan dan penanganan industri.
+- [Truk Palet Manual](https://www.lexygolift.com/id/products/manual-pallet-trucks/): Pergerakan palet yang sederhana dan andal serta penanganan manual dengan angkat tinggi.
+- [Peralatan Gudang](https://www.lexygolift.com/id/products/warehouse-equipment/): Meja angkat kompak, truk platform, dan peralatan pendukung untuk aliran material.
+
+## Model produk
+- [WEP20J Walkie Electric Pallet Truck 2,0 t](https://www.lexygolift.com/id/products/wep20j/): 2.000 kg; 205 mm; Walk-behind.
+- [REP3000E Truk Palet Listrik Rider 3,0 t](https://www.lexygolift.com/id/products/rep3000e/): 3.000 kg; 205 mm; Ride-on.
+- [ATEP3000Y Truk Palet Listrik All-Terrain 3,0 t](https://www.lexygolift.com/id/products/atep3000y/): 3.000 kg; 205 mm; Berjalan di belakang.
+- [WES1500A 1,5 t Walkie Electric Stacker](https://www.lexygolift.com/id/products/wes1500a/): 1.500 kg; 1.600-3.500 mm; Walk-behind.
+- [WES1600A 1,6 t Walkie Electric Stacker](https://www.lexygolift.com/id/products/wes1600a/): 1.600 kg; 1.600-3.500 mm; Walk-behind.
+- [WES1500JP 1,5 t Walkie Electric Stacker](https://www.lexygolift.com/id/products/wes1500jp/): 1.500 kg; 1.600-3.500 mm; Walk-behind.
+- [WES2000A Walkie Electric Stacker 2,0 t](https://www.lexygolift.com/id/products/wes2000a/): 2.000 kg; 1.600-3.500 mm; Walk-behind.
+- [RES1500D Rider Electric Stacker 1,5 t](https://www.lexygolift.com/id/products/res1500d/): 1.500 kg; 1.600-3.500 mm; Stand-on.
+- [RES2000D 2,0 t Rider Electric Stacker](https://www.lexygolift.com/id/products/res2000d/): 2.000 kg; 1.600-3.500 mm; Stand-on.
+- [RES1500E 1,5 t Rider Electric Stacker](https://www.lexygolift.com/id/products/res1500e/): 1.500 kg; 1.600-3.500 mm; Stand-on.
+- [RES2000E 2,0 t Rider Electric Stacker](https://www.lexygolift.com/id/products/res2000e/): 2.000 kg; 1.600-3.500 mm; Stand-on.
+- [RES1500G 1,5 t Rider Electric Stacker](https://www.lexygolift.com/id/products/res1500g/): 1.500 kg; 1.600-3.000 mm; Stand-on.
+- [WCES500J 0,5 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/id/products/wces500j/): 500 kg; 1.600-3.500 mm; Walk-behind.
+- [WCES1000J 1,0 t Walkie Counterbalancing Stacker](https://www.lexygolift.com/id/products/wces1000j/): 1.000 kg; 1.600-3.500 mm; Walk-behind.
+- [WCES1300J 1,3 t Walkie Counterbalancing Stacker](https://www.lexygolift.com/id/products/wces1300j/): 1.300 kg; 1.600-3.500 mm; Walk-behind.
+- [WCES1500J 1,5 t Walkie Counterbalanced Stacker](https://www.lexygolift.com/id/products/wces1500j/): 1.500 kg; 1.600-3.500 mm; Walk-behind.
+- [RCES1000B 1,0 t Rider Counterbalanced Stacker](https://www.lexygolift.com/id/products/rces1000b/): 1.000 kg; Stand-on.
+- [RCES1500E 1,5 t Rider Counterbalanced Stacker](https://www.lexygolift.com/id/products/rces1500e/): 1.500 kg; Stand-on.
+- [RCES2000E Penumpuk Penyeimbang Rider 2,0 t](https://www.lexygolift.com/id/products/rces2000e/): 2.000 kg; Stand-on.
+- [HES1500A 1,5 t Reach Electric Stacker](https://www.lexygolift.com/id/products/hes1500a/): 1.500 kg; 3.000 mm; Stand-on.
+- [HES2000A Reach 2,0 t Reach Electric Stacker](https://www.lexygolift.com/id/products/hes2000a/): 2.000 kg; 1.600-3.500 mm; Stand-on.
+- [EFL1200R3 Forklift Listrik Tiga Roda 1,2 t](https://www.lexygolift.com/id/products/efl1200r3/): 1.200 kg; 3.000 mm; Duduk.
+- [EFL2000R3 Forklift Listrik Tiga Roda 2,0 t](https://www.lexygolift.com/id/products/efl2000r3/): 2.000 kg; 3.000 mm; Duduk.
+- [R4EFL1T Forklift Listrik Empat Roda 1,2 Ton](https://www.lexygolift.com/id/products/r4efl1t/): 1.200 kg; 3.000 mm; Duduk.
+- [R4EFL3T 3,0 t Forklift Listrik Empat Roda](https://www.lexygolift.com/id/products/r4efl3t/): 3.000 kg; 3.000 mm; Duduk.
+- [R4EFL5T Forklift Listrik Empat Roda 5,0 t](https://www.lexygolift.com/id/products/r4efl5t/): 5.000 kg; 3.000 mm; Duduk.
+- [R4EFL12T Forklift Listrik Empat Roda Berat](https://www.lexygolift.com/id/products/r4efl12t/): 12.000 kg; 3.000 mm; Duduk.
+- [MPT5TN Truk Palet Manual 5,0 t](https://www.lexygolift.com/id/products/mpt5tn/): 5.000 kg; Tinggi garpu 85-185 mm; Manual.
+- [MPJSC1500 Dongkrak Palet Tinggi Silinder Tunggal 1,5 t](https://www.lexygolift.com/id/products/mpjsc1500/): 1.500 kg; Tinggi garpu 85-800 mm; Manual.
+- [MPJTSC1500 Dongkrak Palet Angkat Tinggi Dua Tahap 1,5 Ton](https://www.lexygolift.com/id/products/mpjtsc1500/): 1.500 kg; Tinggi garpu 85-800 mm; Manual.
+- [SC1016 Pallet Stacker Self-Loading 1,0 t](https://www.lexygolift.com/id/products/sc1016/): 1.000 kg; 1.600 mm dapat dikonfigurasi; Perjalanan manual / angkat listrik.
+- [QES12E 1,2 t Alat Penumpuk Listrik Walkie Offset-Tiller](https://www.lexygolift.com/id/products/qes12e/): 1.200 kg; 3.000 mm; Berjalan di belakang.
+- [QES15E 1,5 t Walkie Tilter Offset Electric Stacker](https://www.lexygolift.com/id/products/qes15e/): 1.500 kg; 3.000 mm; Walk-behind.
+- [QES15LION Lithium Offset Tiltler Walkie Electric Stacker 1,5 t](https://www.lexygolift.com/id/products/qes15lie/): 1.500 kg; 3.000 mm; Walk-behind.
+- [QED1530 Walkie Electric Pallet Stacker 1,5 t](https://www.lexygolift.com/id/products/qed1530/): 1.500 kg; 3.000 mm dapat dikonfigurasi; Elektrik.
+- [Troli Meja Angkat Hidrolik Listrik EPT30 300 kg](https://www.lexygolift.com/id/products/ept30/): 300 kg; 290-880 mm; Angkat listrik / perjalanan manual.
+- [EPT50 Troli Meja Angkat Hidrolik Listrik 500 kg](https://www.lexygolift.com/id/products/ept50/): 500 kg; 440-1.025 mm; Angkat listrik / perjalanan manual.
+- [EPTD35 Troli Meja Angkat Listrik Gunting Ganda 350 kg](https://www.lexygolift.com/id/products/eptd35/): 350 kg; 370-1.300 mm; Angkat listrik / perjalanan manual.
+- [EXL0412 400 kg Electric Platform Stacker](https://www.lexygolift.com/id/products/exl0412/): 400 kg; 1.115 mm; Lift listrik / perjalanan manual.
+- [EXL0415 400 kg Stacker Platform Listrik](https://www.lexygolift.com/id/products/exl0415/): 400 kg; 1.415 mm; Lift listrik / perjalanan manual.
+- [PT15 Troli Meja Angkat Hidrolik Manual 150 kg](https://www.lexygolift.com/id/products/pt15/): 150 kg; 220-720 mm; Hidrolik manual.
+- [PT30 Troli Meja Angkat Hidrolik Manual 300 kg](https://www.lexygolift.com/id/products/pt30/): 300 kg; 285-880 mm; Hidrolik manual.
+- [PT50 Troli Meja Angkat Hidrolik Manual 500 kg](https://www.lexygolift.com/id/products/pt50/): 500 kg; 285-880 mm; Hidrolik manual.
+- [PT75 Troli Angkat Hidrolik Manual 750 kg](https://www.lexygolift.com/id/products/pt75/): 750 kg; 420-1.000 mm; Hidrolik manual.
+- [PT100 Troli Meja Angkat Hidrolik Manual 1,0 t](https://www.lexygolift.com/id/products/pt100/): 1.000 kg; 380-1.000 mm; Hidrolik manual.
+- [PTD35 Troli Meja Angkat Manual Gunting Ganda 350 kg](https://www.lexygolift.com/id/products/ptd35/): 350 kg; 355-1.300 mm; Hidrolik manual.
+- [Troli Meja Angkat Manual Gunting Ganda PTD70 700 kg](https://www.lexygolift.com/id/products/ptd70/): 700 kg; 445-1.500 mm; Hidrolik manual.
+- [SL0485 400 kg Manual Platform Stacker](https://www.lexygolift.com/id/products/sl0485/): 400 kg; 765 mm; Hidraulik manual.
+- [SL0412 400 kg Manual Platform Stacker](https://www.lexygolift.com/id/products/sl0412/): 400 kg; 1.115 mm; Hidraulik manual.
+- [SL0415 400 kg Manual Platform Stacker](https://www.lexygolift.com/id/products/sl0415/): 400 kg; 1.415 mm; Hidraulik manual.
+- [BED1016 1,0 t Semi-Electric Pallet Stacker](https://www.lexygolift.com/id/products/bed1016/): 1.000 kg; 1.600 mm; Pergerakan manual / angkat listrik.
+- [BED1025 1,0 t Semi-Electric Pallet Stacker](https://www.lexygolift.com/id/products/bed1025/): 1.000 kg; 2.500 mm; Pergerakan manual / angkat listrik.
+- [BED1030 1,0 t Semi-Electric Pallet Stacker](https://www.lexygolift.com/id/products/bed1030/): 1.000 kg; 3.000 mm; Pergerakan manual / angkat listrik.
+- [BED1516 1,5 t Semi-Electric Pallet Stacker](https://www.lexygolift.com/id/products/bed1516/): 1.500 kg; 1.600 mm; Pergerakan manual / angkat listrik.
+
+## Sumber Pembeli
+- [Pusat Sumber Daya](https://www.lexygolift.com/id/resources/): Pemilihan produk, kepatuhan, dokumen, FAQ, dan aplikasi.
+- [Pusat Kepatuhan](https://www.lexygolift.com/id/resources/compliance/): Panduan verifikasi dokumen spesifik model.
+- [Unduhan dan Dokumen](https://www.lexygolift.com/id/resources/download/): Data produk dan permintaan dokumen terkendali.
+- [FAQ Pembeli](https://www.lexygolift.com/id/resources/faq/): Jawaban langsung untuk pembeli profesional.
+- [Cara Memilih Electric Pallet Truck](https://www.lexygolift.com/id/guides/how-to-choose-an-electric-pallet-truck/): Daftar periksa praktis untuk muatan, panjang rute, kondisi lantai, ruang putar, baterai, dan siklus tugas.
+- [Pallet Truck vs. Pallet Stacker](https://www.lexygolift.com/id/guides/pallet-truck-vs-stacker/): Gunakan pallet truck untuk memindahkan beban secara horizontal dan stacker ketika tugas mencakup mengangkat ke posisi penyimpanan.
+- [Kapasitas Forklift, Tinggi Angkat, dan Lebar Lorong](https://www.lexygolift.com/id/guides/forklift-capacity-and-aisle-width/): Mengapa kapasitas terukur saja tidak cukup saat memilih forklift listrik.
+
+## Kontak
+- Email: info@lexygolift.com

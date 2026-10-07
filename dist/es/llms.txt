@@ -1,0 +1,78 @@
+# LEXYGO Equipo de Manipulación de Materiales
+
+> Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. suministra transpaletas eléctricas, apiladores, carretillas elevadoras eléctricas, transpaletas manuales y equipos de almacén.
+
+## Familias de productos
+- [Transpaletas Eléctricas](https://www.lexygolift.com/es/products/electric-pallet-trucks/): Mueven cargas paletizadas de manera eficiente a través de almacenes, muelles y superficies mixtas.
+- [Apiladores Eléctricos](https://www.lexygolift.com/es/products/electric-pallet-stackers/): Levantan, colocan y recuperan palets en áreas de almacenamiento de baja a media altura.
+- [Carretillas Elevadoras Eléctricas](https://www.lexygolift.com/es/products/electric-forklifts/): Carretillas elevadoras eléctricas contrabalanceadas para logística interior y manejo industrial.
+- [Transpaletas Manuales](https://www.lexygolift.com/es/products/manual-pallet-trucks/): Movimiento de palets simple y confiable y manejo manual de elevación alta.
+- [Equipo de Almacén](https://www.lexygolift.com/es/products/warehouse-equipment/): Mesas elevadoras compactas, carros de plataforma y equipos de soporte para el flujo de materiales.
+
+## Modelos de productos
+- [WEP20J Transpaleta Eléctrica Walkie de 2.0 t](https://www.lexygolift.com/es/products/wep20j/): 2,000 kg; 205 mm; a pie.
+- [REP3000E Transpaleta Eléctrica Rider de 3.0 t](https://www.lexygolift.com/es/products/rep3000e/): 3,000 kg; 205 mm; montado.
+- [ATEP3000Y Transpaleta Eléctrica Todo Terreno de 3.0 t](https://www.lexygolift.com/es/products/atep3000y/): 3,000 kg; 205 mm; a pie.
+- [WES1500A Apilador Eléctrico Walkie de 1.5 t](https://www.lexygolift.com/es/products/wes1500a/): 1,500 kg; 1,600-3,500 mm; a pie.
+- [WES1600A Apilador Eléctrico Walkie de 1.6 t](https://www.lexygolift.com/es/products/wes1600a/): 1,600 kg; 1,600-3,500 mm; a pie.
+- [WES1500JP Apilador Eléctrico Walkie de 1.5 t](https://www.lexygolift.com/es/products/wes1500jp/): 1,500 kg; 1,600-3,500 mm; a pie.
+- [WES2000A Apilador Eléctrico Walkie de 2.0 t](https://www.lexygolift.com/es/products/wes2000a/): 2,000 kg; 1,600-3,500 mm; a pie.
+- [RES1500D Apilador Eléctrico Rider de 1.5 t](https://www.lexygolift.com/es/products/res1500d/): 1,500 kg; 1,600-3,500 mm; de pie.
+- [RES2000D Apilador Eléctrico Rider de 2.0 t](https://www.lexygolift.com/es/products/res2000d/): 2,000 kg; 1,600-3,500 mm; de pie.
+- [RES1500E Apilador Eléctrico Rider de 1.5 t](https://www.lexygolift.com/es/products/res1500e/): 1,500 kg; 1,600-3,500 mm; de pie.
+- [RES2000E Apilador Eléctrico Rider de 2.0 t](https://www.lexygolift.com/es/products/res2000e/): 2,000 kg; 1,600-3,500 mm; de pie.
+- [RES1500G Rider Electric Stacker de 1,5 t](https://www.lexygolift.com/es/products/res1500g/): 1.500 kg; 1.600-3.000 mm; De vuelta.
+- [WCES500J apilador contrapesado walkie de 0,5 t](https://www.lexygolift.com/es/products/wces500j/): 500 kg; 1.600-3.500 mm; Caminante por detrás.
+- [WCES1000J apilador contrapesado walkie de 1,0 t](https://www.lexygolift.com/es/products/wces1000j/): 1.000 kg; 1.600-3.500 mm; Caminante.
+- [WCES1300J apilador contrapesado walkie de 1,3 t](https://www.lexygolift.com/es/products/wces1300j/): 1.300 kg; 1.600-3.500 mm; Caminante.
+- [WCES1500J apilador contrapesado walkie de 1,5 t](https://www.lexygolift.com/es/products/wces1500j/): 1.500 kg; 1.600-3.500 mm; Caminante por detrás.
+- [RCES1000B Rider Counterbalanced Stacker de 1,0 t](https://www.lexygolift.com/es/products/rces1000b/): 1.000 kg; Stand-on.
+- [RCES1500E Rider Counterbalanced Stacker de 1,5 t](https://www.lexygolift.com/es/products/rces1500e/): 1.500 kg; Stand-on.
+- [RCES2000E Rider Counterbalanced Stacker de 2,0 t](https://www.lexygolift.com/es/products/rces2000e/): 2.000 kg; Stand-on.
+- [HES1500A apilador eléctrico de alcance de 1,5 t](https://www.lexygolift.com/es/products/hes1500a/): 1.500 kg; 3.000 mm; De vuelta.
+- [HES2000A apilador eléctrico de alcance de 2,0 t](https://www.lexygolift.com/es/products/hes2000a/): 2.000 kg; 1.600-3.500 mm; De vuelta.
+- [EFL1200R3 carretilla elevadora eléctrica de tres ruedas de 1,2 t](https://www.lexygolift.com/es/products/efl1200r3/): 1.200 kg; 3.000 mm; Sentado.
+- [EFL2000R3 carretilla elevadora eléctrica de tres ruedas de 2,0 t](https://www.lexygolift.com/es/products/efl2000r3/): 2.000 kg; 3.000 mm; Sentado.
+- [R4EFL1T carretilla elevadora eléctrica de cuatro ruedas de 1,2 t](https://www.lexygolift.com/es/products/r4efl1t/): 1.200 kg; 3.000 mm; Sentado.
+- [R4EFL3T carretilla elevadora eléctrica de 3,0 t de cuatro ruedas](https://www.lexygolift.com/es/products/r4efl3t/): 3.000 kg; 3.000 mm; Sentado.
+- [R4EFL5T carretilla elevadora eléctrica de cuatro ruedas de 5,0 t](https://www.lexygolift.com/es/products/r4efl5t/): 5.000 kg; 3.000 mm; Sentado.
+- [R4EFL12T Carretilla elevadora eléctrica de cuatro ruedas de alta resistencia](https://www.lexygolift.com/es/products/r4efl12t/): 12.000 kg; 3.000 mm; Sentado.
+- [MPT5TN Transpaleta Manual de 5,0 t](https://www.lexygolift.com/es/products/mpt5tn/): 5.000 kg; Altura de la horquilla de 85-185 mm; Manual.
+- [MPJSC1500 transpaleta monocilíndrico de alta elevación de 1,5 t](https://www.lexygolift.com/es/products/mpjsc1500/): 1.500 kg; Horquilla de 85-800 mm de altura; Manual.
+- [MPJTSC1500 transpaleta de dos etapas de gran elevación de 1,5 t](https://www.lexygolift.com/es/products/mpjtsc1500/): 1.500 kg; Altura de la horquilla de 85-800 mm; Manual.
+- [SC1016 apilador de palets autocargante de 1,0 t](https://www.lexygolift.com/es/products/sc1016/): 1.000 kg; 1.600 mm configurable; Desplazamiento manual / elevador eléctrico.
+- [QES12E apilador eléctrico de walkie con timón de desfasamiento de 1,2 t](https://www.lexygolift.com/es/products/qes12e/): 1.200 kg; 3.000 mm; Caminante.
+- [QES15E apilador eléctrico con timón con desprendimiento de 1,5 t](https://www.lexygolift.com/es/products/qes15e/): 1.500 kg; 3.000 mm; Caminante.
+- [QES15LION apilador eléctrico de walkie con mototimón de litio de 1,5 t](https://www.lexygolift.com/es/products/qes15lie/): 1.500 kg; 3.000 mm; Walk-behind.
+- [QED1530 apilador eléctrico de palets walkie de 1,5 t](https://www.lexygolift.com/es/products/qed1530/): 1.500 kg; 3.000 mm configurable; Eléctrico.
+- [EPT30 carro de mesa elevador hidráulico eléctrico de 300 kg](https://www.lexygolift.com/es/products/ept30/): 300 kg; 290-880 mm; Elevador eléctrico / recorrido manual.
+- [EPT50 carro de mesa elevador hidráulico eléctrico de 500 kg](https://www.lexygolift.com/es/products/ept50/): 500 kg; 440-1.025 mm; Elevador eléctrico / desplazamiento manual.
+- [EPTD35 Carro de mesa elevador eléctrico de doble tijera de 350 kg](https://www.lexygolift.com/es/products/eptd35/): 350 kg; 370-1.300 mm; Elevador eléctrico / recorrido manual.
+- [EXL0412 400 kg Electric Platform Stacker](https://www.lexygolift.com/es/products/exl0412/): 400 kg; 1.115 mm; Elevador eléctrico / recorrido manual.
+- [EXL0415 400 kg Plataforma eléctrica apiladora](https://www.lexygolift.com/es/products/exl0415/): 400 kg; 1.415 mm; Elevador eléctrico / recorrido manual.
+- [PT15 Carro de Mesa Elevadora Hidráulica Manual de 150 kg](https://www.lexygolift.com/es/products/pt15/): 150 kg; 220-720 mm; Hidráulica manual.
+- [PT30 Carro de mesa hidráulica manual de 300 kg](https://www.lexygolift.com/es/products/pt30/): 300 kg; 285-880 mm; Hidráulico manual.
+- [PT50 Carro de mesa elevadora hidráulica manual de 500 kg](https://www.lexygolift.com/es/products/pt50/): 500 kg; 285-880 mm; Hidráulica manual.
+- [PT75 Carro de mesa elevadora hidráulica manual de 750 kg](https://www.lexygolift.com/es/products/pt75/): 750 kg; 420-1.000 mm; Hidráulico manual.
+- [PT100 Carro de mesa elevadora hidráulica manual de 1,0 t](https://www.lexygolift.com/es/products/pt100/): 1.000 kg; 380-1.000 mm; Hidráulica manual.
+- [PTD35 Carro de Mesa Manual de Elevación de Doble Tijera de 350 kg](https://www.lexygolift.com/es/products/ptd35/): 350 kg; 355-1.300 mm; Hidráulico manual.
+- [PTD70 Carro de mesa manual de 700 kg](https://www.lexygolift.com/es/products/ptd70/): 700 kg; 445-1.500 mm; Hidráulico manual.
+- [Apilador de Plataforma Manual de 400 kg](https://www.lexygolift.com/es/products/sl0485/): 400 kg; 765 mm; Hidráulico manual.
+- [Apilador de Plataforma Manual de 400 kg](https://www.lexygolift.com/es/products/sl0412/): 400 kg; 1,115 mm; Hidráulico manual.
+- [Apilador de Plataforma Manual de 400 kg](https://www.lexygolift.com/es/products/sl0415/): 400 kg; 1,415 mm; Hidráulico manual.
+- [Apilador de Palets Semieléctrico de 1,0 t](https://www.lexygolift.com/es/products/bed1016/): 1,000 kg; 1,600 mm; Desplazamiento manual / elevación eléctrica.
+- [Apilador de Palets Semieléctrico de 1,0 t](https://www.lexygolift.com/es/products/bed1025/): 1,000 kg; 2,500 mm; Desplazamiento manual / elevación eléctrica.
+- [Apilador de Palets Semieléctrico de 1,0 t](https://www.lexygolift.com/es/products/bed1030/): 1,000 kg; 3,000 mm; Desplazamiento manual / elevación eléctrica.
+- [Apilador de Palets Semieléctrico de 1,5 t](https://www.lexygolift.com/es/products/bed1516/): 1,500 kg; 1,600 mm; Desplazamiento manual / elevación eléctrica.
+
+## Recursos para compradores
+- [Centro de Recursos](https://www.lexygolift.com/es/resources/): Selección de productos, cumplimiento, documentos, preguntas frecuentes y aplicaciones.
+- [Centro de Cumplimiento](https://www.lexygolift.com/es/resources/compliance/): Guía de verificación de documentos específica del modelo.
+- [Descargas y Documentos](https://www.lexygolift.com/es/resources/download/): Datos del producto y solicitudes de documentos controlados.
+- [Preguntas Frecuentes para Compradores](https://www.lexygolift.com/es/resources/faq/): Respuestas directas para compradores profesionales.
+- [Cómo Elegir un Transpalet Eléctrico](https://www.lexygolift.com/es/guides/how-to-choose-an-electric-pallet-truck/): Lista de verificación práctica para carga, longitud de ruta, condición del piso, espacio de giro, batería y ciclo de trabajo.
+- [Transpalet vs. Apilador de Palets](https://www.lexygolift.com/es/guides/pallet-truck-vs-stacker/): Use un transpalet para mover cargas horizontalmente y un apilador cuando la tarea incluya elevación para almacenamiento.
+- [Capacidad del Montacargas, Altura de Elevación y Ancho del Pasillo](https://www.lexygolift.com/es/guides/forklift-capacity-and-aisle-width/): Por qué la capacidad nominal por sí sola no es suficiente al seleccionar un montacargas eléctrico.
+
+## Contacto
+- Correo electrónico: info@lexygolift.com

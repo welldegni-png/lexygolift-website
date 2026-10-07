@@ -1,0 +1,78 @@
+# LEXYGO Оборудование для обработки материалов
+
+> Компания Zhejiang Changxing Shengli Intelligent Machinery Co., Ltd. поставляет электрические тележки, штабелеры, электрические погрузчики, ручные тележки и складское оборудование.
+
+## Семейства продукции
+- [Электротележки](https://www.lexygolift.com/ru/products/electric-pallet-trucks/): Эффективно перемещают палетированные грузы по складам, докам и смешанным поверхностям.
+- [Электроштабелеры](https://www.lexygolift.com/ru/products/electric-pallet-stackers/): Поднимают, размещают и извлекают паллеты в зонах хранения низкой и средней высоты.
+- [Электрические погрузчики](https://www.lexygolift.com/ru/products/electric-forklifts/): Электрические контрбалансные погрузчики для внутренней логистики и промышленного обращения.
+- [Ручные тележки](https://www.lexygolift.com/ru/products/manual-pallet-trucks/): Простое, надежное перемещение паллет и ручная работа с высокой нагрузкой.
+- [Складское оборудование](https://www.lexygolift.com/ru/products/warehouse-equipment/): Компактные подъемные столы, платформенные тележки и вспомогательное оборудование для материального потока.
+
+## Модели продукции
+- [WEP20J Электротележка 2.0 т Walkie](https://www.lexygolift.com/ru/products/wep20j/): 2 000 кг; 205 мм; пешее управление.
+- [REP3000E Электротележка 3.0 т Rider](https://www.lexygolift.com/ru/products/rep3000e/): 3 000 кг; 205 мм; управление с посадкой.
+- [ATEP3000Y Вездеходная электротележка 3.0 т](https://www.lexygolift.com/ru/products/atep3000y/): 3 000 кг; 205 мм; пешее управление.
+- [WES1500A Электроштабелер 1.5 т Walkie](https://www.lexygolift.com/ru/products/wes1500a/): 1 500 кг; 1 600-3 500 мм; пешее управление.
+- [WES1600A Электроштабелер 1.6 т Walkie](https://www.lexygolift.com/ru/products/wes1600a/): 1 600 кг; 1 600-3 500 мм; пешее управление.
+- [WES1500JP Электроштабелер 1.5 т Walkie](https://www.lexygolift.com/ru/products/wes1500jp/): 1 500 кг; 1 600-3 500 мм; пешее управление.
+- [WES2000A Электроштабелер 2.0 т Walkie](https://www.lexygolift.com/ru/products/wes2000a/): 2 000 кг; 1 600-3 500 мм; пешее управление.
+- [RES1500D Электроштабелер 1.5 т Rider](https://www.lexygolift.com/ru/products/res1500d/): 1 500 кг; 1 600-3 500 мм; управление стоя.
+- [RES2000D Электроштабелер 2.0 т Rider](https://www.lexygolift.com/ru/products/res2000d/): 2 000 кг; 1 600-3 500 мм; управление стоя.
+- [RES1500E Электроштабелер 1.5 т Rider](https://www.lexygolift.com/ru/products/res1500e/): 1 500 кг; 1 600-3 500 мм; управление стоя.
+- [RES2000E Электроштабелер 2.0 т Rider](https://www.lexygolift.com/ru/products/res2000e/): 2 000 кг; 1 600-3 500 мм; управление стоя.
+- [RES1500G 1,5 т Rider Electric Stacker](https://www.lexygolift.com/ru/products/res1500g/): 1 500 кг; 1 600–3 000 мм; Стоячий с подъёмом.
+- [WCES500J 0,5 т рации с противовесным стеллажем](https://www.lexygolift.com/ru/products/wces500j/): 500 кг; 1 600-3 500 мм; Проходящий сзади.
+- [WCES1000J 1,0 т рации с противовесом](https://www.lexygolift.com/ru/products/wces1000j/): 1 000 кг; 1 600-3 500 мм; Ходящий сзади.
+- [WCES1300J 1,3 т рации с противобалансным стэкером](https://www.lexygolift.com/ru/products/wces1300j/): 1 300 кг; 1 600-3 500 мм; Ходящий сзади.
+- [WCES1500J 1,5-тонный рация с противобалансированным стеллажем](https://www.lexygolift.com/ru/products/wces1500j/): 1 500 кг; 1 600-3 500 мм; Ходящий сзади.
+- [RCES1000B 1,0 т Rider Counterbalanced Stacker](https://www.lexygolift.com/ru/products/rces1000b/): 1 000 кг;; Stand-on.
+- [RCES1500E 1,5 т Rider Counterbalanced Stacker](https://www.lexygolift.com/ru/products/rces1500e/): 1 500 кг;; Stand-on.
+- [RCES2000E 2,0 т Rider Counterbalanced Stacker](https://www.lexygolift.com/ru/products/rces2000e/): 2 000 кг;; Стоячий.
+- [HES1500A 1,5 т Reach Electric Stacker](https://www.lexygolift.com/ru/products/hes1500a/): 1 500 кг; 3 000 мм; Стоячий.
+- [HES2000A 2,0 т Reach Electric Stacker](https://www.lexygolift.com/ru/products/hes2000a/): 2 000 кг; 1 600-3 500 мм; Stand-on.
+- [EFL1200R3 1,2 т трёхколёсный электрический погрузчик](https://www.lexygolift.com/ru/products/efl1200r3/): 1 200 кг; 3 000 мм; Сидячий вариант.
+- [EFL2000R3 2,0 т трёхколёсный электрический погрузчик](https://www.lexygolift.com/ru/products/efl2000r3/): 2 000 кг; 3 000 мм; Сидячий.
+- [R4EFL1T 1,2 т четырёхколёсный электрический погрузчик](https://www.lexygolift.com/ru/products/r4efl1t/): 1 200 кг; 3 000 мм; Сидячий.
+- [R4EFL3T 3,0 т четырёхколёсный электрический погрузчик](https://www.lexygolift.com/ru/products/r4efl3t/): 3 000 кг; 3 000 мм; Сидячий вариант.
+- [R4EFL5T 5,0 т четырёхколёсный электрический погрузчик](https://www.lexygolift.com/ru/products/r4efl5t/): 5 000 кг; 3 000 мм; Сидячий режим.
+- [R4EFL12T Тяжёлый четырёхколёсный электрический погрузчик](https://www.lexygolift.com/ru/products/r4efl12t/): 12 000 кг; 3 000 мм; Сидячий вариант.
+- [MPT5TN 5,0 т ручной паллетный тележка](https://www.lexygolift.com/ru/products/mpt5tn/): 5 000 кг; Высота вилки 85-185 мм; Механический.
+- [MPJSC1500 1,5-тонный одноцилиндровый домкрат с высоким подъёмом](https://www.lexygolift.com/ru/products/mpjsc1500/): 1 500 кг; Высота вилки 85-800 мм; Механическая коробка.
+- [MPJTSC1500 двухступенчатый поддон с высоким подъёмом 1,5 т](https://www.lexygolift.com/ru/products/mpjtsc1500/): 1 500 кг; Высота вилки 85-800 мм; Механическая коробка.
+- [SC1016 1,0 т самозагружаемый поддонный штабел](https://www.lexygolift.com/ru/products/sc1016/): 1 000 кг; Настраиваемый 1 600 мм; Ручной ход / электрический подъём.
+- [QES12E 1,2 т Offset-Tiller Electric Stacker](https://www.lexygolift.com/ru/products/qes12e/): 1 200 кг; 3 000 мм; Ходящий сзади.
+- [QES15E 1,5 т Offset-Tiller-Rotie Electric Stacker](https://www.lexygolift.com/ru/products/qes15e/): 1 500 кг; 3 000 мм; Проходящий сзади.
+- [QES15LION 1,5 т Литий-офсетный рация с румплём](https://www.lexygolift.com/ru/products/qes15lie/): 1 500 кг; 3 000 мм; Проходящий сзади.
+- [QED1530 1,5 т электрический поддонный укладчик](https://www.lexygolift.com/ru/products/qed1530/): 1 500 кг; 3 000 мм настраиваемые; электрические.
+- [EPT30 300 кг электрический гидравлический подъёмник](https://www.lexygolift.com/ru/products/ept30/): 300 кг; 290-880 мм; Электрический подъёмник / ручной ход.
+- [EPT50 электрическая гидравлическая подъемная тележка весом 500 кг](https://www.lexygolift.com/ru/products/ept50/): 500 кг; 440-1 025 мм; Электрический подъём / ручной ход.
+- [EPTD35 350 кг электрический подъёмник с двойными ножницами](https://www.lexygolift.com/ru/products/eptd35/): 350 кг; 370-1300 мм; Электрический подъёмник / ручной ход.
+- [EXL0412 400 кг электрический платформенный стекер](https://www.lexygolift.com/ru/products/exl0412/): 400 кг; 1 115 мм; Электрический подъёмник / ручной ход.
+- [EXL0415 400 кг электрический платформенный стекер](https://www.lexygolift.com/ru/products/exl0415/): 400 кг; 1 415 мм; Электрический подъёмник / ручной ход.
+- [PT15 150 кг ручная гидравлическая тележка](https://www.lexygolift.com/ru/products/pt15/): 150 кг; 220-720 мм; Ручная гидравлика.
+- [PT30 300 кг ручной гидравлический подъёмный стол](https://www.lexygolift.com/ru/products/pt30/): 300 кг; 285-880 мм; Ручная гидравлика.
+- [PT50 500 кг ручная гидравлическая подъемная тележка](https://www.lexygolift.com/ru/products/pt50/): 500 кг; 285-880 мм; Ручная гидравлика.
+- [PT75 750 кг ручная гидравлическая подъемная тележка](https://www.lexygolift.com/ru/products/pt75/): 750 кг; 420-1 000 мм; Ручная гидравлика.
+- [PT100 1,0 т ручной гидравлический подъёмный стол] (https://www.lexygolift.com/ru/products/pt100/): 1 000 кг; 380-1 000 мм; Ручная гидравлика.
+- [PTD35 350 кг ручной подъёмной тележки с двумя ножницами](https://www.lexygolift.com/ru/products/ptd35/): 350 кг; 355-1 300 мм; Ручная гидравлика.
+- [PTD70 700 кг ручной подъёмной тележки с двумя ножницами](https://www.lexygolift.com/ru/products/ptd70/): 700 кг; 445-1 500 мм; Ручная гидравлика.
+- [SL0485 400 кг Ручной платформенный штабелер](https://www.lexygolift.com/ru/products/sl0485/): 400 кг; 765 мм; Ручная гидравлика.
+- [SL0412 400 кг Ручной платформенный штабелер](https://www.lexygolift.com/ru/products/sl0412/): 400 кг; 1,115 мм; Ручная гидравлика.
+- [SL0415 400 кг Ручной платформенный штабелер](https://www.lexygolift.com/ru/products/sl0415/): 400 кг; 1,415 мм; Ручная гидравлика.
+- [BED1016 1.0 т Полуэлектрический штабелер паллет](https://www.lexygolift.com/ru/products/bed1016/): 1,000 кг; 1,600 мм; Ручное перемещение / электрический подъем.
+- [BED1025 1.0 т Полуэлектрический штабелер паллет](https://www.lexygolift.com/ru/products/bed1025/): 1,000 кг; 2,500 мм; Ручное перемещение / электрический подъем.
+- [BED1030 1.0 т Полуэлектрический штабелер паллет](https://www.lexygolift.com/ru/products/bed1030/): 1,000 кг; 3,000 мм; Ручное перемещение / электрический подъем.
+- [BED1516 1.5 т Полуэлектрический штабелер паллет](https://www.lexygolift.com/ru/products/bed1516/): 1,500 кг; 1,600 мм; Ручное перемещение / электрический подъем.
+
+## Ресурсы для покупателей
+- [Центр ресурсов](https://www.lexygolift.com/ru/resources/): Выбор продукции, соответствие стандартам, документы, ЧаВо и приложения.
+- [Центр соответствия](https://www.lexygolift.com/ru/resources/compliance/): Руководство по проверке документов для конкретных моделей.
+- [Загрузки и документы](https://www.lexygolift.com/ru/resources/download/): Данные о продукции и запросы контролируемых документов.
+- [ЧаВо для покупателей](https://www.lexygolift.com/ru/resources/faq/): Прямые ответы для профессиональных покупателей.
+- [Как выбрать электрический тележку для паллет](https://www.lexygolift.com/ru/guides/how-to-choose-an-electric-pallet-truck/): Практический контрольный список для нагрузки, длины маршрута, состояния пола, пространства для поворота, батареи и цикла работы.
+- [Тележка для паллет vs. Штабелер паллет](https://www.lexygolift.com/ru/guides/pallet-truck-vs-stacker/): Используйте тележку для горизонтального перемещения грузов и штабелер, когда задача включает подъем в позиции хранения.
+- [Грузоподъемность погрузчика, высота подъема и ширина прохода](https://www.lexygolift.com/ru/guides/forklift-capacity-and-aisle-width/): Почему одной только номинальной грузоподъемности недостаточно при выборе электрического погрузчика.
+
+## Контакты
+- Электронная почта: info@lexygolift.com

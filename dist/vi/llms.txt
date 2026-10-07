@@ -1,0 +1,78 @@
+# Thiết bị xử lý vật liệu LEXYGO
+
+> Công ty TNHH Máy móc Thông minh Chiết Giang Changxing Shengli cung cấp xe nâng điện, xe xếp nệp, xe nâng điện, xe nâng tay và thiết bị kho hàng.
+
+## Dòng sản phẩm
+- [Xe nâng pallet điện](https://www.lexygolift.com/vi/products/electric-pallet-trucks/): Di chuyển hàng hóa xếp pallet hiệu quả qua các kho, bến tàu và bề mặt hỗn hợp.
+- [Xe xếp pallet điện](https://www.lexygolift.com/vi/products/electric-pallet-stackers/): Nâng, đặt và lấy pallet trong các khu vực lưu trữ có chiều cao thấp đến trung bình.
+- [Xe nâng điện](https://www.lexygolift.com/vi/products/electric-forklifts/): Xe nâng điện cân bằng cho logistics trong nhà và xử lý công nghiệp.
+- [Xe nâng pallet thủ công](https://www.lexygolift.com/vi/products/manual-pallet-trucks/): Di chuyển pallet đơn giản, đáng tin cậy và xử lý nâng cao thủ công.
+- [Thiết bị kho](https://www.lexygolift.com/vi/products/warehouse-equipment/): Bàn nâng nhỏ gọn, xe nâng nền tảng và thiết bị hỗ trợ cho dòng chảy vật liệu.
+
+## Mô hình sản phẩm
+- [WEP20J Xe tải pallet điện bộ đàm 2.0 tấn](https://www.lexygolift.com/vi/products/wep20j/): 2.000 kg; 205 mm; Đi bộ phía sau.
+- [REP3000E Xe nâng pallet điện Rider 3.0 tấn](https://www.lexygolift.com/vi/products/rep3000e/): 3.000 kg; 205 mm; Xe tải cưỡi.
+- [ATEP3000Y Xe nâng pallet điện đa địa hình 3.0 tấn](https://www.lexygolift.com/vi/products/atep3000y/): 3.000 kg; 205 mm; Đi bộ phía sau.
+- [WES1500A Bộ đàm 1,5 tấn Xếp Điện](https://www.lexygolift.com/vi/products/wes1500a/): 1.500 kg; 1.600-3.500 mm; Đi bộ phía sau.
+- [WES1600A Bộ đàm điện 1,6 tấn](https://www.lexygolift.com/vi/products/wes1600a/): 1.600 kg; 1.600-3.500 mm; Đi bộ phía sau.
+- [WES1500JP bộ đàm 1,5 tấn Xếp điện](https://www.lexygolift.com/vi/products/wes1500jp/): 1.500 kg; 1.600-3.500 mm; Đi bộ phía sau.
+- [WES2000A Bộ đàm 2.0 tấn Xếp điện](https://www.lexygolift.com/vi/products/wes2000a/): 2.000 kg; 1.600-3.500 mm; Đi bộ phía sau.
+- [RES1500D Rider Electric Stacker 1,5 tấn](https://www.lexygolift.com/vi/products/res1500d/): 1.500 kg; 1.600-3.500 mm; Đứng đứng.
+- [RES2000D Rider Electric Stacker 2.0 tấn](https://www.lexygolift.com/vi/products/res2000d/): 2.000 kg; 1.600-3.500 mm; Đứng đứng.
+- [RES1500E Rider Electric Stacker 1,5 tấn](https://www.lexygolift.com/vi/products/res1500e/): 1.500 kg; 1.600-3.500 mm; Đứng đứng.
+- [RES2000E Rider Electric Stacker 2.0 tấn](https://www.lexygolift.com/vi/products/res2000e/): 2.000 kg; 1.600-3.500 mm; Đứng đứng.
+- [RES1500G Rider Electric Stacker 1,5 tấn](https://www.lexygolift.com/vi/products/res1500g/): 1.500 kg; 1.600-3.000 mm; Đứng đứng.
+- [WCES500J Bộ đàm cân bằng 0,5 t] (https://www.lexygolift.com/vi/products/wces500j/): 500 kg; 1.600-3.500 mm; Đi bộ phía sau.
+- [WCES1000J bộ đàm 1.0 t Counterbalanced Stacker](https://www.lexygolift.com/vi/products/wces1000j/): 1.000 kg; 1.600-3.500 mm; Đi bộ phía sau.
+- [WCES1300J Bộ đàm cân bằng 1,3 tấn](https://www.lexygolift.com/vi/products/wces1300j/): 1.300 kg; 1.600-3.500 mm; Đi bộ phía sau.
+- [WCES1500J bộ đàm cân bằng 1,5 t] (https://www.lexygolift.com/vi/products/wces1500j/): 1.500 kg; 1.600-3.500 mm; Đi bộ phía sau.
+- [RCES1000B Rider Counterbalanced Stacker 1,0 tấn](https://www.lexygolift.com/vi/products/rces1000b/): 1.000 kg;; Stand-on.
+- [RCES1500E Rider Counterbalanced Stacker 1,5 tấn](https://www.lexygolift.com/vi/products/rces1500e/): 1.500 kg;; Stand-on.
+- [RCES2000E 2,0 tấn Rider Counterbalanced Stacker](https://www.lexygolift.com/vi/products/rces2000e/): 2.000 kg;; Đứng đứng.
+- [HES1500A Máy xếp điện Reach 1,5 tắn](https://www.lexygolift.com/vi/products/hes1500a/): 1.500 kg; 3.000 mm; Đứng đứng.
+- [HES2000A 2.0 t Reach Electric Stacker](https://www.lexygolift.com/vi/products/hes2000a/): 2.000 kg; 1.600-3.500 mm; Đứng đứng.
+- [EFL1200R3 Xe nâng điện ba bánh 1,2 tật](https://www.lexygolift.com/vi/products/efl1200r3/): 1.200 kg; 3.000 mm; Ngồi.
+- [EFL2000R3 Xe nâng điện ba bánh 2.0 t](https://www.lexygolift.com/vi/products/efl2000r3/): 2.000 kg; 3.000 mm; Ngồi.
+- [R4EFL1T Xe nâng điện 4 bánh 1,2 tấn](https://www.lexygolift.com/vi/products/r4efl1t/): 1.200 kg; 3.000 mm; Ngồi.
+- [R4EFL3T Xe nâng điện bốn bánh 3,0 tấn](https://www.lexygolift.com/vi/products/r4efl3t/): 3.000 kg; 3.000 mm; Ngồi.
+- [R4EFL5T Xe nâng điện bốn bánh 5.0 tấn](https://www.lexygolift.com/vi/products/r4efl5t/): 5.000 kg; 3.000 mm; Ngồi yên.
+- [R4EFL12T Xe nâng điện bốn bánh hạng nặng](https://www.lexygolift.com/vi/products/r4efl12t/): 12.000 kg; 3.000 mm; Ngồi.
+- [MPT5TN Xe nâng pallet thủ công 5.0 tấn](https://www.lexygolift.com/vi/products/mpt5tn/): 5.000 kg; Chiều cao càng 85-185 mm; Số tay.
+- [MPJSC1500 kích pallet nâng cao một xi-lanh 1,5 t] (https://www.lexygolift.com/vi/products/mpjsc1500/): 1.500 kg; Chiều cao càng 85-800 mm; Số sàn.
+- [MPJTSC1500 kích pallet nâng cao hai giai đoạn 1,5 tấn](https://www.lexygolift.com/vi/products/mpjtsc1500/): 1.500 kg; Chiều cao càng 85-800 mm; Số sàn.
+- [SC1016 Xe nâng pallet tự động 1.0 t tự tải](https://www.lexygolift.com/vi/products/sc1016/): 1.000 kg; 1.600 mm có thể tùy chỉnh; Di chuyển bằng tay / nâng điện.
+- [QES12E Xe nâng điện đi bộ tay 1.2 t với cần lái lệch](https://www.lexygolift.com/vi/products/qes12e/): 1.200 kg; 3.000 mm; Đi bộ theo sau.
+- [QES15E Xe nâng điện đi bộ tay 1.5 t với cần lái lệch](https://www.lexygolift.com/vi/products/qes15e/): 1.500 kg; 3.000 mm; Đi bộ theo sau.
+- [QES15LION Xe nâng điện Lithium đi bộ tay 1.5 t với cần lái lệch](https://www.lexygolift.com/vi/products/qes15lie/): 1.500 kg; 3.000 mm; Đi bộ theo sau.
+- [QED1530 Xe nâng pallet điện đi bộ tay 1.5 t](https://www.lexygolift.com/vi/products/qed1530/): 1.500 kg; 3.000 mm có thể tùy chỉnh; Nâng điện.
+- [EPT30 Xe nâng bàn thủy lực điện 300 kg](https://www.lexygolift.com/vi/products/ept30/): 300 kg; 290-880 mm; Nâng điện / di chuyển bằng tay.
+- [EPT50 Xe nâng bàn thủy lực điện 500 kg](https://www.lexygolift.com/vi/products/ept50/): 500 kg; 440-1.025 mm; Nâng điện / di chuyển bằng tay.
+- [EPTD35 Xe nâng bàn điện dạng kéo kéo đôi 350 kg](https://www.lexygolift.com/vi/products/eptd35/): 350 kg; 370-1.300 mm; Nâng điện / di chuyển bằng tay.
+- [EXL0412 400 Xe nâng sàn điện 400 kg](https://www.lexygolift.com/vi/products/exl0412/): 400 kg; 1.115 mm; Nâng điện / di chuyển bằng tay.
+- [EXL0415 400 Xe nâng sàn điện 400 kg](https://www.lexygolift.com/vi/products/exl0415/): 400 kg; 1.415 mm; Nâng điện / di chuyển bằng tay.
+- [PT15 Xe nâng bàn thủy lực bằng tay 150 kg](https://www.lexygolift.com/vi/products/pt15/): 150 kg; 220-720 mm; Thủy lực bằng tay.
+- [PT30 Xe nâng bàn thủy lực bằng tay 300 kg](https://www.lexygolift.com/vi/products/pt30/): 300 kg; 285-880 mm; Thủy lực bằng tay.
+- [PT50 Xe nâng bàn thủy lực bằng tay 500 kg](https://www.lexygolift.com/vi/products/pt50/): 500 kg; 285-880 mm; Thủy lực bằng tay.
+- [PT75 Xe nâng bàn thủy lực bằng tay 750 kg](https://www.lexygolift.com/vi/products/pt75/): 750 kg; 420-1.000 mm; Thủy lực bằng tay.
+- [PT100 Xe nâng bàn thủy lực bằng tay 1.0 t](https://www.lexygolift.com/vi/products/pt100/): 1.000 kg; 380-1.000 mm; Thủy lực bằng tay.
+- [PTD35 Xe nâng bàn thủy lực đôi bằng tay 350 kg](https://www.lexygolift.com/vi/products/ptd35/): 350 kg; 355-1.300 mm; Thủy lực bằng tay.
+- [PTD70 Xe nâng bàn thủy lực đôi bằng tay 700 kg](https://www.lexygolift.com/vi/products/ptd70/): 700 kg; 445-1.500 mm; Thủy lực bằng tay.
+- [SL0485 400 kg Xe Nâng Thủ Công Chân Đế](https://www.lexygolift.com/vi/products/sl0485/): 400 kg; 765 mm; Thủy lực vận hành bằng tay.
+- [SL0412 400 kg Xe Nâng Thủ Công Chân Đế](https://www.lexygolift.com/vi/products/sl0412/): 400 kg; 1,115 mm; Thủy lực vận hành bằng tay.
+- [SL0415 400 kg Xe Nâng Thủ Công Chân Đế](https://www.lexygolift.com/vi/products/sl0415/): 400 kg; 1,415 mm; Thủy lực vận hành bằng tay.
+- [BED1016 1,0 t Xe Nâng Pallet Bán Điện](https://www.lexygolift.com/vi/products/bed1016/): 1.000 kg; 1.600 mm; Di chuyển bằng tay / nâng bằng điện.
+- [BED1025 1,0 t Xe Nâng Pallet Bán Điện](https://www.lexygolift.com/vi/products/bed1025/): 1.000 kg; 2.500 mm; Di chuyển bằng tay / nâng bằng điện.
+- [BED1030 1,0 t Xe Nâng Pallet Bán Điện](https://www.lexygolift.com/vi/products/bed1030/): 1.000 kg; 3.000 mm; Di chuyển bằng tay / nâng bằng điện.
+- [BED1516 1,5 t Xe Nâng Pallet Bán Điện](https://www.lexygolift.com/vi/products/bed1516/): 1.500 kg; 1.600 mm; Di chuyển bằng tay / nâng bằng điện.
+
+## Tài nguyên cho Người Mua
+- [Trung Tâm Tài Nguyên](https://www.lexygolift.com/vi/resources/): Lựa chọn sản phẩm, tuân thủ, tài liệu, Câu hỏi thường gặp và ứng dụng.
+- [Trung Tâm Tuân Thủ](https://www.lexygolift.com/vi/resources/compliance/): Hướng dẫn kiểm tra tài liệu theo từng mẫu mã.
+- [Tải xuống và Tài liệu](https://www.lexygolift.com/vi/resources/download/): Dữ liệu sản phẩm và yêu cầu tài liệu kiểm soát.
+- [Hỏi đáp Người Mua](https://www.lexygolift.com/vi/resources/faq/): Câu trả lời trực tiếp cho người mua chuyên nghiệp.
+- [Cách Chọn Xe Nâng Pallet Điện](https://www.lexygolift.com/vi/guides/how-to-choose-an-electric-pallet-truck/): Danh sách kiểm tra thực tế về tải trọng, chiều dài hành trình, điều kiện sàn, không gian quay, pin và chu kỳ làm việc.
+- [Xe Nâng Pallet so với Xe Nâng Chân Đế](https://www.lexygolift.com/vi/guides/pallet-truck-vs-stacker/): Sử dụng xe nâng pallet để di chuyển tải trọng theo phương ngang và xe nâng chân đế khi nhiệm vụ bao gồm nâng vào vị trí lưu kho.
+- [Sức Chứa Xe Nâng, Chiều Cao Nâng, và Chiều Rộng Lối Đi](https://www.lexygolift.com/vi/guides/forklift-capacity-and-aisle-width/): Tại sao chỉ dựa vào sức chứa định mức không đủ khi chọn xe nâng điện.
+
+## Liên Hệ
+- Email: info@lexygolift.com

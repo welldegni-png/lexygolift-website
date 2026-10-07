@@ -1,0 +1,78 @@
+# LEXYGO マテリアルハンドリング機器
+
+>浙江昌興盛利インテリジェント機械有限公司は電動パレットトラック、スタッカー、電動フォークリフト、手動パレットトラック、倉庫設備を供給しています。
+
+## 製品ファミリー
+- [電動パレットトラック](https://www.lexygolift.com/ja/products/electric-pallet-trucks/):パレット化された荷物を倉庫、ドック、混合舗装地を効率的に移動させます。
+- [電動パレットスタッカー](https://www.lexygolift.com/ja/products/electric-pallet-stackers/):低〜中高度の保管エリアでパレットを持ち上げ、配置し、回収します。
+- [電動フォークリフト](https://www.lexygolift.com/ja/products/electric-forklifts/):屋内物流や工業搬送用の電動カウンターバランスフォークリフト。
+- [手動パレットトラック](https://www.lexygolift.com/ja/products/manual-pallet-trucks/):シンプルで信頼性の高いパレット移動と手動の高揚力ハンドリング。
+- [倉庫機器](https://www.lexygolift.com/ja/products/warehouse-equipment/):コンパクトなリフティングテーブル、プラットフォームトラック、資材の流れのためのサポート機器。
+
+## 製品モデル
+- [WEP20J 2.0トントランシーバー電気パレットトラック](https://www.lexygolift.com/ja/products/wep20j/):2,000 kg;205 mm;ウォークビハインド式。
+- [REP3000E 3.0 tライダー電動パレットトラック](https://www.lexygolift.com/ja/products/rep3000e/):3,000 kg;205 mm;乗用。
+- [ATEP3000Y 3.0トン全地形電動パレットトラック](https://www.lexygolift.com/ja/products/atep3000y/):3,000 kg;205 mm;歩行型。
+- [WES1500A 1.5トントランシーバー電気スタッカー](https://www.lexygolift.com/ja/products/wes1500a/):1,500 kg;1,600-3,500 mm;ウォークビハインド式。
+- [WES1600A 1.6トントランシーバー電気スタッカー](https://www.lexygolift.com/ja/products/wes1600a/):1,600 kg;1,600-3,500 mm;ウォークビハインド式。
+- [WES1500JP 1.5トントランシーバー電気スタッカー](https://www.lexygolift.com/ja/products/wes1500jp/):1,500 kg;1,600-3,500 mm;ウォークビハインド式。
+- [WES2000A 2.0トン電気無線スタッカー](https://www.lexygolift.com/ja/products/wes2000a/):2,000 kg;1,600-3,500 mm;ウォークビハインド式。
+- [RES1500D 1.5トンライダー電動スタッカー](https://www.lexygolift.com/ja/products/res1500d/):1,500 kg;1,600-3,500 mm;スタンドオン。
+- [RES2000D 2.0 t ライダー電動スタッカー](https://www.lexygolift.com/ja/products/res2000d/):2,000 kg;1,600-3,500 mm;スタンドオン。
+- [RES1500E 1.5 t ライダー電動スタッカー](https://www.lexygolift.com/ja/products/res1500e/):1,500 kg;1,600-3,500 mm;スタンドオン。
+- [RES2000E 2.0 t ライダー電動スタッカー](https://www.lexygolift.com/ja/products/res2000e/):2,000 kg;1,600-3,500 mm;スタンドオン。
+- [RES1500G 1.5 t ライダー電動スタッカー](https://www.lexygolift.com/ja/products/res1500g/):1,500 kg;1,600-3,000 mm;スタンドオン。
+- [WCES500J 0.5 t トレッキー・カウンターバランス・スタッカー](https://www.lexygolift.com/ja/products/wces500j/):500 kg;1,600-3,500 mm;ウォークビハインド式。
+- [WCES1000J 1.0トンのトレッキー・カウンターバランス・スタッカー](https://www.lexygolift.com/ja/products/wces1000j/):1,000 kg;1,600-3,500 mm;ウォークビハインド式。
+- [WCES1300J 1.3トンのトランシーバー・カウンターバランス・スタッカー](https://www.lexygolift.com/ja/products/wces1300j/):1,300 kg;1,600-3,500 mm;ウォークビハインド式。
+- [WCES1500J 1.5トンのトレッキーカウンターバランススタッカー](https://www.lexygolift.com/ja/products/wces1500j/):1,500 kg;1,600-3,500 mm;ウォークビハインド式。
+- [RCES1000B 1.0 t ライダー・カウンターバランス・スタッカー](https://www.lexygolift.com/ja/products/rces1000b/):1,000 kg;スタンドオン。
+- [RCES1500E 1.5 t ライダー・カウンターバランス・スタッカー](https://www.lexygolift.com/ja/products/rces1500e/):1,500 kg;スタンドオン。
+- [RCES2000E 2.0 tライダー・カウンターバランス・スタッカー](https://www.lexygolift.com/ja/products/rces2000e/):2,000 kg;スタンドオン。
+- [HES1500A 1.5 t リーチ電動スタッカー](https://www.lexygolift.com/ja/products/hes1500a/):1,500 kg;3,000 mm;スタンドオン。
+- [HES2000A 2.0 tリーチ電動スタッカー](https://www.lexygolift.com/ja/products/hes2000a/):2,000 kg;1,600-3,500 mm;スタンドオン。
+- [EFL1200R3 1.2トン三輪電動フォークリフト](https://www.lexygolift.com/ja/products/efl1200r3/):1,200 kg;3,000 mm;座席式。
+- [EFL2000R3 2.0 t 3輪電動フォークリフト](https://www.lexygolift.com/ja/products/efl2000r3/):2,000 kg;3,000 mm;座席式。
+- [R4EFL1T 1.2トン4輪電動フォークリフト](https://www.lexygolift.com/ja/products/r4efl1t/):1,200 kg;3,000 mm;座席式。
+- [R4EFL3T 3.0トンの四輪電動フォークリフト](https://www.lexygolift.com/ja/products/r4efl3t/):3,000 kg;3,000 mm;座席式。
+- [R4EFL5T 5.0 t 4輪電動フォークリフト](https://www.lexygolift.com/ja/products/r4efl5t/):5,000 kg;3,000 mm;座席式。
+- [R4EFL12T 重厚四輪電動フォークリフト](https://www.lexygolift.com/ja/products/r4efl12t/):12,000 kg;3,000 mm;座席式。
+- [MPT5TN 5.0 tマニュアルパレットトラック](https://www.lexygolift.com/ja/products/mpt5tn/):5,000 kg;フォーク高85-185 mm;マニュアル。
+- [MPJSC1500 1.5 t 単気筒ハイリフトパレットジャッキ](https://www.lexygolift.com/ja/products/mpjsc1500/):1,500 kg;フォーク高 85-800 mm;マニュアル。
+- [MPJTSC1500 1.5 t 2段式ハイリフトパレットジャッキ](https://www.lexygolift.com/ja/products/mpjtsc1500/):1,500 kg;フォーク高さ 85-800 mm;マニュアル。
+- [SC1016 1.0 t自動積みパレットスタッカー](https://www.lexygolift.com/ja/products/sc1016/):1,000 kg;1,600 mmの調整可能;手動トラベル/電動リフト。
+- [QES12E 1.2 t オフセット・ティラー式電気スタッカー](https://www.lexygolift.com/ja/products/qes12e/):1,200 kg;3,000 mm;ウォークビハインド式。
+- [QES15E 1.5 t オフセット・ティラー式電気スタッカー](https://www.lexygolift.com/ja/products/qes15e/):1,500 kg;3,000 mm;ウォークビハインド式。
+- [QES15LION 1.5 t リチウムオフセットティラー式ウォーキー電動スタッカー](https://www.lexygolift.com/ja/products/qes15lie/):1,500 kg;3,000 mm;ウォークビハインド式。
+- [QED1530 1.5トントランシーバー電気パレットスタッカー](https://www.lexygolift.com/ja/products/qed1530/):1,500 kg;3,000 mmの構成可能;電動。
+- [EPT30 300kg電動油圧リフトテーブルカート](https://www.lexygolift.com/ja/products/ept30/):300kg;290-880mm;電動リフト/手動移動。
+- [EPT50 500kg電動油圧リフトテーブルカート](https://www.lexygolift.com/ja/products/ept50/):500kg;440-1,025mm;電動リフト/手動移動。
+- [EPTD35 350 kg ダブルシザー電動リフトテーブルカート](https://www.lexygolift.com/ja/products/eptd35/):350 kg;370-1,300 mm;電動リフト/手動移動。
+- [EXL0412 400 kg電動プラットフォームスタッカー](https://www.lexygolift.com/ja/products/exl0412/):400 kg;1,115 mm;電動リフト/手動移動。
+- [EXL0415 400 kg電動プラットフォームスタッカー](https://www.lexygolift.com/ja/products/exl0415/):400 kg;1,415 mm;電動リフト/手動移動。
+- [PT15 150 kg 手動油圧リフトテーブルカート](https://www.lexygolift.com/ja/products/pt15/):150 kg;220-720 mm;手動油圧式。
+- [PT30 300 kg 手動油圧リフトテーブルカート](https://www.lexygolift.com/ja/products/pt30/):300 kg;285-880 mm;手動油圧式。
+- [PT50 500 kg 手動油圧リフトテーブルカート](https://www.lexygolift.com/ja/products/pt50/):500 kg;285-880 mm;手動油圧式。
+- [PT75 750 kg 手動油圧リフトテーブルカート](https://www.lexygolift.com/ja/products/pt75/):750 kg;420-1,000 mm;手動油圧式。
+- [PT100 1.0 t手動油圧リフトテーブルカート](https://www.lexygolift.com/ja/products/pt100/):1,000 kg;380-1,000 mm;手動油圧式。
+- [PTD35 350 kg ダブルシザー手動リフトテーブルカート](https://www.lexygolift.com/ja/products/ptd35/):350 kg;355-1,300 mm;手動油圧式。
+- [PTD70 700kgダブルシザー手動リフトテーブルカート](https://www.lexygolift.com/ja/products/ptd70/):700kg;445-1,500mm;手動油圧式。
+- [SL0485 400 kg手動プラットフォームスタッカー](https://www.lexygolift.com/ja/products/sl0485/):400 kg;765 mm;手動油圧式。
+- [SL0412 400 kg手動プラットフォームスタッカー](https://www.lexygolift.com/ja/products/sl0412/):400 kg;1,115 mm;手動油圧式。
+- [SL0415 400 kg手動プラットフォームスタッカー](https://www.lexygolift.com/ja/products/sl0415/):400 kg;1,415 mm;手動油圧式。
+- [BED1016 1.0 t セミ電動パレットスタッカー](https://www.lexygolift.com/ja/products/bed1016/):1,000 kg;1,600 mm;手動移動/電動リフト。
+- [BED1025 1.0 tセミ電動パレットスタッカー](https://www.lexygolift.com/ja/products/bed1025/):1,000 kg;2,500 mm;手動移動/電動リフト。
+- [BED1030 1.0 tセミ電動パレットスタッカー](https://www.lexygolift.com/ja/products/bed1030/):1,000 kg;3,000 mm;手動移動/電動リフト。
+- [BED1516 1.5 t セミエレクトリックパレットスタッカー](https://www.lexygolift.com/ja/products/bed1516/):1,500 kg;1,600 mm;手動移動/電動リフト。
+
+## バイヤーリソース
+- [リソースセンター](https://www.lexygolift.com/ja/resources/):製品選択、コンプライアンス、ドキュメント、FAQ、アプリケーション。
+- [コンプライアンスセンター](https://www.lexygolift.com/ja/resources/compliance/):モデル固有の文書検証ガイダンス。
+- [ダウンロードおよびドキュメント](https://www.lexygolift.com/ja/resources/download/):製品データおよび管理された文書請求。
+- [バイヤーFAQ](https://www.lexygolift.com/ja/resources/faq/):プロのバイヤー向けの直接的な回答。
+- [電動パレットトラックの選び方](https://www.lexygolift.com/ja/guides/how-to-choose-an-electric-pallet-truck/):積載、ルート長、床の状態、旋回スペース、バッテリー、デューティサイクルの実用的なチェックリスト。
+- [パレットトラック vs. パレットスタッカー](https://www.lexygolift.com/ja/guides/pallet-truck-vs-stacker/):パレットトラックで荷物を水平に移動させ、収納場所に持ち上げる作業にはスタッカーを使います。
+- 【フォークリフト容量、リフト高さ、通路幅】(https://www.lexygolift.com/ja/guides/forklift-capacity-and-aisle-width/):電動フォークリフトを選ぶ際、定格容量だけでは不十分な理由。
+
+## 接触
+- メール:info@lexygolift.com
