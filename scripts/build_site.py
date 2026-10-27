@@ -1029,6 +1029,8 @@ def build():
     llms += [f"- [{guide['title']}]({route_url('/guides/' + guide['slug'] + '/')}): {guide['summary']}" for guide in GUIDES]
     llms += ["", "## Contact", f"- Email: {COMPANY['email']}"]
     (DIST / "llms.txt").write_text("\n".join(llms) + "\n", encoding="utf-8")
+    from add_stacker_video import install as install_stacker_video
+    install_stacker_video()
     print(f"Built {len(routes)} routes and {len(PRODUCTS)} product pages in {DIST}")
 
 
